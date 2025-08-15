@@ -59,7 +59,7 @@ function Home() {
   };
 
   return (
-    <div className="background" ref={containerRef}>
+    <div className="background position-relative" ref={containerRef}>
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
