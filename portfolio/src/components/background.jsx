@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import '../App.css';
+import "../App.css";
 
 // Home Page
 function Home() {
@@ -80,13 +80,25 @@ function Home() {
 
 // Pages
 function Movies() {
-  return <div className="page" style={{ backgroundColor: "#9295BB", height: "100vh" }}><h1 style={{ textAlign: "center" }}>Movies Page</h1></div>;
+  return (
+    <div className="page" style={{ backgroundColor: "#9295BB", height: "100vh" }}>
+      <h1 style={{ textAlign: "center" }}>Movies Page</h1>
+    </div>
+  );
 }
 function Games() {
-  return <div className="page" style={{ backgroundColor: "#B0B6CC", height: "100vh" }}><h1 style={{ textAlign: "center" }}>Games Page</h1></div>;
+  return (
+    <div className="page" style={{ backgroundColor: "#B0B6CC", height: "100vh" }}>
+      <h1 style={{ textAlign: "center" }}>Games Page</h1>
+    </div>
+  );
 }
 function Foods() {
-  return <div className="page" style={{ backgroundColor: "#FEE9C6", height: "100vh" }}><h1 style={{ textAlign: "center" }}>Foods Page</h1></div>;
+  return (
+    <div className="page" style={{ backgroundColor: "#FEE9C6", height: "100vh" }}>
+      <h1 style={{ textAlign: "center" }}>Foods Page</h1>
+    </div>
+  );
 }
 
 // App Router

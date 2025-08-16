@@ -1,14 +1,15 @@
 import React from 'react';
-import Background from './components/background';
 import Header from './components/header';
+import Background from './components/background';
 
 function App() {
   return (
     <>
-      <Background/>
-      <Header/>
+      <Header />
+      <Background />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+export { Background };
