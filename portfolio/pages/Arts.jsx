@@ -1,11 +1,11 @@
 import React from "react";
 
-function Movies() {
+function Arts() {
   return (
     <div className="page">
-      <h1>Movies Page</h1>
+      <h1>Art Page</h1>
     </div>
   );
 }
 
-export default Movies;
+export default Arts;

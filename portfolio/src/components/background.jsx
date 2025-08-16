@@ -1,22 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-// Home Page
-function Home() {
+export default function Background() {
   const containerRef = useRef(null);
   const [boxWidth, setBoxWidth] = useState(90);
   const [count, setCount] = useState(1);
-  const [bgColor, setBgColor] = useState(""); // clicked color for global background
+  const [bgColor, setBgColor] = useState(""); // clicked color
   const navigate = useNavigate();
 
   const colors = ["#9295BB", "#B0B6CC", "#FEE9C6"];
 
-  // Resize logic
   useEffect(() => {
     function updateBoxes() {
       if (!containerRef.current) return;
-
       const totalWidth = containerRef.current.clientWidth;
       const minScreen = 320;
       const maxScreen = 1200;
@@ -27,8 +24,6 @@ function Home() {
       const clampedT = Math.min(Math.max(t, 0), 1);
 
       let calcWidth = minWidth + clampedT * (maxWidth - minWidth);
-      calcWidth = Math.max(minWidth, Math.min(calcWidth, maxWidth));
-
       const fullBoxesCount = Math.floor(totalWidth / calcWidth);
       const totalBoxes = fullBoxesCount + 1;
 
@@ -41,7 +36,6 @@ function Home() {
     return () => window.removeEventListener("resize", updateBoxes);
   }, []);
 
-  // Update body background
   useEffect(() => {
     document.body.style.backgroundColor = bgColor || "#B0B6CC";
   }, [bgColor]);
@@ -50,16 +44,15 @@ function Home() {
     const color = colors[index % 3];
     setBgColor(color);
 
-    // Animate and then navigate
     setTimeout(() => {
       if (index % 3 === 0) navigate("/movies");
-      if (index % 3 === 1) navigate("/games");
-      if (index % 3 === 2) navigate("/foods");
-    }, 500); // wait for color transition
+      if (index % 3 === 1) navigate("/arts");
+      if (index % 3 === 2) navigate("/photos");
+    }, 500);
   };
 
   return (
-    <div className="background position-relative" ref={containerRef}>
+    <div className="background" ref={containerRef}>
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
@@ -75,42 +68,5 @@ function Home() {
         />
       ))}
     </div>
-  );
-}
-
-// Pages
-function Movies() {
-  return (
-    <div className="page" style={{ backgroundColor: "#9295BB", height: "100vh" }}>
-      <h1 style={{ textAlign: "center" }}>Movies Page</h1>
-    </div>
-  );
-}
-function Games() {
-  return (
-    <div className="page" style={{ backgroundColor: "#B0B6CC", height: "100vh" }}>
-      <h1 style={{ textAlign: "center" }}>Games Page</h1>
-    </div>
-  );
-}
-function Foods() {
-  return (
-    <div className="page" style={{ backgroundColor: "#FEE9C6", height: "100vh" }}>
-      <h1 style={{ textAlign: "center" }}>Foods Page</h1>
-    </div>
-  );
-}
-
-// App Router
-export default function Background() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/games" element={<Games />} />
-        <Route path="/foods" element={<Foods />} />
-      </Routes>
-    </Router>
   );
 }
