@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../App.css";
+import "/stylesheet/background.css"; 
 
 export default function Background() {
   const containerRef = useRef(null);
   const [boxWidth, setBoxWidth] = useState(90);
   const [count, setCount] = useState(1);
-  const [bgColor, setBgColor] = useState(""); // clicked color
+  const [bgColor, setBgColor] = useState(""); 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const colors = ["#9295BB", "#B0B6CC", "#FEE9C6"];
 
+  // calculate responsive box width & count
   useEffect(() => {
     function updateBoxes() {
       if (!containerRef.current) return;
@@ -36,6 +39,15 @@ export default function Background() {
     return () => window.removeEventListener("resize", updateBoxes);
   }, []);
 
+  // set background color based on route
+  useEffect(() => {
+    if (location.pathname === "/movies") setBgColor(colors[0]);
+    else if (location.pathname === "/arts") setBgColor(colors[1]);
+    else if (location.pathname === "/photos") setBgColor(colors[2]);
+    else setBgColor(""); // home/default → striped
+  }, [location.pathname]);
+
+  // update body bg
   useEffect(() => {
     document.body.style.backgroundColor = bgColor || "#B0B6CC";
   }, [bgColor]);
@@ -52,7 +64,7 @@ export default function Background() {
   };
 
   return (
-    <div className="background" ref={containerRef}>
+    <div className="background fixed-top" ref={containerRef}>
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}

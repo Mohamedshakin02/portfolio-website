@@ -1,15 +1,17 @@
 import React from 'react'
+import "/stylesheet/intro.css"; 
+import ShakinImg from '../assets/Shakin.png';
 
 function Intro() {
   return (
     <>
-        <div className="intro-container">
-            <div className='hello'>
-                <h2>Hello, I am</h2>
+        <div className="intro-container container-lg p-4 h-50" style={{ position: 'relative' }}>
+            <div className='hello d-flex align-self-center'>
+                <h2 className='display-6 fw-medium mb-0'>Hello, I am</h2>
             </div>
 
-            <div className='name'>
-                <h1>Mohamed Shakin</h1>
+            <div className='name '>
+                <h1 className='display-1 fw-bold'>Mohamed Shakin</h1>
             </div>
 
             <div className='links'>
@@ -32,15 +34,15 @@ function Intro() {
             </div>
 
             <div className='image'>
-                <img src="" alt="" />
+                <img src={ShakinImg} alt="Shakin" className='img-fluid' />
             </div>
 
-            <div className='welcome'>
-                <h2>Welcome to my portfolio,</h2>
+            <div className='welcome d-flex align-self-end'>
+                <h2 className='display-4 fw-medium'>Welcome to my portfolio,</h2>
             </div>
 
             <div className='description'>
-                <p>Explore my projects, skills, and passion for building creative digital experiences.</p>
+                <p className='fs-5 fw-medium'>Explore my projects, skills, and passion for building creative digital experiences.</p>
             </div>
         </div>
     </>

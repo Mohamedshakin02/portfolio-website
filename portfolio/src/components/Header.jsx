@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../App.css';
+import "/stylesheet/header.css"; 
 
 function Header() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -40,8 +41,8 @@ function Header() {
   };
 
   return (
-    <header className="position-absolute top-0 start-0 w-100 my-4 d-flex justify-content-center">
-      <nav className="navbar navbar-expand-md bg-body-tertiary rounded-pill w-100 w-lg-auto mx-3 px-3 container-lg position-relative z-3">
+    <header className="position-absolute top-25 start-50 translate-middle container-lg my-4 mx-2 mx-lg-auto">
+      <nav className="navbar navbar-expand-md bg-body-tertiary rounded-pill w-100  px-3 container-lg position-relative z-3">
         <div className="container-fluid d-flex align-items-center">
           {/* Small screen title */}
           <span className="navbar-brand d-md-none fw-bold position-absolute top-50 start-50 translate-middle z-index-3">

@@ -1,0 +1,49 @@
+.background {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100svh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transition: 2s;
+  z-index:-1;
+}
+
+.box {
+  flex: 0 0 120px;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Colors */
+
+.box.a {
+  background-color: #9295BB;        /* A color */
+}
+
+.box.b {
+  background-color: #B0B6CC; /* B color */
+}
+
+.box.c {
+  background-color: #FEE9C6;     /* C color */
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  transition: background-color 2s ease;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

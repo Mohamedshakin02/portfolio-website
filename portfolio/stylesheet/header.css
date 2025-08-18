@@ -1,0 +1,89 @@
+.top-25 {
+  top: 10%;
+}
+
+/* Small screen mobile menu slide down animation */
+@media (max-width: 767.98px) {
+  .z-n1-md{
+    z-index: -1;
+  }
+  
+  /* Mobile menu container */
+.mobile-menu {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* initial background */
+  border-radius: 0px 0px 20px 20px;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  padding-top: 2rem;
+
+  max-height: 0;      /* collapsed */
+  opacity: 0;
+  transition: 
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;  /* smooth slide */
+  transform: translateY(-20px); /* slide up when closed */
+}
+
+/* Opened menu */
+.mobile-menu.show {
+  max-height: 500px;        /* enough to show all items */
+  opacity: 1;
+  transform: translateY(0); /* slide to original position */
+  background-color: #f8f9fa; 
+  
+}
+
+/* Menu items */
+.mobile-menu .menu-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu.show .menu-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  /* Divider between menu items */
+  .mobile-menu .menu-item + .menu-item {
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+/* For md and above, remove animation and dividers */
+@media (min-width: 768px) {
+
+  .mobile-menu {
+    position: static;
+    width: auto;
+    background: transparent;
+    padding: 0;
+  }
+
+  .mobile-menu .menu-item + .menu-item {
+    border-top: none;
+  }
+
+  .mobile-menu .menu-item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.navbar-toggler {
+  border: none;        /* Removes the border */
+  box-shadow: none;    /* Removes the focus outline shadow */
+  width: 10px
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
