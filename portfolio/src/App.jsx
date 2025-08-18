@@ -6,6 +6,7 @@ import Header from "./components/header";
 import Movies from "../pages/Movies";
 import Photos from "../pages/Photos";
 import Arts from "../pages/Arts";
+import Home from "./components/Home";
 
 // Wrapper to conditionally show Header
 function Layout({ children }) {
@@ -25,7 +26,7 @@ export default function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Background />} />
+          <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies/>} />
           <Route path="/photos" element={<Photos/>} />
           <Route path="/arts" element={<Arts/>} />
