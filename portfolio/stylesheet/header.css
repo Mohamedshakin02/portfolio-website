@@ -1,5 +1,16 @@
-.top-25 {
+.top-10 {
   top: 10%;
+}
+
+@media (max-width: 992px){
+  .top-10 {
+    top: 4%;
+  }
+
+  header{
+    width: 100%;
+    justify-self: center;
+  }
 }
 
 /* Small screen mobile menu slide down animation */

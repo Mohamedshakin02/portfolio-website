@@ -2,46 +2,114 @@ $background-color: rgba(255, 255, 255, 0.51);
 $blur: blur(5px);
 $radius: 40px;
 
+.top-5 {
+    top: 5%;
+}
+
+.end-3 {
+    right: 3%;
+}
+
+.top-layer {
+    .image {
+        height: 450px;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
 .intro-container {
+    padding: auto 12px;
+}
+
+.intro-content {
     background-color: $background-color;
     backdrop-filter: $blur;
     border-radius: $radius;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 30% 450px 30%;
-    grid-template-areas: 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
         "hello images ."
         "names images welcome"
         "links images description";
 
-    .hello{
+    .hello {
         grid-area: hello;
     }
 
-    .name{
+    .name {
         grid-area: names;
     }
-    
-    .links{
-        grid-area: links;
-    }
 
-    .image{
-        grid-area: images;
-        position: relative;
-        
-        img{
-            width: 93%;
-            height: auto;
-            position: absolute;
+    .links {
+        grid-area: links;
+
+        .link {
+            background-color: #FEE9C6;
+            width: 50px;
+            aspect-ratio: 1/1;
+
+            img {
+                max-width: 100%;
+                aspect-ratio: 1/1;
+            }
         }
     }
 
-    .welcome{
+    .image-holder {
+        grid-area: images;
+        position: relative;
+
+        // img{
+        //     width: 93%;
+        //     height: auto;
+        //     position: absolute;
+        // }
+    }
+
+    .welcome {
         grid-area: welcome;
     }
 
-    .description{
+    .description {
         grid-area: description;
+    }
+}
+
+@media (max-width: 992px) {
+    /* LG breakpoint */
+
+    .top-layer {
+        position: static !important;
+
+        .image {
+            z-index: 0;
+            height: 300px;
+        }
+
+        .scroll-container {
+            display: none;
+        }
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "hello"
+            "names"
+            "welcome"
+            "description"
+            "links";
+
+        .image-holder {
+            display: none;
+        }
+
+        .links{
+            justify-content: space-between;
+        }
     }
 }
