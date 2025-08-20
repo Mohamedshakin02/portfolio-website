@@ -41,7 +41,7 @@ function Header() {
   };
 
   return (
-    <header className="position-absolute top-10 start-50 translate-middle container-lg my-4">
+    <header className="sticky-top container-md my-4" style={{ zIndex: 10 }}>
       <nav className="navbar navbar-expand-md bg-body-tertiary rounded-pill w-100  px-3 container-lg position-relative z-3">
         <div className="container-fluid d-flex align-items-center">
           {/* Small screen title */}
