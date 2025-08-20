@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Movies from "../pages/Movies";
 import Photos from "../pages/Photos";
@@ -6,13 +6,15 @@ import Arts from "../pages/Arts";
 import Home from "./components/Home";
 import Background from "./components/background";
 import Header from "./components/Header";
+import Preloader from "./components/Preloader";
+
 
 function Layout({ children }) {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
   return (
-    <div style={{ position: "relative"}}>
+    <div style={{ position: "relative" }}>
       {/* Background always clickable behind */}
       <div
         style={{
@@ -23,11 +25,11 @@ function Layout({ children }) {
         <Background />
       </div>
 
-      {/* Wrap foreground content in a "clickable only on content" layer */}
+      {/* Foreground */}
       <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
         {isHome && (
           <div style={{ pointerEvents: "auto" }}>
-            <Header/>
+            <Header />
           </div>
         )}
 
@@ -45,20 +47,35 @@ function Layout({ children }) {
   );
 }
 
-
-
-
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // when all resources (images, CSS, etc.) are loaded
+    const handleLoad = () => {
+      setTimeout(() => setLoading(false), 1000); // small delay for smooth transition
+    };
+
+    window.addEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/photos" element={<Photos />} />
-          <Route path="/arts" element={<Arts />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <>
+      {loading ? (
+        <Preloader/>
+      ) : (
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/movies" element={<Movies />} />
+              <Route path="/photos" element={<Photos />} />
+              <Route path="/arts" element={<Arts />} />
+            </Routes>
+          </Layout>
+        </Router>
+      )}
+    </>
   );
 }
