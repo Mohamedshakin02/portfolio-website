@@ -6,8 +6,15 @@ import Arts from "../pages/Arts";
 import Home from "./components/Home";
 import Background from "./components/background";
 import Header from "./components/Header";
-import Preloader from "./components/Preloader";
 
+// Loader Component
+function Preloader() {
+  return (
+    <div className="preloader">
+      <img src={require("./assets/loading.gif")} alt="Loading..." />
+    </div>
+  );
+}
 
 function Layout({ children }) {
   const location = useLocation();
@@ -15,7 +22,6 @@ function Layout({ children }) {
 
   return (
     <div style={{ position: "relative" }}>
-      {/* Background always clickable behind */}
       <div
         style={{
           position: "absolute",
@@ -25,7 +31,6 @@ function Layout({ children }) {
         <Background />
       </div>
 
-      {/* Foreground */}
       <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
         {isHome && (
           <div style={{ pointerEvents: "auto" }}>
@@ -51,31 +56,37 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // when all resources (images, CSS, etc.) are loaded
-    const handleLoad = () => {
-      setTimeout(() => setLoading(false), 1000); // small delay for smooth transition
-    };
+    const handleLoad = () => setLoading(false);
 
-    window.addEventListener("load", handleLoad);
-    return () => window.removeEventListener("load", handleLoad);
+    if (document.readyState === "complete") {
+      // Page already loaded
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+      // ✅ Fallback for Safari: force remove loader after 5s
+      const timer = setTimeout(() => setLoading(false), 5000);
+
+      return () => {
+        window.removeEventListener("load", handleLoad);
+        clearTimeout(timer);
+      };
+    }
   }, []);
 
   return (
-    <>
+    <Router>
       {loading ? (
-        <Preloader/>
+        <Preloader />
       ) : (
-        <Router>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/movies" element={<Movies />} />
-              <Route path="/photos" element={<Photos />} />
-              <Route path="/arts" element={<Arts />} />
-            </Routes>
-          </Layout>
-        </Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/photos" element={<Photos />} />
+            <Route path="/arts" element={<Arts />} />
+          </Routes>
+        </Layout>
       )}
-    </>
+    </Router>
   );
 }
