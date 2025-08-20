@@ -73,7 +73,7 @@ export default function App() {
     });
 
     // Fallback in case some images never load (Safari fix)
-    const timer = setTimeout(() => setLoading(false), 5000);
+    const timer = setTimeout(() => setLoading(false), 2000);
 
     return () => {
       images.forEach((img) => {
