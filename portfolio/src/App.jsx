@@ -48,37 +48,36 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Select all images in the page
     const images = Array.from(document.images);
     let loadedCount = 0;
 
     if (images.length === 0) {
-      setLoading(false);
+      setLoading(false); // no images → hide preloader immediately
       return;
     }
 
-    const onLoadOrError = () => {
+    const onImageLoad = () => {
       loadedCount++;
-      if (loadedCount === images.length) {
-        setLoading(false);
-      }
+      if (loadedCount === images.length) setLoading(false);
     };
 
-    images.forEach((img) => {
+    images.forEach(img => {
       if (img.complete) {
-        loadedCount++;
+        onImageLoad();
       } else {
-        img.addEventListener("load", onLoadOrError);
-        img.addEventListener("error", onLoadOrError);
+        img.addEventListener("load", onImageLoad);
+        img.addEventListener("error", onImageLoad); // handle broken images
       }
     });
 
-    // Fallback in case some images never load (Safari fix)
+    // Fallback timer (5s)
     const timer = setTimeout(() => setLoading(false), 5000);
 
     return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", onLoadOrError);
-        img.removeEventListener("error", onLoadOrError);
+      images.forEach(img => {
+        img.removeEventListener("load", onImageLoad);
+        img.removeEventListener("error", onImageLoad);
       });
       clearTimeout(timer);
     };
