@@ -8,7 +8,6 @@ import Background from "./components/background";
 import Header from "./components/Header";
 import Preloader from "./components/Preloader";
 
-
 function Layout({ children }) {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -49,21 +48,40 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => setLoading(false);
+    const images = Array.from(document.images);
+    let loadedCount = 0;
 
-    if (document.readyState === "complete") {
-      // Page already loaded
+    if (images.length === 0) {
       setLoading(false);
-    } else {
-      window.addEventListener("load", handleLoad);
-      // ✅ Fallback for Safari: force remove loader after 5s
-      const timer = setTimeout(() => setLoading(false), 5000);
-
-      return () => {
-        window.removeEventListener("load", handleLoad);
-        clearTimeout(timer);
-      };
+      return;
     }
+
+    const onLoadOrError = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        setLoading(false);
+      }
+    };
+
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+      } else {
+        img.addEventListener("load", onLoadOrError);
+        img.addEventListener("error", onLoadOrError);
+      }
+    });
+
+    // Fallback in case some images never load (Safari fix)
+    const timer = setTimeout(() => setLoading(false), 5000);
+
+    return () => {
+      images.forEach((img) => {
+        img.removeEventListener("load", onLoadOrError);
+        img.removeEventListener("error", onLoadOrError);
+      });
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
