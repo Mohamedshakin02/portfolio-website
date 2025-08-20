@@ -15,7 +15,7 @@ function About() {
                         <p className="m-0 display-6 fw-medium pt-1">Indian</p>
                     </div>
 
-                    <div className="languages pb-3 pt-2 pt-lg-0 d-flex flex-column align-self-end">
+                    <div className="languages pb-3 pt-4 pt-lg-0 d-flex flex-column align-self-end">
                         <p className="m-0 fs-5 fs-lg-5 fw-normal">Languages:</p>
                         <p className="m-0  display-6 fw-medium pt-1">English, <br />Tamil</p>
                     </div>
@@ -25,7 +25,7 @@ function About() {
                         <p className="m-0 display-6 fw-medium pt-1">19</p>
                     </div>
 
-                    <div className="location pb-3 pt-2 pt-lg-0 d-flex flex-column align-self-end">
+                    <div className="location pb-3 pt-4 pt-lg-0 d-flex flex-column align-self-end">
                         <p className="m-0 fs-5 fs-lg-5 fw-normal">Location:</p>
                         <p className="m-0 display-6 fw-medium pt-1">Dubai, <br />UAE</p>
                     </div>
