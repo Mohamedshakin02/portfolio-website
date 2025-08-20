@@ -6,15 +6,8 @@ import Arts from "../pages/Arts";
 import Home from "./components/Home";
 import Background from "./components/background";
 import Header from "./components/Header";
+import Preloader from "./components/Preloader";
 
-// Loader Component
-function Preloader() {
-  return (
-    <div className="preloader">
-      <img src={require("./assets/loading.gif")} alt="Loading..." />
-    </div>
-  );
-}
 
 function Layout({ children }) {
   const location = useLocation();
