@@ -31,7 +31,7 @@ function About() {
                     </div>
 
                     <div className="description py-3 pt-5">
-                        <p className="m-0 fs-4 fs-lg-5 fw-medium">
+                        <p className="m-0 fs-5 fs-lg-5 fw-medium">
                             I’m Mohamed Shakin, passionate about building creative and practical digital solutions that solve real-world problems.
                             With a background in Creative Computing, I’ve developed a solid foundation in front-end development and programming using HTML, CSS, JavaScript, and Python. <br /><br />
                             I enjoy exploring how design and technology intersect to create meaningful user experiences. Whether it’s developing a website, prototyping an app, or automating a task, I approach every project with a problem-solving mindset and an eye for detail. <br /><br />
