@@ -46,53 +46,43 @@ function Layout({ children }) {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const images = Array.from(document.images);
-    let loadedCount = 0;
+    const images = Array.from(document.images); // get all images in app
 
     if (images.length === 0) {
-      setFadeOut(true);
-      setTimeout(() => setLoading(false), 500); // fade duration
+      setLoading(false); // no images, remove loader immediately
       return;
     }
 
-    const onImageLoad = () => {
+    let loadedCount = 0;
+
+    const checkAllLoaded = () => {
       loadedCount++;
       if (loadedCount === images.length) {
-        setFadeOut(true);
-        setTimeout(() => setLoading(false), 500); // fade duration
+        setLoading(false); // all images done
       }
     };
 
-    images.forEach(img => {
+    images.forEach((img) => {
       if (img.complete) {
-        onImageLoad();
+        checkAllLoaded();
       } else {
-        img.addEventListener("load", onImageLoad);
-        img.addEventListener("error", onImageLoad);
+        img.addEventListener("load", checkAllLoaded);
+        img.addEventListener("error", checkAllLoaded);
       }
     });
 
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-      setTimeout(() => setLoading(false), 500);
-    }, 5000);
+    // fallback in case some image never fires load/error
+    const timer = setTimeout(() => setLoading(false), 8000);
 
-    return () => {
-      images.forEach(img => {
-        img.removeEventListener("load", onImageLoad);
-        img.removeEventListener("error", onImageLoad);
-      });
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
       {loading ? (
-        <Preloader fade={fadeOut} />
+        <Preloader />
       ) : (
         <Layout>
           <Routes>

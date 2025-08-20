@@ -2,9 +2,9 @@ import React from 'react'
 import Loading from '../assets/loading/loading.gif';
 import '../App.css'
 
-function Preloader({ fade }) {
+function Preloader() {
     return (
-        <div className={`preloader ${fade ? "fade-out" : ""}`}>
+        <div className="preloader d-flex justify-content-center align-items-center">
             <img src={Loading} alt="Loading" />
         </div>
     )
