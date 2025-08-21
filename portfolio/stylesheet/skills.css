@@ -1,3 +1,7 @@
+.pt-lg-6 {
+  padding-top: 6rem !important;
+}
+
 .skills-container {
   padding: 0px 12px;
   position: relative;
@@ -14,7 +18,8 @@
   border-radius: 40px;
   box-sizing: border-box;
   display: grid;
-  gap: 4rem;
+  gap: 5rem;
+  align-items: stretch;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "web software" "game design";
 }
@@ -40,5 +45,9 @@
   gap: 1rem;
 }
 .skills-content .skill .top-container .image {
-  width: 60px;
+  height: 60px;
+  aspect-ratio: 1/1;
+}
+.skills-content .skill .bottom-container {
+  flex-grow: 1;
 }/*# sourceMappingURL=skills.css.map */

@@ -2,6 +2,10 @@ $background-color: rgba(255, 255, 255, 0.51);
 $blur: blur(5px);
 $radius: 40px;
 
+.pt-lg-6 {
+    padding-top: 6rem !important;
+}
+
 .skills-container {
     padding: 0px 12px;
     position: relative;
@@ -17,7 +21,8 @@ $radius: 40px;
     border-radius: $radius;
     box-sizing: border-box;
     display: grid;
-    gap: 4rem;
+    gap: 5rem;
+    align-items: stretch;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
         "web software"
@@ -49,8 +54,13 @@ $radius: 40px;
             gap: 1rem;
 
             .image {
-                width: 60px;
+                height: 60px;
+                aspect-ratio: 1/1;
             }
+        }
+
+        .bottom-container {
+            flex-grow: 1;
         }
     }
 }
