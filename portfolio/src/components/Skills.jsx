@@ -24,7 +24,7 @@ function Skills() {
                         </div>
                         <div className='bottom-container mt-4'>
                             <div className="description">
-                                <p className='h5 fw-normal'>Building responsive and modern websites with clean layouts and smooth functionality. From simple projects to full-featured sites, I focus on creating engaging web experiences.</p>
+                                <p className='h5 fw-normal'>Building responsive and modern websites with clean layouts and smooth functionality. From simple projects to full-featured sites, delivering engaging and user-friendly web experiences.</p>
                             </div>
                             <div className='tools mt-3'>
                                 <p className='m-0 fs-5 fw-medium'>Tools: HTML, CSS, JavaScript, React</p>
