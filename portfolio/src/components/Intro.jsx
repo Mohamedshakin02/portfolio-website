@@ -106,10 +106,6 @@ function Intro() {
 
                         </div>
 
-                        {/* <div className='image'>
-                    <img src={ShakinImg} alt="Shakin" className='img-fluid' />
-                </div> */}
-
                         <div className='welcome d-flex align-self-end'>
                             <h2 className='display-5 fw-medium'>Welcome to my portfolio,</h2>
                         </div>
