@@ -52,7 +52,7 @@
   border-style: solid;
   border-color: black;
   border-width: 0px 5px 5px 0px;
-  border-radius: 25px;
+  border-radius: 0px 25px 25px 25px;
   align-items: stretch;
   flex: 1;
 }
