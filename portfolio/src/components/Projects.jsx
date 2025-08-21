@@ -76,9 +76,11 @@ function Projects() {
                                         className="img-fluid mb-3"
                                         style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                                     />
-                                    <h3 className="fs-4 fw-semibold">{project.title}</h3>
+                                    <div class="top-container">
+                                        <h3 className="fs-4 fw-semibold">{project.title}</h3>
                                     <p className="fs-6 fw-medium">{project.type}</p>
-                                    <p className="flex-grow-1 h5 fw-medium">{project.description}</p>
+                                    </div>
+                                    <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
                                     <div className="d-flex justify-content-between mt-4">
                                         {project.github && (
                                             <a

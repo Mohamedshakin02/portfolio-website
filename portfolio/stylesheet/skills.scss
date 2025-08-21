@@ -65,7 +65,7 @@ $radius: 40px;
 }
 
 @media (max-width: 992px) {
-    .skills-container{
+    .skills-container {
         top: 6rem;
     }
 
@@ -74,10 +74,10 @@ $radius: 40px;
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .pt-lg-6 {
-    padding-top: 4rem !important;
-}
+        padding-top: 4rem !important;
+    }
 
     .skills-content {
         bottom: 2.5rem;
@@ -91,8 +91,8 @@ $radius: 40px;
 
 }
 
-@media (max-width: 576px){
-    .skills-content{
+@media (max-width: 576px) {
+    .skills-content {
         bottom: 2rem;
     }
 }

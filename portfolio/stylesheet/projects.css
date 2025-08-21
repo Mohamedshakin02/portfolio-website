@@ -2,6 +2,10 @@
   padding-top: 6rem !important;
 }
 
+.h-20 {
+  height: 20% !important;
+}
+
 .swiper-pagination {
   margin-top: 40px;
   position: relative;
@@ -51,6 +55,12 @@
   border-radius: 25px;
   align-items: stretch;
   flex: 1;
+}
+.projects-content .project-card .top-container {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .projects-content .project-card p.flex-grow-1 {
   flex-grow: 1;
