@@ -21,7 +21,6 @@ $radius: 40px;
     border-radius: $radius;
     box-sizing: border-box;
     display: grid;
-    gap: 5rem;
     align-items: stretch;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -62,5 +61,38 @@ $radius: 40px;
         .bottom-container {
             flex-grow: 1;
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .skills-container{
+        top: 4rem;
+    }
+
+    .skills-content {
+        bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px){
+    .pt-lg-6 {
+    padding-top: 4rem !important;
+}
+
+    .skills-content {
+        bottom: 2.5rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "web"
+            "software"
+            "game"
+            "design";
+    }
+
+}
+
+@media (max-width: 576px){
+    .skills-content{
+        bottom: 2rem;
     }
 }
