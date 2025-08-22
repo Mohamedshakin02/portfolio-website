@@ -10,7 +10,7 @@ function Footer() {
                     <div className='top-container gap-3 gap-lg-5'>
                         <div className='name'>
                             <h3 className='h1'>Designed and Developed by </h3>
-                            <h1 className='display-1 fw-bold'>Mohamed Shakin</h1>
+                            <h1 className='display-1 fw-bold m-0'>Mohamed Shakin</h1>
                         </div>
 
                         <div className='links'>
