@@ -2,10 +2,6 @@ $background-color: rgba(255, 255, 255, 0.51);
 $blur: blur(5px);
 $radius: 40px;
 
-.pt-lg-6 {
-    padding-top: 6rem;
-}
-
 .h-20 {
     height: 20% !important;
 }
@@ -37,6 +33,7 @@ $radius: 40px;
 .projects-content {
     position: relative;
     bottom: 5.5rem;
+    padding-top: 6rem !important;
     z-index: -1;
     background-color: $background-color;
     backdrop-filter: $blur;
@@ -94,13 +91,14 @@ $radius: 40px;
     }
 
     .projects-content {
+        padding-top: 5rem !important;
         bottom: 5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .pt-lg-6 {
-        padding-top: 3rem !important;
+    .projects-content {
+        padding-top: 4rem !important;
     }
 
     .explore {

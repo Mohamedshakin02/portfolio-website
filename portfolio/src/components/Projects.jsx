@@ -55,7 +55,7 @@ function Projects() {
             <div className="projects-container container-md">
                 <h1 className="display-1 fw-semibold text-center mb-5">Projects</h1>
 
-                <div className="projects-content p-4 pt-1 p-lg-5 pt-lg-6" style={{ pointerEvents: "auto" }}>
+                <div className="projects-content p-4 pt-1 p-lg-5" style={{ pointerEvents: "auto" }}>
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={50}
