@@ -3,7 +3,7 @@ $blur: blur(5px);
 $radius: 40px;
 
 .pt-lg-6 {
-    padding-top: 6rem !important;
+    padding-top: 6rem;
 }
 
 .h-20 {
@@ -100,7 +100,7 @@ $radius: 40px;
 
 @media (max-width: 768px) {
     .pt-lg-6 {
-        padding-top: 4rem !important;
+        padding-top: 3rem !important;
     }
 
     .explore {

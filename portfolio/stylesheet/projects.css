@@ -1,5 +1,5 @@
 .pt-lg-6 {
-  padding-top: 6rem !important;
+  padding-top: 6rem;
 }
 
 .h-20 {
@@ -84,7 +84,7 @@
 }
 @media (max-width: 768px) {
   .pt-lg-6 {
-    padding-top: 4rem !important;
+    padding-top: 3rem !important;
   }
   .explore a {
     box-shadow: 4px -4px 0px black, -4px 4px 0px black !important;
