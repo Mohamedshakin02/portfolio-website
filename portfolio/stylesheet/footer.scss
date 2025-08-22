@@ -26,6 +26,8 @@ $background-color: #FEE9C6;
 
             .contact {
                 grid-area: contact;
+                width:fit-content;
+                justify-self: end;
             }
         }
 
@@ -79,6 +81,15 @@ $background-color: #FEE9C6;
                     text-align-last: initial;
                 }
             }
+
+            .contact{
+                width: initial !important;
+                justify-self: initial !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
         }
     }
 }

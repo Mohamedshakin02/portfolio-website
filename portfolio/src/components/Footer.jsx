@@ -32,14 +32,20 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className='contact'>
-                            <h3 className='h1'>Contact</h3>
-                            <div className='link'>
-                                <a href="mailto:m.shakin2005@gmail.com" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>m.shakin<span className='number fs-5'>2005</span>@gmail.com</a>
-                            </div>
-                            <div className='link mt-1'>
-                                <a href="tel:+4733378901" target="_blank" className='number text-decoration-none text-body text-dark fs-5 fw-medium'>+971504385645</a>
-                            </div>
+                        <div className="contact">
+                            <h3 className="h1 mb-2">Contact</h3>
+
+                            <a href="mailto:m.shakin2005@gmail.com"
+                                target="_blank"
+                                className="d-block text-decoration-none text-dark fs-4 fw-medium">
+                                m.shakin<span className="number fs-5">2005</span>@gmail.com
+                            </a>
+
+                            <a href="tel:+971504385645"
+                                target="_blank"
+                                className="number d-block mt-2 text-decoration-none text-dark fs-5 fw-medium">
+                                +971504385645
+                            </a>
                         </div>
 
                     </div>

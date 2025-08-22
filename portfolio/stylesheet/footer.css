@@ -20,6 +20,9 @@
 }
 .footer-container .footer-content .top-container .contact {
   grid-area: contact;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: end;
 }
 .footer-container .footer-content .bottom-container {
   text-align: center;
@@ -59,5 +62,12 @@
   .footer-container .top-container .name h1, .footer-container .top-container .links h1, .footer-container .top-container .contact h1 {
     -moz-text-align-last: initial;
          text-align-last: initial;
+  }
+  .footer-container .top-container .contact {
+    width: initial !important;
+    justify-self: initial !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=footer.css.map */
