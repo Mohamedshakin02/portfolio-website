@@ -75,8 +75,8 @@ $background-color: #FEE9C6;
                 p,
                 a {
                     display: flex;
-                    justify-content: center;
-                    text-align: center;
+                    justify-content: left;
+                    text-align: left;
                 }
 
                 h1 {
@@ -109,15 +109,16 @@ $background-color: #FEE9C6;
                 a {
                     font-size: 1.5rem !important;
                 }
+
+                .number{
+                    font-size: 1.4rem !important;
+                }
             
         }
 
             .contact {
                 width: initial !important;
                 justify-self: initial !important;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
             }
 
         }

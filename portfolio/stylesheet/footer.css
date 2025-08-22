@@ -56,8 +56,8 @@
   .footer-container .top-container .contact p,
   .footer-container .top-container .contact a {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: left;
+    text-align: left;
   }
   .footer-container .top-container .name h1,
   .footer-container .top-container .links h1,
@@ -83,12 +83,12 @@
   .footer-container .top-container .contact a {
     font-size: 1.5rem !important;
   }
+  .footer-container .top-container .contact .number {
+    font-size: 1.4rem !important;
+  }
   .footer-container .top-container .contact {
     width: initial !important;
     justify-self: initial !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .footer-container .bottom-container p {
     font-size: 1.2rem !important;
