@@ -1,0 +1,63 @@
+.pt-lg-6 {
+  padding-top: 6rem !important;
+}
+
+.footer-container {
+  background-color: #FEE9C6;
+  position: relative;
+  top: 12rem;
+}
+.footer-container .footer-content .top-container {
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas: "names link contact";
+}
+.footer-container .footer-content .top-container .name {
+  grid-area: names;
+}
+.footer-container .footer-content .top-container .links {
+  grid-area: link;
+}
+.footer-container .footer-content .top-container .contact {
+  grid-area: contact;
+}
+.footer-container .footer-content .bottom-container {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .footer-container .top-container {
+    grid-template-areas: "names names" "link contact" !important;
+  }
+  .footer-container .top-container .name h1,
+  .footer-container .top-container .name h3 {
+    text-align: center;
+  }
+  .footer-container .top-container .name h1 {
+    -moz-text-align-last: justify;
+         text-align-last: justify;
+  }
+}
+@media (max-width: 576px) {
+  .footer-container .top-container {
+    justify-content: center !important;
+    grid-template-areas: "names" "contact" "link" !important;
+  }
+  .footer-container .top-container .name h1,
+  .footer-container .top-container .name h3,
+  .footer-container .top-container .name p,
+  .footer-container .top-container .name a, .footer-container .top-container .links h1,
+  .footer-container .top-container .links h3,
+  .footer-container .top-container .links p,
+  .footer-container .top-container .links a, .footer-container .top-container .contact h1,
+  .footer-container .top-container .contact h3,
+  .footer-container .top-container .contact p,
+  .footer-container .top-container .contact a {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-container .top-container .name h1, .footer-container .top-container .links h1, .footer-container .top-container .contact h1 {
+    -moz-text-align-last: initial;
+         text-align-last: initial;
+  }
+}/*# sourceMappingURL=footer.css.map */

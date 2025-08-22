@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css';
 import '/stylesheet/projects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -76,7 +77,7 @@ function Projects() {
                                         className="img-fluid mb-3"
                                         style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                                     />
-                                    <div class="top-container">
+                                    <div className="top-container">
                                         <h3 className="fs-4 fw-semibold">{project.title}</h3>
                                         <p className="fs-6 fw-medium">{project.type}</p>
                                     </div>
@@ -132,7 +133,7 @@ function Projects() {
                         ))}
                     </Swiper>
 
-                    <div class="explore d-flex justify-content-center">
+                    <div className="explore d-flex justify-content-center">
                         <Link to="/" className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center mt-4 mb-4 mb-lg-3 py-2 px-3 py-lg-3 px-lg-4 fs-5">EXPLORE MORE</Link>
                     </div>
                 </div>

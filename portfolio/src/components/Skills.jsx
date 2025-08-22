@@ -85,7 +85,7 @@ function Skills() {
                                 <p className='h5 fw-medium'>Designing fun and interactive games that combine creativity with engaging mechanics, suitable for storytelling and entertainment.</p>
                             </div>
                             <div className='tools mt-3 h-25'>
-                                <p className='m-0 fs-5 fw-medium'>Tools: Unity, Twine, Bitsy, p5.js</p>
+                                <p className='m-0 fs-5 fw-medium'>Tools: Unity, Twine, Bitsy, p<span className='number fs-6'>5</span>.js</p>
                             </div>
                         </div>
                     </div>

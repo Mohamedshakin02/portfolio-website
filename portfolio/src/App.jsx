@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Movies from "../pages/Movies";
 import Photos from "../pages/Photos";
 import Arts from "../pages/Arts";
-import Home from "./components/Home";
+import Home from "../pages/Home";
 import Background from "./components/background";
 import Header from "./components/Header";
 import Preloader from "./components/Preloader";

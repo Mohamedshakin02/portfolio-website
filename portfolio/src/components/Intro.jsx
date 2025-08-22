@@ -34,15 +34,15 @@ function Intro() {
                             }}
                             modules={[Autoplay]}
                             breakpoints={{
-                                0: {             // from 0px and up
+                                0: {             
                                     slidesPerView: 1,
                                     spaceBetween: 10,
                                 },
-                                768: {           // from 768px and up
+                                768: {           
                                     slidesPerView: 2,
                                     spaceBetween: 20,
                                 },
-                                1440: {          // from 1440px and up
+                                1440: {          
                                     slidesPerView: 3,
                                     spaceBetween: 30,
                                 },
