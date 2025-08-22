@@ -16,7 +16,7 @@ function Footer() {
                         <div className='links'>
                             <h3 className='h1'>Links</h3>
                             <div className='link'>
-                                <a href="https://github.com/Mohamedshakin02" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>LinkedIn</a>
+                                <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>LinkedIn</a>
                             </div>
 
                             <div className='link'>
@@ -24,11 +24,11 @@ function Footer() {
                             </div>
 
                             <div className='link'>
-                                <a href="https://github.com/Mohamedshakin02" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Itch.io</a>
+                                <a href="https://mohamed-shakin.itch.io/" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Itch.io</a>
                             </div>
 
                             <div className='link'>
-                                <a href="https://github.com/Mohamedshakin02" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Youtube</a>
+                                <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Youtube</a>
                             </div>
                         </div>
 
