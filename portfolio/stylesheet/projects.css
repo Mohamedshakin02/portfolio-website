@@ -70,6 +70,9 @@
   border-radius: 15px;
   box-shadow: 5px -5px 0px black, -5px 5px 0px black;
 }
+.projects-content .explore a:hover {
+  background-color: white;
+}
 
 @media (max-width: 992px) {
   .projects-container {
