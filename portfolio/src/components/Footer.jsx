@@ -7,7 +7,7 @@ function Footer() {
         <>
             <div className='footer-container container-fluid' style={{ pointerEvents: "auto" }}>
                 <div className='footer-content container-md p-4 pt-5 pb-0 p-lg-5 pb-lg-0'>
-                    <div className='top-container gap-3 gap-lg-8'>
+                    <div className='top-container gap-4 gap-lg-5'>
                         <div className='name'>
                             <h3 className='h1'>Designed and Developed by </h3>
                             <h1 className='display-1 fw-bold'>Mohamed Shakin</h1>

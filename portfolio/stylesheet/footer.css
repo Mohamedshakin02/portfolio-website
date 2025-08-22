@@ -30,15 +30,12 @@
 
 @media (max-width: 992px) {
   .footer-container .top-container {
-    grid-template-areas: "names names" "link contact" !important;
+    grid-template-areas: "names link" "names contact" !important;
   }
-  .footer-container .top-container .name h1,
-  .footer-container .top-container .name h3 {
-    text-align: center;
-  }
-  .footer-container .top-container .name h1 {
-    -moz-text-align-last: justify;
-         text-align-last: justify;
+  .footer-container .top-container .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media (max-width: 576px) {
@@ -49,19 +46,42 @@
   .footer-container .top-container .name h1,
   .footer-container .top-container .name h3,
   .footer-container .top-container .name p,
-  .footer-container .top-container .name a, .footer-container .top-container .links h1,
+  .footer-container .top-container .name a,
+  .footer-container .top-container .links h1,
   .footer-container .top-container .links h3,
   .footer-container .top-container .links p,
-  .footer-container .top-container .links a, .footer-container .top-container .contact h1,
+  .footer-container .top-container .links a,
+  .footer-container .top-container .contact h1,
   .footer-container .top-container .contact h3,
   .footer-container .top-container .contact p,
   .footer-container .top-container .contact a {
     display: flex;
     justify-content: center;
+    text-align: center;
   }
-  .footer-container .top-container .name h1, .footer-container .top-container .links h1, .footer-container .top-container .contact h1 {
+  .footer-container .top-container .name h1,
+  .footer-container .top-container .links h1,
+  .footer-container .top-container .contact h1 {
     -moz-text-align-last: initial;
          text-align-last: initial;
+  }
+  .footer-container .top-container .name h3 {
+    font-size: 1.75rem !important;
+  }
+  .footer-container .top-container .name h1 {
+    font-size: 3rem !important;
+  }
+  .footer-container .top-container .links h3 {
+    font-size: 2rem !important;
+  }
+  .footer-container .top-container .links .link a {
+    font-size: 1.5rem !important;
+  }
+  .footer-container .top-container .contact h3 {
+    font-size: 2rem !important;
+  }
+  .footer-container .top-container .contact a {
+    font-size: 1.5rem !important;
   }
   .footer-container .top-container .contact {
     width: initial !important;
@@ -69,5 +89,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .footer-container .bottom-container p {
+    font-size: 1.2rem !important;
+  }
+  .footer-container .bottom-container .number {
+    font-size: 1.2rem !important;
   }
 }/*# sourceMappingURL=footer.css.map */

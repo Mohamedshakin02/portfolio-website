@@ -12,7 +12,7 @@ function Skills() {
             <div className="skills-container container-md">
                 <h1 className="display-1 fw-semibold text-center">Skills</h1>
 
-                <div className="skills-content p-4 pt-5 pb-5 p-lg-5 pt-lg-6 gap-5 gap-lg-8" style={{ pointerEvents: "auto" }}>
+                <div className="skills-content p-4 pt-5 pb-5 p-lg-5 pt-lg-6 gap-5" style={{ pointerEvents: "auto" }}>
                     <div className='skill web p-4 d-flex flex-column justify-content-between'>
                         <div className='top-container d-flex align-items-center h-25'>
                             <div className="image">
