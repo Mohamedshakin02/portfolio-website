@@ -46,7 +46,6 @@
     top: 6rem;
   }
   .footer-container .top-container {
-    justify-content: center !important;
     grid-template-areas: "names" "contact" "link" !important;
   }
   .footer-container .top-container .name h1,
@@ -71,35 +70,13 @@
     -moz-text-align-last: initial;
          text-align-last: initial;
   }
+  .footer-container .top-container .contact {
+    justify-self: start !important;
+  }
   .footer-container .top-container .name h3 {
     font-size: 1.75rem !important;
   }
   .footer-container .top-container .name h1 {
-    font-size: 3rem !important;
-  }
-  .footer-container .top-container .links h3 {
-    font-size: 2rem !important;
-  }
-  .footer-container .top-container .links .link a {
-    font-size: 1.5rem !important;
-  }
-  .footer-container .top-container .contact h3 {
-    font-size: 2rem !important;
-  }
-  .footer-container .top-container .contact a {
-    font-size: 1.5rem !important;
-  }
-  .footer-container .top-container .contact .number {
-    font-size: 1.4rem !important;
-  }
-  .footer-container .top-container .contact {
-    width: initial !important;
-    justify-self: initial !important;
-  }
-  .footer-container .bottom-container p {
-    font-size: 1.2rem !important;
-  }
-  .footer-container .bottom-container .number {
-    font-size: 1.2rem !important;
+    font-size: 2.5rem !important;
   }
 }/*# sourceMappingURL=footer.css.map */
