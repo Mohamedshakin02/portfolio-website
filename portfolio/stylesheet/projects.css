@@ -65,6 +65,11 @@
 .projects-content .project-card p.flex-grow-1 {
   flex-grow: 1;
 }
+.projects-content .explore a {
+  background-color: #FEE9C6;
+  border-radius: 15px;
+  box-shadow: 5px -5px 0px black, -5px 5px 0px black;
+}
 
 @media (max-width: 992px) {
   .projects-container {
@@ -77,6 +82,17 @@
 @media (max-width: 768px) {
   .pt-lg-6 {
     padding-top: 4rem !important;
+  }
+  .explore a {
+    box-shadow: 4px -4px 0px black, -4px 4px 0px black !important;
+  }
+  .swiper-pagination {
+    margin-top: 30px;
+    position: relative;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
   }
 }
 @media (max-width: 576px) {

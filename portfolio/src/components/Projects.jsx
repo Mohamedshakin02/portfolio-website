@@ -12,6 +12,7 @@ import GithubLogo from '../assets/logos/github-logo.png';
 import GameLogo from '../assets/logos/game-logo.png';
 import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 import WebLogo from '../assets/logos/web-logo.png';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function Projects() {
     const [projects] = useState([
@@ -78,7 +79,7 @@ function Projects() {
                                     />
                                     <div class="top-container">
                                         <h3 className="fs-4 fw-semibold">{project.title}</h3>
-                                    <p className="fs-6 fw-medium">{project.type}</p>
+                                        <p className="fs-6 fw-medium">{project.type}</p>
                                     </div>
                                     <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
                                     <div className="d-flex justify-content-between mt-4">
@@ -89,7 +90,7 @@ function Projects() {
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
                                             >
-                                                <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px'}} />
+                                                <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
                                                 Code Link
                                             </a>
                                         )}
@@ -100,7 +101,7 @@ function Projects() {
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
                                             >
-                                                <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px'}} />
+                                                <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                 Live Link
                                             </a>
                                         )}
@@ -111,7 +112,7 @@ function Projects() {
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
                                             >
-                                                <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px'}} />
+                                                <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
                                                 YouTube Link
                                             </a>
                                         )}
@@ -122,7 +123,7 @@ function Projects() {
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
                                             >
-                                                <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px'}} />
+                                                <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
                                                 Game Link
                                             </a>
                                         )}
@@ -131,6 +132,10 @@ function Projects() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+
+                    <div class="explore d-flex justify-content-center">
+                        <Link to="/" className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center mt-4 mb-4 mb-lg-3 py-2 px-3 py-lg-3 px-lg-4 fs-5">EXPLORE MORE</Link>
+                    </div>
                 </div>
             </div>
         </>
