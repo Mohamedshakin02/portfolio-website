@@ -29,6 +29,9 @@
 }
 
 @media (max-width: 992px) {
+  .footer-container {
+    top: 8rem;
+  }
   .footer-container .top-container {
     grid-template-areas: "names link" "names contact" !important;
   }
@@ -39,6 +42,9 @@
   }
 }
 @media (max-width: 576px) {
+  .footer-container {
+    top: 6rem;
+  }
   .footer-container .top-container {
     justify-content: center !important;
     grid-template-areas: "names" "contact" "link" !important;
