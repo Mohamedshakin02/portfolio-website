@@ -78,7 +78,7 @@ function Projects() {
                                         style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                                     />
                                     <div className="top-container">
-                                        <h3 className="fs-4 fw-semibold">{project.title}</h3>
+                                        <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
                                         <p className="fs-6 fw-medium">{project.type}</p>
                                     </div>
                                     <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
