@@ -3,7 +3,7 @@ import '/stylesheet/projects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import ProjectImg1 from '../assets/projects/G-Shock.png';
 import ProjectImg2 from '../assets/projects/Info-Globe.png';
 import ProjectImg3 from '../assets/projects/CML.png';
@@ -60,12 +60,11 @@ function Projects() {
                         spaceBetween={50}
                         loop={true}
                         pagination={{ clickable: true }}
-                        autoplay={{ delay: 2500, disableOnInteraction: false }}
                         breakpoints={{
                             768: { slidesPerView: 2 },
                             1200: { slidesPerView: 3 },
                         }}
-                        modules={[Autoplay, Pagination]}
+                        modules={[Pagination]}
                         className="mySwiper"
                     >
                         {projects.map((project, index) => (
