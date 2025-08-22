@@ -6,7 +6,7 @@ function Footer() {
     return (
         <>
             <div className='footer-container container-fluid' style={{ pointerEvents: "auto" }}>
-                <div className='footer-content container-md p-3 p-md-4 p-lg-5 pt-5 pt-lg-6'>
+                <div className='footer-content container-md p-3 p-md-4 p-lg-5 pt-5 pb-0 pt-lg-6'>
                     <div className='top-container gap-3 gap-lg-5'>
                         <div className='name'>
                             <h3 className='h1'>Designed and Developed by </h3>
