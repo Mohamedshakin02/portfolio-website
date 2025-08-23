@@ -116,26 +116,43 @@ $radius: 40px;
         }
 
         .border {
-            grid-template-columns: 50% 50% !important;
+            grid-template-columns: auto auto !important;
+            grid-template-areas:
+                "levels levels"
+                "year year"
+                "names board";
 
 
             p {
-                font-size: 1.4rem !important;
+                font-size: 2rem !important;
+                text-align: center;
 
             }
 
             .number {
                 font-size: 1.1rem !important;
-                text-align: end;
             }
 
             .responsive-text {
                 font-size: 1rem !important;
             }
 
-            .board,
-            .year {
+            .level{
+                justify-self: center;
+            }
+
+            .board
+             {
                 justify-self: end;
+                width: max-content;
+            }
+
+            .name{
+                width: max-content;
+            }
+
+            .year{
+                justify-self: center;
             }
         }
     }

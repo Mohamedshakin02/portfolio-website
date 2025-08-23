@@ -87,21 +87,33 @@
     bottom: 2rem;
   }
   .education-container .border {
-    grid-template-columns: 50% 50% !important;
+    grid-template-columns: auto auto !important;
+    grid-template-areas: "levels levels" "year year" "names board";
   }
   .education-container .border p {
-    font-size: 1.4rem !important;
+    font-size: 2rem !important;
+    text-align: center;
   }
   .education-container .border .number {
     font-size: 1.1rem !important;
-    text-align: end;
   }
   .education-container .border .responsive-text {
     font-size: 1rem !important;
   }
-  .education-container .border .board,
-  .education-container .border .year {
+  .education-container .border .level {
+    justify-self: center;
+  }
+  .education-container .border .board {
     justify-self: end;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .education-container .border .name {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .education-container .border .year {
+    justify-self: center;
   }
 }
 @media (max-width: 768px) {
