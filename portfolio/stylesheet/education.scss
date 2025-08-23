@@ -51,10 +51,10 @@ $radius: 40px;
         }
 
         p {
-                width: fit-content;
-            }
+            width: fit-content;
+        }
 
-        .number{
+        .number {
             width: fit-content;
         }
     }
@@ -99,8 +99,10 @@ $radius: 40px;
 }
 
 @media (max-width: 768px) {
-    .education-content {
-        padding-top: 4rem !important;
+    .education-container {
+        .education-content {
+            padding-top: 4rem !important;
+        }
     }
 }
 
@@ -129,7 +131,8 @@ $radius: 40px;
                 font-size: 1rem !important;
             }
 
-            .board, .year {
+            .board,
+            .year {
                 justify-self: end;
             }
         }

@@ -76,7 +76,7 @@
   }
 }
 @media (max-width: 768px) {
-  .education-content {
+  .education-container .education-content {
     padding-top: 4rem !important;
   }
 }
@@ -97,7 +97,8 @@
   .education-container .border .responsive-text {
     font-size: 1rem !important;
   }
-  .education-container .border .board, .education-container .border .year {
+  .education-container .border .board,
+  .education-container .border .year {
     justify-self: end;
   }
 }
