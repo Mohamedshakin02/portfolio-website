@@ -18,9 +18,38 @@
   border-color: black !important;
   border-width: 0px 5px 5px 0px !important;
   border-radius: 0px 25px 25px 25px !important;
-}
-.education-content div {
+  display: grid;
+  grid-template-columns: 50% auto;
   justify-content: space-between;
+  grid-template-areas: "levels names" "year board";
+}
+.education-content .border .level {
+  grid-area: levels;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.education-content .border .year {
+  grid-area: year;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.education-content .border .name {
+  grid-area: names;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.education-content .border .board {
+  grid-area: board;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.education-content .border p {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.education-content .border .number {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media (max-width: 992px) {
@@ -28,21 +57,21 @@
     position: relative;
     top: 2rem !important;
   }
-  .education-content {
+  .education-container .education-content {
     padding-top: 5rem !important;
     bottom: 2.5rem;
   }
-  .left-container p {
+  .education-container .border {
+    grid-template-columns: 50% auto;
+    grid-template-areas: "levels year" "names board";
+  }
+  .education-container .border p {
     font-size: 1.8rem !important;
   }
-  .left-container .number {
+  .education-container .border .number {
     font-size: 1.6rem !important;
-    text-align: end;
   }
-  .right-container .board {
-    text-align: end;
-  }
-  .responsive-text {
+  .education-container .border .responsive-text {
     font-size: 1.5rem !important;
   }
 }
@@ -52,16 +81,28 @@
   }
 }
 @media (max-width: 576px) {
-  .education-content {
+  .education-container .education-content {
     bottom: 2rem;
   }
-  .left-container p {
-    font-size: 1.4rem !important;
+  .education-container .border {
+    grid-template-columns: 60% auto !important;
   }
-  .left-container .number {
+  .education-container .border p {
     font-size: 1.2rem !important;
   }
-  .responsive-text {
+  .education-container .border .number {
     font-size: 1.1rem !important;
+    text-align: end;
+  }
+  .education-container .border .responsive-text {
+    font-size: 0.8rem !important;
+  }
+  .education-container .border .board {
+    justify-self: end;
+  }
+}
+@media (max-width: 768px) {
+  .education-content {
+    padding-top: 4rem !important;
   }
 }/*# sourceMappingURL=education.css.map */

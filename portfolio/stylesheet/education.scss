@@ -22,44 +22,79 @@ $radius: 40px;
         border-color: black !important;
         border-width: 0px 5px 5px 0px !important;
         border-radius: 0px 25px 25px 25px !important;
-    }
 
-    div{
+        display: grid;
+        grid-template-columns: 50% auto;
         justify-content: space-between;
+        grid-template-areas:
+            "levels names"
+            "year board";
 
+        .level {
+            grid-area: levels;
+            width: fit-content;
+        }
+
+        .year {
+            grid-area: year;
+            width: fit-content;
+        }
+
+        .name {
+            grid-area: names;
+            width: fit-content;
+        }
+
+        .board {
+            grid-area: board;
+            width: fit-content;
+        }
+
+        p {
+                width: fit-content;
+            }
+
+        .number{
+            width: fit-content;
+        }
     }
+
+
+
+    // div{
+    //     justify-content: space-between;
+
+    // }
 }
 
 @media (max-width: 992px) {
-    .education-container{
+    .education-container {
         position: relative;
         top: 2rem !important;
-    }
 
-    .education-content{
-        padding-top: 5rem !important;
-        bottom: 2.5rem;
-    }
-
-    .left-container {
-        p{
-            font-size: 1.8rem !important;
+        .education-content {
+            padding-top: 5rem !important;
+            bottom: 2.5rem;
         }
-        
-        .number{
-            font-size: 1.6rem !important;
-            text-align: end;
-        }
-    }
 
-    .right-container{
-        .board{
-            text-align: end;
-        }
-    }
+        .border {
+            grid-template-columns: 50% auto;
+            grid-template-areas:
+                "levels year"
+                "names board";
 
-    .responsive-text {
-        font-size: 1.5rem !important;
+            p {
+                font-size: 1.8rem !important;
+            }
+
+            .number {
+                font-size: 1.6rem !important;
+            }
+
+            .responsive-text {
+                font-size: 1.5rem !important;
+            }
+        }
     }
 }
 
@@ -67,32 +102,104 @@ $radius: 40px;
     .education-content {
         padding-top: 4rem !important;
     }
-
-    
 }
 
-@media (max-width: 576px){
-    .education-content{
-        bottom: 2rem;
-    }
+@media (max-width: 576px) {
 
-    .left-container {
-        p{
-            font-size: 1.4rem !important;
+    .education-container {
+        .education-content {
+            bottom: 2rem;
         }
-        
-        .number{
-            font-size: 1.2rem !important;
+
+        .border {
+            grid-template-columns: 60% auto !important;
+
+
+            p {
+                font-size: 1.2rem !important;
+
+            }
+
+            .number {
+                font-size: 1.1rem !important;
+                text-align: end;
+            }
+
+            .responsive-text {
+                font-size: 0.8rem !important;
+            }
+
+            .board {
+                justify-self: end;
+            }
         }
     }
-
-    .right-container{
-        .board{
-        }
-    }
-
-    .responsive-text {
-        font-size: 1.1rem !important;
-    }
-
 }
+
+// @media (max-width: 576px){
+//     .education-content{
+//         bottom: 2rem;
+//     }
+
+//     .left-container {
+//         p{
+//             font-size: 1.4rem !important;
+//         }
+
+//         .number{
+//             font-size: 1.2rem !important;
+//         }
+//     }
+
+//     .right-container{
+//         .board{
+//         }
+//     }
+
+//     .responsive-text {
+//         font-size: 1.1rem !important;
+//     }
+
+// }
+
+// @media (max-width: 992px) {
+//     .education-container{
+//         position: relative;
+//         top: 2rem !important;
+//     }
+
+//     .education-content{
+//         padding-top: 5rem !important;
+//         bottom: 2.5rem;
+//     }
+
+//     .left-container {
+//         p{
+//             font-size: 1.8rem !important;
+//         }
+
+//         .number{
+//             font-size: 1.6rem !important;
+//             text-align: end;
+//         }
+//     }
+
+//     .right-container{
+//         .board{
+//             text-align: end;
+//         }
+//     }
+
+//     .responsive-text {
+//         font-size: 1.5rem !important;
+//     }
+// }
+
+@media (max-width: 768px) {
+    .education-content {
+        padding-top: 4rem !important;
+    }
+}
+
+
+// }
