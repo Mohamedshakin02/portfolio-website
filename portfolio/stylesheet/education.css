@@ -85,7 +85,7 @@
     bottom: 2rem;
   }
   .education-container .border {
-    grid-template-columns: 60% auto !important;
+    grid-template-columns: 50% 50% !important;
   }
   .education-container .border p {
     font-size: 1.4rem !important;
@@ -97,7 +97,7 @@
   .education-container .border .responsive-text {
     font-size: 1rem !important;
   }
-  .education-container .border .board {
+  .education-container .border .board, .education-container .border .year {
     justify-self: end;
   }
 }

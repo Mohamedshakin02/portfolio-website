@@ -112,7 +112,7 @@ $radius: 40px;
         }
 
         .border {
-            grid-template-columns: 60% auto !important;
+            grid-template-columns: 50% 50% !important;
 
 
             p {
@@ -129,7 +129,7 @@ $radius: 40px;
                 font-size: 1rem !important;
             }
 
-            .board {
+            .board, .year {
                 justify-self: end;
             }
         }
