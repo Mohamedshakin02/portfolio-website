@@ -8,6 +8,7 @@ import Background from "./components/background";
 import Header from "./components/Header";
 import Preloader from "./components/Preloader";
 import AboutPage from "../pages/AboutPage";
+import NotFound from "../pages/NotFound";
 
 // Layout with Background + Header
 function Layout({ children }) {
@@ -116,6 +117,7 @@ function AppContent() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/arts" element={<Arts />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </Layout>
   );
