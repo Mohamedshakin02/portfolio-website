@@ -9,12 +9,14 @@ import Header from "./components/Header";
 import Preloader from "./components/Preloader";
 import AboutPage from "../pages/AboutPage";
 
+// Layout with Background + Header
 function Layout({ children }) {
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/about";
 
   return (
     <div style={{ position: "relative" }}>
+      {/* Background */}
       <div
         style={{
           position: "absolute",
@@ -24,8 +26,9 @@ function Layout({ children }) {
         <Background />
       </div>
 
+      {/* Foreground content */}
       <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
-        {isHome &&  (
+        {isHome && (
           <div style={{ pointerEvents: "auto" }}>
             <Header />
           </div>
@@ -34,7 +37,7 @@ function Layout({ children }) {
         <main
           className="container-fluid p-0"
           style={{
-            pointerEvents: "none",
+            pointerEvents: "auto",
             paddingTop: "6rem"
           }}
         >
@@ -45,10 +48,14 @@ function Layout({ children }) {
   );
 }
 
-export default function App() {
+// Hook to show Preloader on route changes
+function usePageLoader() {
+  const location = useLocation();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
+
     const images = Array.from(document.images);
     let loadedCount = 0;
 
@@ -73,7 +80,7 @@ export default function App() {
       }
     });
 
-    // Fallback in case some images never load (Safari fix)
+    // Fallback in case images hang
     const timer = setTimeout(() => setLoading(false), 2000);
 
     return () => {
@@ -83,23 +90,33 @@ export default function App() {
       });
       clearTimeout(timer);
     };
-  }, []);
+  }, [location.pathname]); // run again on every route change
 
+  return loading;
+}
+
+export default function App() {
   return (
     <Router>
-      {loading ? (
-        <Preloader />
-      ) : (
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/movies" element={<Movies />} />
-            <Route path="/photos" element={<Photos />} />
-            <Route path="/arts" element={<Arts />} />
-          </Routes>
-        </Layout>
-      )}
+      <AppContent />
     </Router>
+  );
+}
+
+function AppContent() {
+  const loading = usePageLoader();
+
+  return loading ? (
+    <Preloader />
+  ) : (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/photos" element={<Photos />} />
+        <Route path="/arts" element={<Arts />} />
+      </Routes>
+    </Layout>
   );
 }
