@@ -1,0 +1,98 @@
+$background-color: rgba(255, 255, 255, 0.51);
+$blur: blur(5px);
+$radius: 40px;
+
+
+.education-container {
+    padding: 0px 12px;
+}
+
+.education-content {
+    padding-top: 6rem !important;
+    position: relative;
+    bottom: 3.5rem;
+    z-index: -1;
+    background-color: $background-color;
+    backdrop-filter: $blur;
+    border-radius: $radius;
+    box-sizing: border-box;
+
+    .border {
+        border-style: solid !important;
+        border-color: black !important;
+        border-width: 0px 5px 5px 0px !important;
+        border-radius: 0px 25px 25px 25px !important;
+    }
+
+    div{
+        justify-content: end;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .education-container{
+        position: relative;
+        top: 2rem !important;
+    }
+
+    .education-content{
+        padding-top: 5rem !important;
+        bottom: 2.5rem;
+    }
+
+    .left-container {
+        p{
+            font-size: 1.8rem !important;
+        }
+        
+        .number{
+            font-size: 1.6rem !important;
+            text-align: end;
+        }
+    }
+
+    .right-container{
+        .board{
+            text-align: end;
+        }
+    }
+
+    .responsive-text {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-content {
+        padding-top: 4rem !important;
+    }
+
+    
+}
+
+@media (max-width: 576px){
+    .education-content{
+        bottom: 2rem;
+    }
+
+    .left-container {
+        p{
+            font-size: 1.4rem !important;
+        }
+        
+        .number{
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .right-container{
+        .board{
+        }
+    }
+
+    .responsive-text {
+        font-size: 1.1rem !important;
+    }
+
+}
