@@ -13,7 +13,7 @@ function Education() {
                                 <p className='fs-2 fw-medium m-1'>School Education</p>
                             </div>
                             <div className='year'>
-                                <p className='number fs-5 fw-medium m-md-1 pt-0 pt-md-2 pt-lg-0'>2009-2021</p>
+                                <p className='number fs-5 fw-medium m-md-1 py-0 py-md-2 py-lg-0'>2009-2021</p>
                             </div>
 
                             <div className="name ">
@@ -31,7 +31,7 @@ function Education() {
                                 <p className='fs-2 fw-medium m-1'>High School, Science</p>
                             </div>
                             <div className='year '>
-                                <p className='number fs-5 fw-medium m-md-1 pt-0 pt-md-2 pt-lg-0'>2021-2023 </p>
+                                <p className='number fs-5 fw-medium m-md-1 py-0 py-md-2 pt-lg-0'>2021-2023 </p>
                             </div>
 
 
@@ -51,7 +51,7 @@ function Education() {
                                 <p className='fs-2 fw-medium m-1'>BSc (Hons) Creative Computing</p>
                             </div>
                             <div className='year '>
-                                <p className='number fs-5 fw-medium m-md-1 pt-0 pt-md-2 pt-lg-0'>2023-present </p>
+                                <p className='number fs-5 fw-medium m-md-1 py-0 py-md-2 pt-lg-0'>2023-present </p>
                             </div>
 
 
