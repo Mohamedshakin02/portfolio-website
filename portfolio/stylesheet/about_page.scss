@@ -1,4 +1,26 @@
-.about-page-wrapper {
+.about-section {
     position: relative;
     top: 1rem;
+}
+
+.skills-section {
+    position: relative;
+    bottom: 11rem;
+}
+
+.footer-section {
+    position: relative;
+    bottom: 9rem;
+}
+
+@media (max-width: 992px) {
+
+    .skills-section {
+        bottom: 3rem;
+    }
+
+    .footer-section{
+        bottom: 2.5rem;
+    }
+
 }
