@@ -1,20 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../App.css';
 import "/stylesheet/header.css"; 
 
 function Header() {
-  const [currentPage, setCurrentPage] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
+  const location = useLocation();
 
   const menuItems = [
-    { name: "Home", link: "#h" },
-    { name: "About", link: "#" },
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
     { name: "Projects", link: "#j" },
     { name: "Certificates", link: "#" },
     { name: "Contact", link: "#" },
   ];
+
+  const currentPage =
+    menuItems.find((item) => item.link === location.pathname)?.name || "";
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -72,14 +76,13 @@ function Header() {
                   key={item.name}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <a
+                  <Link
                     className={`nav-link ${currentPage === item.name ? 'active' : ''}`}
-                    aria-current="page"
-                    href={item.link}
+                    to={item.link}
                     onClick={() => handleMenuItemClick(item.name)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

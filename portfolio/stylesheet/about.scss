@@ -2,10 +2,13 @@ $background-color: rgba(255, 255, 255, 0.51);
 $blur: blur(5px);
 $radius: 40px;
 
+.about-homepage-wrapper{
+    position: relative;
+    top: 12rem !important;
+}
+
 .about-container {
     padding: 0px 12px;
-    position: relative;
-    top: 12rem;
 }
 
 
@@ -51,8 +54,8 @@ $radius: 40px;
 }
 
 @media (max-width: 992px) {
-    .about-container{
-        top: 4rem;
+    .about-homepage-wrapper{
+        top: 4rem !important;
     }
 
     .about-content {

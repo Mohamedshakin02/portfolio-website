@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import '/stylesheet/about.css';   // corrected path
+import '/stylesheet/about.css';   
 
 function About() {
     return (

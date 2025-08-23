@@ -7,10 +7,11 @@ import Home from "../pages/Home";
 import Background from "./components/background";
 import Header from "./components/Header";
 import Preloader from "./components/Preloader";
+import AboutPage from "../pages/AboutPage";
 
 function Layout({ children }) {
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  const isHome = location.pathname === "/" || location.pathname === "/about";
 
   return (
     <div style={{ position: "relative" }}>
@@ -24,7 +25,7 @@ function Layout({ children }) {
       </div>
 
       <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
-        {isHome && (
+        {isHome &&  (
           <div style={{ pointerEvents: "auto" }}>
             <Header />
           </div>
@@ -92,6 +93,7 @@ export default function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/photos" element={<Photos />} />
             <Route path="/arts" element={<Arts />} />
