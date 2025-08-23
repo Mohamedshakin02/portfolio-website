@@ -88,14 +88,14 @@
     grid-template-columns: 60% auto !important;
   }
   .education-container .border p {
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
   }
   .education-container .border .number {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
     text-align: end;
   }
   .education-container .border .responsive-text {
-    font-size: 0.8rem !important;
+    font-size: 1.1rem !important;
   }
   .education-container .border .board {
     justify-self: end;
