@@ -116,7 +116,7 @@ $radius: 40px;
         }
 
         .border {
-            grid-template-columns: auto auto !important;
+            grid-auto-columns: minmax(100px, 1fr);
             grid-template-areas:
                 "levels levels"
                 "year year"

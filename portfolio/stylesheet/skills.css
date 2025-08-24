@@ -61,7 +61,7 @@
   .skills-content {
     padding-top: 4rem !important;
     bottom: 2.5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(100px, 1fr);
     grid-template-areas: "web" "software" "game" "design";
   }
 }

@@ -87,7 +87,7 @@
     bottom: 2rem;
   }
   .education-container .border {
-    grid-template-columns: auto auto !important;
+    grid-auto-columns: minmax(100px, 1fr);
     grid-template-areas: "levels levels" "year year" "names board";
   }
   .education-container .border p {
