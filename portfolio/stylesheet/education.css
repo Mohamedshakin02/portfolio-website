@@ -67,9 +67,6 @@
     grid-template-columns: 50% auto;
     grid-template-areas: "levels year" "names board";
   }
-  .education-container .border p {
-    font-size: 1.8rem !important;
-  }
   .education-container .border .number {
     font-size: 1.4rem !important;
   }
