@@ -68,10 +68,13 @@
     grid-template-areas: "levels year" "names board";
   }
   .education-container .border .number {
-    font-size: 1.4rem !important;
+    font-size: 1.2rem !important;
   }
   .education-container .border .responsive-text {
     font-size: 1.2rem !important;
+  }
+  .education-container .border .board {
+    justify-self: end;
   }
 }
 @media (max-width: 768px) {
