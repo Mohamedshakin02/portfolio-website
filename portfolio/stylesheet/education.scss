@@ -86,11 +86,15 @@ $radius: 40px;
                 "names board";
                 
             .number {
-                font-size: 1.4rem !important;
+                font-size: 1.3rem !important;
             }
 
             .responsive-text {
                 font-size: 1.2rem !important;
+            }
+
+            .board{
+                justify-self: end;
             }
         }
     }
