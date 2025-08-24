@@ -8,7 +8,7 @@ function Education() {
             <div className="education-container container-md">
                 <h1 className="display-1 fw-semibold text-center">Education</h1>
                 <div className="education-content p-4 p-lg-5 d-flex flex-column gap-5" style={{ pointerEvents: "auto" }}>
-                    <div className="school border  mb-2 p-3 p-md-4">
+                    <div className="school border mb-0 mb-md-2 p-3 p-md-4">
                             <div className='level'>
                                 <p className='fs-2 fw-medium m-1'>School Education</p>
                             </div>
@@ -26,7 +26,7 @@ function Education() {
 
                     </div>
 
-                    <div className="high-school border mb-2 p-3 p-md-4">
+                    <div className="high-school border mb-0 mb-md-2 p-3 p-md-4">
                             <div className='level '>
                                 <p className='fs-2 fw-medium m-1'>High School, Science</p>
                             </div>
@@ -46,7 +46,7 @@ function Education() {
 
                     </div>
 
-                    <div className="bachelor border mb-3 p-3 p-md-4">
+                    <div className="bachelor border mb-0 mb-md-2 p-3 p-md-4">
                             <div className='level '>
                                 <p className='fs-2 fw-medium m-1'>BSc (Hons) Creative Computing</p>
                             </div>

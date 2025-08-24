@@ -91,7 +91,6 @@
     grid-template-areas: "levels levels" "year year" "names board";
   }
   .education-container .border p {
-    font-size: 2rem !important;
     text-align: center;
   }
   .education-container .border .number {
