@@ -46,7 +46,7 @@ function Education() {
 
                     </div>
 
-                    <div className="bachelor border mb-0 mb-md-2 p-3 p-md-4">
+                    <div className="bachelor border mb-3 mb-lg-2 p-3 p-md-4">
                             <div className='level '>
                                 <p className='fs-2 fw-medium m-1'>BSc (Hons) Creative Computing</p>
                             </div>
