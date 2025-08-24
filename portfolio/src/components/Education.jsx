@@ -56,7 +56,7 @@ function Education() {
 
 
                             <div className="name ">
-                                <p className='responsive-text fs-2 fw-medium m-1'>Bath Spa Univeristy, RAK</p>
+                                <p className='responsive-text fs-2 fw-medium m-1'>Bath Spa University, RAK</p>
                             </div>
 
                             <div className="board ">
