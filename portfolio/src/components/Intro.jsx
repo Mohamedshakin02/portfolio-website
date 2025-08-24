@@ -87,7 +87,7 @@ function Intro() {
                             <h1 className='display-1 fw-bold'>Mohamed Shakin</h1>
                         </div>
 
-                        <div className='links d-flex flex-wrap justify-content-center align-items-center gap-3'>
+                        <div className='links d-flex flex-wrap align-items-center gap-3'>
                             <div className='link'>
                                 <a href="https://github.com/Mohamedshakin02" target="_blank"><img src={GithubLogo} alt="githib.com" className='img-fluid p-2' /></a>
                             </div>
