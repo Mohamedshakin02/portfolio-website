@@ -9,11 +9,12 @@ import Header from "./components/Header";
 import Preloader from "./components/Preloader";
 import AboutPage from "../pages/AboutPage";
 import NotFound from "../pages/NotFound";
+import ProjectsPage from "../pages/ProjectsPage";
 
 // Layout with Background + Header
 function Layout({ children }) {
   const location = useLocation();
-  const isHome = location.pathname === "/" || location.pathname === "/about";
+  const isHome = location.pathname === "/" || location.pathname === "/about" || location.pathname === "/projects";
 
   return (
     <div style={{ position: "relative" }}>
@@ -114,6 +115,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage/>} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/arts" element={<Arts />} />
