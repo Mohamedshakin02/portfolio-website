@@ -134,7 +134,7 @@ function Projects() {
                     </Swiper>
 
                     <div className="explore d-flex justify-content-center">
-                        <Link to="/" className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center mt-4 mb-4 mb-lg-3 py-2 px-3 py-lg-3 px-lg-4 fs-5">EXPLORE MORE</Link>
+                        <Link to="/projects" className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center mt-4 mb-4 mb-lg-3 py-2 px-3 py-lg-3 px-lg-4 fs-5">EXPLORE MORE</Link>
                     </div>
                 </div>
             </div>
