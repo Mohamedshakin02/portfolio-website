@@ -24,13 +24,13 @@ $radius: 40px;
     border: 3px solid #000;
 }
 
-.web-projects-container {
+.all-projects-container {
     padding: 0px 12px;
     position: relative;
     top: 1rem;
 }
 
-.web-projects-content {
+.all-projects-content {
     position: relative;
     bottom: 5.5rem;
     padding-top: 5rem !important;
@@ -50,7 +50,7 @@ $radius: 40px;
         height: auto;
     }
 
-    .web-project-card {
+    .all-project-card {
         border-style: solid;
         border-color: black;
         border-width: 0px 5px 5px 0px;
@@ -67,7 +67,7 @@ $radius: 40px;
 
     }
 
-    .web-project-card p.flex-grow-1 {
+    .all-project-card p.flex-grow-1 {
         flex-grow: 1;
     }
 
@@ -87,14 +87,14 @@ $radius: 40px;
 
 @media (max-width: 992px) {
 
-    .web-projects-content {
+    .all-projects-content {
         padding-top: 5rem !important;
         bottom: 5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .web-projects-content {
+    .all-projects-content {
         padding-top: 3rem !important;
     }
 
@@ -117,7 +117,7 @@ $radius: 40px;
 }
 
 @media (max-width: 576px) {
-    .web-projects-content {
+    .all-projects-content {
         bottom: 4.5rem;
     }
 }

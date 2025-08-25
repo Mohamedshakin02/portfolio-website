@@ -1,62 +1,54 @@
-import React,  { useState } from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import '/stylesheet/all_projects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg1 from '../assets/projects/G-Shock.png';
-import ProjectImg2 from '../assets/projects/CML.png';
-import ProjectImg3 from '../assets/projects/Zoo-Website.png';
-import ProjectImg4 from '../assets/projects/Choco.png';
-import ProjectImg5 from '../assets/projects/Soundboard.png';
-import ProjectImg6 from '../assets/projects/Petrol.png';
+import ProjectImg1 from '../assets/projects/Info-Globe.png';
+import ProjectImg2 from '../assets/projects/Student-Manager.png';
+import ProjectImg3 from '../assets/projects/Alexa-Jokes.png';
+import ProjectImg4 from '../assets/projects/Maths-Quiz.png';
+import ProjectImg5 from '../assets/projects/Vending-Machine.png';
 import GithubLogo from '../assets/logos/github-logo.png';
-import WebLogo from '../assets/logos/web-logo.png';
+import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 
-function WebProjects() {
+function SoftwareProjects() {
     const [projects] = useState([
         {
-            title: 'G-Shock Responsive Website',
-            description: 'Developed a responsive G-Shock website using React.js, integrated with a Node.js/MongoDB backend for user login, featuring watch details and fully responsive design across desktop, tablet, and mobile devices.',
+            title: 'Info Globe GUI',
+            description: "Developed Info Globe, a Python Tkinter GUI app that fetches country data from the RestCountries API, featuring search, random country display, and region/language filters.",
             image: ProjectImg1,
-            github: 'https://github.com/Mohamedshakin02/G-SHOCK-Watch.git',
-            link: 'https://g-shock.vercel.app/',
+            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/Data%20Driven%20Application',
+            youtube: 'https://youtu.be/HDZiiggFHlM?si=NS_cXg5EcYnzWaLF',
         },
         {
-            title: 'CML Company Website',
-            description: 'Developed a responsive website for CML Company as part of a university assessment, highlighting musical events, consulting, and products. My role included responsive development, UI design, and contributing ideas.',
+            title: 'Student Management GUI',
+            description: 'Developed a Python program to manage student records from a text file, featuring a menu to view all or individual records, calculate percentages, and extended options to sort, add, delete, and update records.',
             image: ProjectImg2,
-            github: 'https://github.com/Zeko54/CML.git',
-            link: 'https://cml-henna.vercel.app/',
+            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/GUI%20Development/Student%20Manager',
+            youtube: 'https://youtu.be/deLR6_emePM?si=8L_g7kjnHRp7aTbX',
         },
         {
-            title: 'The Zoo Wildlife Park Website',
-            description: 'Recreated the non-responsive Zoo Wildlife Park website using HTML, CSS, and JavaScript, designed some sections to improve visual layout and user engagement, while preserving the original content and core functionality.',
+            title: "Alexa's Jokes GUI",
+            description: 'Developed a Python program to display random jokes from a text file, featuring a display of joke question and a button to reveal the answer.',
             image: ProjectImg3,
-            github: 'https://github.com/Mohamedshakin1/The-Zoo-Wildlife-Park',
-            link: 'https://mohamedshakin1.github.io/The-Zoo-Wildlife-Park/',
+            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/GUI%20Development/Alexa%20tell%20me%20a%20Joke',
+            youtube: 'https://youtu.be/X_-Lwo5W4dY?si=O9o2z0hj1n6Bhybn',
         },
         {
-            title: 'Chocolate Company Website',
-            description: 'Developed a responsive chocolate company website featuring a custom chocolate box builder, company overview, product promotions, and user signup, optimized for desktop and mobile.',
+            title: 'Maths Quiz GUI',
+            description: 'Developed an Arithmetic Quiz program in Python with selectable difficulty levels, displaying arithmetic questions, and updating scores based on correct attempts.',
             image: ProjectImg4,
-            github: 'https://github.com/Mohamedshakin02/Chocolate-Company-Website',
-            link: 'https://chocolate-company-website.vercel.app/',
+            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/GUI%20Development/Maths%20Quiz',
+            youtube: 'https://youtu.be/oXyzUx9Pzv0?si=CSJh8oQsFdHGZ6aO',
         },
         {
-            title: 'Interactive Soundboard',
-            description: 'Developed an interactive audio soundboard web application using HTML, CSS, and JavaScript, featuring a grid of audio samples with clickable playback and a text-to-speech feature.',
+            title: 'Vending Machine Program',
+            description: 'Developed a Python vending machine program featuring a menu, item selection by code, automatic stock and balance updates, and suggestions for additional purchases.',
             image: ProjectImg5,
-            github: 'https://github.com/Mohamedshakin02/Javascript-Projects/tree/main/Soundboard',
-            link: 'https://soundboard-activity.vercel.app/',
-        },
-        {
-            title: 'Petrol Calculator',
-            description: 'Developed a simple petrol calculator web application using HTML, CSS, and JavaScript, featuring inputs for petrol cost per liter and liters purchased, with a calculation button to display the total cost.',
-            image: ProjectImg6,
-            github: 'https://github.com/Mohamedshakin02/Javascript-Projects/tree/main/Petrol%20Calculator',
-            link: 'https://petrol-calculator-activity.vercel.app/',
+            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/Vending%20Machine',
+            youtube: 'https://youtu.be/Y28euhQEwGA?si=OexagkFXixdsNG5N',
         }
 
     ]);
@@ -64,7 +56,7 @@ function WebProjects() {
     return (
         <>
             <div className="all-projects-container container-md">
-                <h1 className="display-3 fw-semibold text-center mb-5">Web Development</h1>
+                <h1 className="display-3 fw-semibold text-center mb-5">Software Development</h1>
 
                 <div className="all-projects-content p-4 p-lg-5" style={{ pointerEvents: "auto" }}>
                     <Swiper
@@ -104,15 +96,15 @@ function WebProjects() {
                                                 Code Link
                                             </a>
                                         )}
-                                        {project.link && (
+                                        {project.youtube && (
                                             <a
-                                                href={project.link}
+                                                href={project.youtube}
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
                                             >
-                                                <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
-                                                Live Link
+                                                <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                YouTube Link
                                             </a>
                                         )}
                                     </div>
@@ -126,4 +118,5 @@ function WebProjects() {
     );
 }
 
-export default WebProjects
+
+export default SoftwareProjects

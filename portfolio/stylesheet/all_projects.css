@@ -20,13 +20,13 @@
   border: 3px solid #000;
 }
 
-.web-projects-container {
+.all-projects-container {
   padding: 0px 12px;
   position: relative;
   top: 1rem;
 }
 
-.web-projects-content {
+.all-projects-content {
   position: relative;
   bottom: 5.5rem;
   padding-top: 5rem !important;
@@ -37,15 +37,15 @@
   border-radius: 40px;
   box-sizing: border-box;
 }
-.web-projects-content .swiper-wrapper {
+.all-projects-content .swiper-wrapper {
   display: flex;
   align-items: stretch;
 }
-.web-projects-content .swiper-slide {
+.all-projects-content .swiper-slide {
   display: flex;
   height: auto;
 }
-.web-projects-content .web-project-card {
+.all-projects-content .all-project-card {
   border-style: solid;
   border-color: black;
   border-width: 0px 5px 5px 0px;
@@ -53,32 +53,32 @@
   align-items: stretch;
   flex: 1;
 }
-.web-projects-content .web-project-card .top-container {
+.all-projects-content .all-project-card .top-container {
   min-height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-.web-projects-content .web-project-card p.flex-grow-1 {
+.all-projects-content .all-project-card p.flex-grow-1 {
   flex-grow: 1;
 }
-.web-projects-content .explore a {
+.all-projects-content .explore a {
   background-color: #FEE9C6;
   border-radius: 15px;
   box-shadow: 5px -5px 0px black, -5px 5px 0px black;
 }
-.web-projects-content .explore a:hover {
+.all-projects-content .explore a:hover {
   background-color: white;
 }
 
 @media (max-width: 992px) {
-  .web-projects-content {
+  .all-projects-content {
     padding-top: 5rem !important;
     bottom: 5rem;
   }
 }
 @media (max-width: 768px) {
-  .web-projects-content {
+  .all-projects-content {
     padding-top: 3rem !important;
   }
   .explore a {
@@ -94,7 +94,7 @@
   }
 }
 @media (max-width: 576px) {
-  .web-projects-content {
+  .all-projects-content {
     bottom: 4.5rem;
   }
-}/*# sourceMappingURL=web_projects.css.map */
+}/*# sourceMappingURL=all_projects.css.map */
