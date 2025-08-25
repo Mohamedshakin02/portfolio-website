@@ -102,6 +102,9 @@
   .education-container .border .level {
     justify-self: center;
   }
+  .education-container .border .level p {
+    font-weight: 600 !important;
+  }
   .education-container .border .board {
     justify-self: end;
     width: -moz-max-content;
@@ -113,10 +116,5 @@
   }
   .education-container .border .year {
     justify-self: center;
-  }
-}
-@media (max-width: 768px) {
-  .education-content {
-    padding-top: 4rem !important;
   }
 }/*# sourceMappingURL=education.css.map */
