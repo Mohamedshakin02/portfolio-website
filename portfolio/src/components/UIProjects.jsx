@@ -15,7 +15,7 @@ import CanvaLogo from '../assets/logos/canva-logo.png';
 function UIProjects() {
   const [projects] = useState([
           {
-              title: 'Tick Events App Prototype',
+              title: 'Tick Events Application Prototype',
               description: "Developed Tick Events, a Figma prototype app that displays upcoming events, allowing users to filter by location, category, and date, providing an easy-to-use and informative experience.",
               image: ProjectImg1,
               figma: 'https://www.figma.com/proto/8ei59o3Siq5zbrHLCuS2r7/HiFi-Interactive-Prototype?node-id=103-2&t=FAqJabHuBirGSvqx-1&scaling=contain&page-id=0%3A1&starting-point-node-id=103%3A2',
