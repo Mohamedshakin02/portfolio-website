@@ -39,14 +39,9 @@ function Header() {
 
   const handleMenuToggle = () => setMenuOpen(prev => !prev);
 
-  const handleMenuItemClick = (name) => {
-    setCurrentPage(name);
-    setMenuOpen(false);
-  };
-
   return (
     <header className="sticky-top container-md my-4" style={{ zIndex: 10 }}>
-      <nav className="navbar navbar-expand-md bg-body-tertiary rounded-pill w-100  px-3 container-lg position-relative z-3">
+      <nav className="navbar navbar-expand-md bg-body-tertiary rounded-pill w-100 px-3 container-lg position-relative z-3">
         <div className="container-fluid d-flex align-items-center">
           {/* Small screen title */}
           <span className="navbar-brand d-md-none fw-bold position-absolute top-50 start-50 translate-middle z-index-3">
@@ -79,7 +74,7 @@ function Header() {
                   <Link
                     className={`nav-link ${currentPage === item.name ? 'active' : ''}`}
                     to={item.link}
-                    onClick={() => handleMenuItemClick(item.name)}
+                    onClick={() => setMenuOpen(false)} // just close menu on click
                   >
                     {item.name}
                   </Link>

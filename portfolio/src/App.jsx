@@ -14,7 +14,7 @@ import ProjectsPage from "../pages/ProjectsPage";
 // Layout with Background + Header
 function Layout({ children }) {
   const location = useLocation();
-  const isHome = location.pathname === "/" || location.pathname === "/about" || location.pathname === "/projects";
+  const isHome = ["/", "/about", "/projects"].includes(location.pathname);
 
   return (
     <div style={{ position: "relative" }}>
@@ -82,7 +82,6 @@ function usePageLoader() {
       }
     });
 
-    // Fallback in case images hang
     const timer = setTimeout(() => setLoading(false), 2000);
 
     return () => {
@@ -92,7 +91,7 @@ function usePageLoader() {
       });
       clearTimeout(timer);
     };
-  }, [location.pathname]); // run again on every route change
+  }, [location.pathname]);
 
   return loading;
 }
@@ -115,11 +114,11 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage/>} />
+        <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/arts" element={<Arts />} />
-        <Route path="*" element={<NotFound/>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );

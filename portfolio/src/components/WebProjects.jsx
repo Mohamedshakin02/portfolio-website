@@ -63,6 +63,13 @@ function WebProjects() {
 
     return (
         <>
+        <style>
+{`
+  .all-project-card a {
+    pointer-events: auto;
+  }
+`}
+</style>
             <div className="all-projects-container container-md">
                 <h1 className="display-3 fw-semibold text-center mb-5">Web Development</h1>
 
@@ -110,6 +117,7 @@ function WebProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                style={{ pointerEvents: "auto" }}
                                             >
                                                 <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                 Live Link
