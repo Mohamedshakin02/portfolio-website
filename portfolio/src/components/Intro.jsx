@@ -20,7 +20,7 @@ function Intro() {
             <div className="intro-section">
                 <div className="top-layer position-absolute container-fluid p-0 " style={{ pointerEvents: "none" }}>
                     <div className='image d-flex justify-content-center align-items-center position-relative end-3 z-3' style={{ pointerEvents: "none" }}>
-                        <img src={ShakinImg} alt="Shakin" className='img-fluid' />
+                        <img src={ShakinImg} alt="Shakin" className='img-fluid' style={{ pointerEvents: "auto" }}/>
                     </div>
                     <div className="scroll-container container-fluid bg-body-tertiary z-3" style={{ pointerEvents: "auto" }}>
                         <Swiper
