@@ -24,7 +24,7 @@ function AcademicCertificates() {
         <div className="all-certificates-container container-md">
             <h1 className="display-3 fw-semibold text-center mb-5">Academic Certificates</h1>
 
-            <div className="all-certificates-content p-0 pb-3 pb-lg-0 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
+            <div className="all-certificates-content p-0 pb-3 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
                 <Swiper
                     slidesPerView={"auto"}
                     centeredSlides={true}
