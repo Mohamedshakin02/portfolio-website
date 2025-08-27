@@ -82,8 +82,8 @@ $radius: 40px;
         bottom: 5rem;
 
         .all-certificate-card {
-            height: 70vh;
-            padding: 1rem !important;
+            height: 60vh;
+            padding: 2rem !important;
         }
     }
 
@@ -108,8 +108,9 @@ $radius: 40px;
 
 
     .all-certificate-card {
-        height: 50vh;
-        /* smaller on mobile */
+        padding: 1rem !important;
+        height: 55vh;
+
     }
 }
 }
@@ -117,11 +118,6 @@ $radius: 40px;
 @media (max-width: 576px) {
     .all-certificates-content {
         bottom: 4.5rem;
-
-        .all-certificate-card {
-            height: 50vh;
-        }
-
     }
 
     .certificate-footer {
