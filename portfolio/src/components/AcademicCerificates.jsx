@@ -29,7 +29,7 @@ function AcademicCertificates() {
                     slidesPerView={"auto"}
                     centeredSlides={true}
                     spaceBetween={50}
-                    initialSlide={1}
+                    initialSlide={0}
                     loop={true}
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
