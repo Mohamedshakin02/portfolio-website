@@ -34,6 +34,23 @@ function AcademicCertificates() {
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
                     className="mySwiper"
+                    breakpoints={{
+                        0: {
+                            centeredSlides: true, 
+                        },
+                        576: {
+                            centeredSlides: true, 
+                        },
+                        768: {
+                            centeredSlides: true,
+                        },
+                        992: {
+                            centeredSlides: false,
+                        },
+                        1200: {
+                            centeredSlides: false,
+                        },
+                    }}
                 >
                     {certificates.map((certificate, index) => (
                         <SwiperSlide key={index} className="certificate-slide">
