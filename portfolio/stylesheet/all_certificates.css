@@ -1,0 +1,113 @@
+.swiper-pagination {
+  margin-top: 40px;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000 !important;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FEE9C6 !important;
+  border: 3px solid #000;
+}
+
+.all-certificates-container {
+  padding: 0px 12px;
+  position: relative;
+  top: 1rem;
+}
+
+.all-certificates-content {
+  position: relative;
+  bottom: 5.5rem;
+  padding-top: 5rem !important;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.51);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 40px;
+  box-sizing: border-box;
+}
+.all-certificates-content .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  /* center vertically */
+}
+.all-certificates-content .swiper-slide {
+  width: auto !important;
+  /* allow width to fit image */
+  display: flex;
+  justify-content: center;
+}
+.all-certificates-content .all-certificate-card {
+  border: 5px solid black;
+  border-width: 0px 5px 5px 0px;
+  border-radius: 0px 25px 25px 25px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  /* set max height for certificates */
+}
+.all-certificates-content .certificate-img {
+  height: 100%;
+  /* fill card height */
+  width: auto;
+  /* keep aspect ratio */
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+.certificate-footer {
+  position: relative;
+  bottom: 11rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+  .all-certificates-content {
+    padding-top: 4rem !important;
+    bottom: 5rem;
+  }
+  .all-certificates-content .all-certificate-card {
+    height: 70vh;
+    padding: 1rem !important;
+  }
+  .certificate-footer {
+    bottom: 7rem;
+  }
+}
+@media (max-width: 768px) {
+  .swiper-pagination {
+    margin-top: 30px;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+  .all-certificates-content {
+    padding-top: 3rem !important;
+    bottom: 4.5rem;
+  }
+  .all-certificates-content .all-certificate-card {
+    height: 50vh;
+    /* smaller on mobile */
+  }
+}
+@media (max-width: 576px) {
+  .all-certificates-content {
+    bottom: 4.5rem;
+  }
+  .all-certificates-content .all-certificate-card {
+    height: 50vh;
+  }
+  .certificate-footer {
+    bottom: 5rem;
+  }
+}/*# sourceMappingURL=all_certificates.css.map */
