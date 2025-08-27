@@ -15,7 +15,7 @@ function AboutPage() {
             <div className="skills-section">
                 <Skills/>
             </div>
-            <div className="footer-section">
+            <div className="about-footer">
                 <Footer/>
             </div>    
             

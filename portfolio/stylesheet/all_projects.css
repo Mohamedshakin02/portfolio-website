@@ -62,19 +62,19 @@
 .all-projects-content .all-project-card p.flex-grow-1 {
   flex-grow: 1;
 }
-.all-projects-content .explore a {
-  background-color: #FEE9C6;
-  border-radius: 15px;
-  box-shadow: 5px -5px 0px black, -5px 5px 0px black;
-}
-.all-projects-content .explore a:hover {
-  background-color: white;
+
+.project-footer {
+  position: relative;
+  bottom: 11rem;
 }
 
 @media (max-width: 992px) {
   .all-projects-content {
     padding-top: 5rem !important;
     bottom: 5rem;
+  }
+  .project-footer {
+    bottom: 7rem;
   }
 }
 @media (max-width: 768px) {
@@ -96,5 +96,8 @@
 @media (max-width: 576px) {
   .all-projects-content {
     bottom: 4.5rem;
+  }
+  .project-footer {
+    bottom: 5rem;
   }
 }/*# sourceMappingURL=all_projects.css.map */
