@@ -43,9 +43,11 @@ function AcademicCertificates() {
                         },
                         768: {
                             centeredSlides: false,
+                            spaceBetween:40,
                         },
                         992: {
                             centeredSlides: false,
+                            spaceBetween:40,
                         },
                         1200: {
                             centeredSlides: false,
