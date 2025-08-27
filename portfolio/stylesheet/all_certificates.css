@@ -67,14 +67,13 @@
   bottom: 11rem;
 }
 
-/* Responsive Fixes */
 @media (max-width: 992px) {
   .all-certificates-content {
     padding-top: 4rem !important;
     bottom: 5rem;
   }
   .all-certificates-content .all-certificate-card {
-    height: 40rem;
+    height: 23rem;
     padding: 2rem !important;
   }
   .certificate-footer {
@@ -95,7 +94,7 @@
   }
   .all-certificates-content .all-certificate-card {
     padding: 2rem !important;
-    height: 40rem;
+    height: 25rem;
   }
 }
 @media (max-width: 576px) {

@@ -42,7 +42,7 @@ function AcademicCertificates() {
                             centeredSlides: true, 
                         },
                         768: {
-                            centeredSlides: true,
+                            centeredSlides: false,
                         },
                         992: {
                             centeredSlides: false,

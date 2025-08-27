@@ -73,14 +73,14 @@ $radius: 40px;
     bottom: 11rem;
 }
 
-/* Responsive Fixes */
+
 @media (max-width: 992px) {
     .all-certificates-content {
         padding-top: 4rem !important;
         bottom: 5rem;
 
         .all-certificate-card {
-            height: 40rem;
+            height: 23rem;
             padding: 2rem !important;
         }
     }
@@ -107,7 +107,7 @@ $radius: 40px;
 
     .all-certificate-card {
         padding: 2rem !important;
-        height: 40rem;
+        height: 25rem;
 
     }
 }
