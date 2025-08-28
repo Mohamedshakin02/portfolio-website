@@ -22,7 +22,7 @@ function ContactPage() {
                         </a>
                     </div>
 
-                    <div className='phone mt-4 mt-md-4 mt-lg-5'>
+                    <div className='phone mt-4 mt-md-4'>
                         <a href="tel:+971504385645"
                                 target="_blank"
                                 className="number d-block text-decoration-none text-dark fs-3 fw-medium d-flex align-items-center">
@@ -32,7 +32,7 @@ function ContactPage() {
                             </a>
                     </div>
 
-                     <div className='linkedin mt-4 mt-md-3 mt-lg-5'>
+                     <div className='linkedin mt-4 mt-md-4'>
                         <a href="https://www.linkedin.com/in/mohamed-shakin/"
                                 target="_blank"
                                 className=" d-block text-decoration-none text-dark fs-2 fw-medium d-flex"
