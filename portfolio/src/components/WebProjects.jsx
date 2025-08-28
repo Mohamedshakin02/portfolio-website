@@ -78,7 +78,7 @@ function WebProjects() {
                         slidesPerView={1}
                         spaceBetween={50}
                         loop={true}
-                        pagination={{ clickable: true }}
+                        pagination={{ clickable: true, dynamicBullets: true, }}
                         breakpoints={{
                             768: { slidesPerView: 2 },
                             1200: { slidesPerView: 3 },

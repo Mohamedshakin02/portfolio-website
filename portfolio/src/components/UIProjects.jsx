@@ -60,7 +60,7 @@ function UIProjects() {
                           spaceBetween={50}
                           initialSlide={0}
                           loop={true}
-                          pagination={{ clickable: true }}
+                          pagination={{ clickable: true, dynamicBullets: true, }}
                           breakpoints={{
                               768: { slidesPerView: 2 },
                               1200: { slidesPerView: 3 },
