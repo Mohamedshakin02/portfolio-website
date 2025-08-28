@@ -66,7 +66,6 @@ function CourseCertificates() {
                         spaceBetween={50}
                         initialSlide={0}
                         loop={true}
-                        pagination={{ clickable: true }}
                         modules={[Pagination]}
                         className="mySwiper"
                         breakpoints={{
