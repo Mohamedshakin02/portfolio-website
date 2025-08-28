@@ -50,9 +50,7 @@ function CourseCertificates() {
 
                 @media (max-width: 768px) {
                     .all-certificates-content .course-certificate-card{
-                    height: 15rem !important;
-                    padding: 0.8rem !important;
-                    border-width: 0px 4px 4px 0px;}
+                    height: 15rem !important;}
             `}
 
             </style>
