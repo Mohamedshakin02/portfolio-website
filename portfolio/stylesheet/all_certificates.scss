@@ -68,10 +68,11 @@ $radius: 40px;
     }
 }
 
-.certificate-footer {
+.certificates-footer {
     position: relative;
     bottom: 11rem;
 }
+
 
 
 @media (max-width: 992px) {
@@ -80,12 +81,12 @@ $radius: 40px;
         bottom: 5rem;
 
         .all-certificate-card {
-            height: 25rem;
+            height: 27.5rem;
             padding: 1rem !important;
         }
     }
 
-    .certificate-footer {
+    .certificates-footer {
         bottom: 7rem;
     }
 }
@@ -117,7 +118,7 @@ $radius: 40px;
     }
     }
 
-    .certificate-footer {
-        bottom: 5rem;
+    .certificates-footer {
+        bottom: 6rem;
     }
 }

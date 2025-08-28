@@ -62,7 +62,7 @@
   display: block;
 }
 
-.certificate-footer {
+.certificates-footer {
   position: relative;
   bottom: 11rem;
 }
@@ -73,10 +73,10 @@
     bottom: 5rem;
   }
   .all-certificates-content .all-certificate-card {
-    height: 25rem;
+    height: 27.5rem;
     padding: 1rem !important;
   }
-  .certificate-footer {
+  .certificates-footer {
     bottom: 7rem;
   }
 }
@@ -100,7 +100,7 @@
   .all-certificates-content .all-certificate-card {
     border-width: 0px 4px 4px 0px;
   }
-  .certificate-footer {
-    bottom: 5rem;
+  .certificates-footer {
+    bottom: 6rem;
   }
 }/*# sourceMappingURL=all_certificates.css.map */
