@@ -74,7 +74,7 @@
   }
   .all-certificates-content .all-certificate-card {
     height: 25rem;
-    padding: 2rem !important;
+    padding: 1rem !important;
   }
   .certificate-footer {
     bottom: 7rem;
@@ -92,10 +92,6 @@
     padding-top: 3rem !important;
     bottom: 4.5rem;
   }
-  .all-certificates-content .all-certificate-card {
-    padding: 2rem !important;
-    height: 25rem;
-  }
 }
 @media (max-width: 576px) {
   .all-certificates-content {
@@ -103,7 +99,6 @@
   }
   .all-certificates-content .all-certificate-card {
     padding: 1rem !important;
-    height: 25rem;
   }
   .certificate-footer {
     bottom: 5rem;
