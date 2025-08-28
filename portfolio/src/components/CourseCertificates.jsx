@@ -48,7 +48,7 @@ function CourseCertificates() {
                     .all-certificates-content .course-certificate-card{
                     height: 20rem !important;}
 
-                @media (max-width: 768px) {
+                @media (max-width: 576px) {
                     .all-certificates-content .course-certificate-card{
                     height: 15rem !important;}
             `}
