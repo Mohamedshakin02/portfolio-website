@@ -5,24 +5,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg1 from '../assets/projects/Agriculture-Data.png';
-import ProjectImg2 from '../assets/projects/Garden-Chatbot.png';
+import ProjectImg1 from '../assets/projects/Garden-Chatbot.png';
+import ProjectImg2 from '../assets/projects/Agriculture-Data.png';
 import ProjectImg3 from '../assets/projects/p5js-works.png';
 import WebLogo from '../assets/logos/web-logo.png';
 
 function OtherProjects() {
     const [projects] = useState([
         {
-            title: 'Agriculture Data Visualization',
-            description: "Agriculture Data Visualization is an interactive project created using Flourish, showing how agriculture has changed over time and across regions, allowing users to explore the data and understand regional and global trends.",
-            image: ProjectImg1,
-            link: 'https://public.flourish.studio/story/3056211/',
-        },
-        {
             title: 'Garden Chatbot',
             description: 'Developed Garden Chatbot using Google Dialogflow to provide personalized plant recommendations based on the user’s environment, offering simple and engaging gardening guidance.',
-            image: ProjectImg2,
+            image: ProjectImg1,
             link: 'https://garden-chatbot-project.vercel.app/',
+        },
+        {
+            title: 'Agriculture Data Visualization',
+            description: "Agriculture Data Visualization is an interactive project created using Flourish, showing how agriculture has changed over time and across regions, allowing users to explore the data and understand regional and global trends.",
+            image: ProjectImg2,
+            link: 'https://public.flourish.studio/story/3056211/',
         },
         {
             title: 'p5.js Works',

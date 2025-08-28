@@ -14,7 +14,7 @@ function Header() {
     { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
     { name: "Certificates", link: "/certificates" },
-    { name: "Contact", link: "#" },
+    { name: "Contact", link: "/contact" },
   ];
 
   const currentPage =
