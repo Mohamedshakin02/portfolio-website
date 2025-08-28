@@ -59,13 +59,14 @@ function CourseCertificates() {
             <div className="all-certificates-container container-md">
                 <h1 className="display-3 fw-semibold text-center mb-5">Course Certificates</h1>
 
-                <div className="all-certificates-content p-0 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
+                <div className="all-certificates-content p-0 pb-3 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
                     <Swiper
                         slidesPerView={"auto"}
                         centeredSlides={true}
                         spaceBetween={50}
                         initialSlide={0}
                         loop={true}
+                        pagination={{ clickable: true }}
                         modules={[Pagination]}
                         className="mySwiper"
                         breakpoints={{
