@@ -45,6 +45,17 @@
   .contact-content {
     bottom: 4.5rem;
   }
+  .contact-content .email a, .contact-content .phone a, .contact-content .linkedin a {
+    font-size: 1.4rem !important;
+    align-items: center !important;
+    font-weight: 500 !important;
+  }
+  .contact-content .email .number, .contact-content .phone .number, .contact-content .linkedin .number {
+    font-size: 1.3rem !important;
+  }
+  .contact-content .linkedin a {
+    align-items: start !important;
+  }
   .contact-footer {
     bottom: 7rem;
   }

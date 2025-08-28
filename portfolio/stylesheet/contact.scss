@@ -52,6 +52,24 @@ $radius: 40px;
 @media (max-width: 576px) {
     .contact-content {
         bottom: 4.5rem;
+
+        .email, .phone, .linkedin {
+            a{
+                font-size: 1.4rem !important;
+                align-items: center !important;
+                font-weight: 500 !important;
+            }
+
+            .number{
+                    font-size: 1.3rem !important;
+                }
+        }
+
+        .linkedin{
+            a{
+                align-items: start !important;
+            }
+        }
     }
 
     .contact-footer{
