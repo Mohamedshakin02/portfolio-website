@@ -31,7 +31,6 @@ function CourseCertificates() {
         { title: 'Introduction to Python Certificate', image: CertificateImg7 },
         { title: 'Python Intermediate Certificate', image: CertificateImg8 },
         { title: 'Python Tkinter Certificate', image: CertificateImg9 },
-        { title: 'Python Tkinter Certificate', image: CertificateImg9 },
         { title: 'Dialogflow Certificate', image: CertificateImg10 },
         { title: 'Data Visualization Certificate', image: CertificateImg11 },
     ]);
@@ -51,7 +50,8 @@ function CourseCertificates() {
 
                 @media (max-width: 768px) {
                     .all-certificates-content .course-certificate-card{
-                    height: 15rem !important;}
+                    height: 15rem !important;
+                    padding: 0.8rem !important;}
             `}
 
             </style>
