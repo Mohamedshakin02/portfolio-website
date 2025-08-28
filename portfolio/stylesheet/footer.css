@@ -47,7 +47,7 @@
 }
 @media (max-width: 576px) {
   .footer-container {
-    top: 6rem;
+    top: 8rem;
   }
   .footer-container .top-container {
     grid-template-areas: "names" "contact" "link" !important;
