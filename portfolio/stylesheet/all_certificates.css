@@ -99,6 +99,7 @@
   }
   .all-certificates-content .all-certificate-card {
     padding: 1rem !important;
+    border-width: 0px 4px 4px 0px;
   }
   .certificate-footer {
     bottom: 5rem;
