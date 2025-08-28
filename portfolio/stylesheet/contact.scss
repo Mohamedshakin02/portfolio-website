@@ -60,7 +60,6 @@ $radius: 40px;
         .email, .phone, .linkedin {
             a{
                 font-size: 1.4rem !important;
-                align-items: center !important;
                 font-weight: 500 !important;
             }
 
@@ -69,11 +68,6 @@ $radius: 40px;
                 }
         }
 
-        .linkedin{
-            a{
-                align-items: start !important;
-            }
-        }
     }
 
     .contact-footer{
