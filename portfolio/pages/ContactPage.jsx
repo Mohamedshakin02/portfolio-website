@@ -14,7 +14,7 @@ function ContactPage() {
                     <div className='email mt-4 mt-md-3 mt-lg-5'>
                         <a href="mailto:m.shakin2005@gmail.com"
                             target="_blank"
-                            className="d-block text-decoration-none text-dark fs-1 fw-normal d-flex"
+                            className="d-block text-decoration-none text-dark fs-2 fw-medium d-flex align-items-center"
                             style={{ wordBreak: "break-word" }}>
 
                             <i className="bi bi-envelope-fill display-5 me-3 me-md-5 mt-2"></i>
@@ -25,7 +25,7 @@ function ContactPage() {
                     <div className='phone mt-4 mt-md-4 mt-lg-5'>
                         <a href="tel:+971504385645"
                                 target="_blank"
-                                className="number d-block text-decoration-none text-dark fs-2 fw-normal d-flex">
+                                className="number d-block text-decoration-none text-dark fs-3 fw-medium d-flex align-items-center">
 
                                 <i className="bi bi-telephone-fill display-5 me-3 me-md-5 mt-1"></i>
                                 +971504385645
@@ -35,7 +35,7 @@ function ContactPage() {
                      <div className='linkedin mt-4 mt-md-3 mt-lg-5'>
                         <a href="https://www.linkedin.com/in/mohamed-shakin/"
                                 target="_blank"
-                                className=" d-block text-decoration-none text-dark fs-1 fw-normal d-flex"
+                                className=" d-block text-decoration-none text-dark fs-2 fw-medium d-flex"
                                 style={{ wordBreak: "break-word" }}>
 
                                 <i className="bi bi-linkedin display-5 me-3 me-md-5 mt-2"></i>

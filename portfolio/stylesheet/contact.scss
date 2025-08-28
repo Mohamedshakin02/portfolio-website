@@ -37,7 +37,7 @@ $radius: 40px;
     }
 
     .contact-footer{
-        bottom: 6.5rem;
+        bottom: 6rem;
     }
 }
 
@@ -47,11 +47,19 @@ $radius: 40px;
         padding-left: 2rem !important;
         padding-right: 2rem !important;
     }
+
+    .contact-footer{
+        bottom: 5rem;
+    }
 }
 
 @media (max-width: 576px) {
     .contact-content {
         bottom: 4.5rem;
+
+        // p{
+        //     font-size: 1.6rem !important;
+        // }
 
         .email, .phone, .linkedin {
             a{
