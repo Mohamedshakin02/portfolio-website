@@ -95,7 +95,7 @@
 }
 @media (max-width: 576px) {
   .all-certificates-content {
-    bottom: 4.5rem;
+    bottom: 4.3rem;
   }
   .all-certificates-content .all-certificate-card {
     border-width: 0px 4px 4px 0px;
