@@ -1,0 +1,80 @@
+.rgb-page .menu p {
+  text-align: center;
+  color: #222222;
+}
+.rgb-page .menu #result {
+  color: #FFF2E0;
+}
+.rgb-page .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  gap: 3rem;
+}
+.rgb-page #box1,
+.rgb-page #box2,
+.rgb-page #box3 {
+  height: 18rem;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  box-shadow: 5px -5px 0px black, -5px 5px 0px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rgb-page #first,
+.rgb-page #second,
+.rgb-page #third {
+  display: none;
+}
+.rgb-page .option {
+  margin-bottom: 0%;
+}
+.rgb-page .play-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.rgb-page button {
+  font-size: 21px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 5px -5px 0px black, -5px 5px 0px black;
+  background-color: white;
+}
+.rgb-page button:hover {
+  background-color: #f6eca9;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+/* responsive */
+@media (max-width: 768px) {
+  .rgb-page .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .rgb-page #box1,
+  .rgb-page #box2,
+  .rgb-page #box3 {
+    width: 90%;
+    height: auto;
+    aspect-ratio: initial;
+    margin-bottom: 20px;
+    box-shadow: 4px -4px 0px black, -4px 4px 0px black !important;
+  }
+  .rgb-page button {
+    box-shadow: 4px -4px 0px black, -4px 4px 0px black !important;
+  }
+}/*# sourceMappingURL=rgb.css.map */

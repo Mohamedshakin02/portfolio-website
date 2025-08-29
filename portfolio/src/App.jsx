@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Movies from "../pages/Movies";
+import RGB from "../pages/RGB";
 import Photos from "../pages/Photos";
 import Arts from "../pages/Arts";
 import Home from "../pages/Home";
@@ -119,7 +119,7 @@ function AppContent() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/certificates" element={<CertificatesPage/>} />
         <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/rgb-game" element={<RGB/>} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/arts" element={<Arts />} />
         <Route path="*" element={<NotFound />} />
