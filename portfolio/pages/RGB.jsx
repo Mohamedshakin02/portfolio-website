@@ -62,6 +62,7 @@ function RGB() {
               onClick={handleBack}
               className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center py-1 px-3 py-lg-2 px-lg-3 fs-5"
             >
+              <i className="bi bi-caret-left-fill" style={{ marginTop: "1.25px"}}></i>
               BACK
             </button>
           </div>
