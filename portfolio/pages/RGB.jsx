@@ -40,10 +40,9 @@ function RGB() {
   const checkAnswer = (choice) => {
     if (choice === targetColor) {
       setResult(
-        `${
-          colors.indexOf(choice) === 0
-            ? "A"
-            : colors.indexOf(choice) === 1
+        `${colors.indexOf(choice) === 0
+          ? "A"
+          : colors.indexOf(choice) === 1
             ? "B"
             : "C"
         } is the right answer`
@@ -54,54 +53,58 @@ function RGB() {
   };
 
   return (
-    <div className="page rgb-page container-fluid" style={{ zIndex: 1, pointerEvents: "auto" }}>
-      {/* Back Button */}
-      <div className="back container-md mt-5">
-        <button
-          onClick={handleBack}
-          className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center py-1 px-3 py-lg-2 px-lg-3 fs-5"
-        >
-          BACK
-        </button>
-      </div>
-
-      {/* Game */}
-      <div className="game-container container-lg my-5">
-        <h1 className="text-center display-4 fw-bold">RGB GAME</h1>
-
-        <div className="game">
-          {/* Menu */}
-          <div className="menu">
-            <p className="fs-2 fw-medium">
-              Guess the color of <span id="rgb-name">{targetColor}</span>
-            </p>
-            <p>
-              <span id="result" className="fs-4 fw-medium">{result}</span>
-            </p>
+    <>
+      <div className="rgb-page-background container-fluid" style={{ zIndex: 1, pointerEvents: "auto" }}>
+        <div className="page rgb-page container-fluid" style={{ zIndex: 1, pointerEvents: "auto" }}>
+          {/* Back Button */}
+          <div className="back container-md mt-5">
+            <button
+              onClick={handleBack}
+              className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center py-1 px-3 py-lg-2 px-lg-3 fs-5"
+            >
+              BACK
+            </button>
           </div>
 
-          {/* Color Boxes */}
-          <div className="container">
-            {colors.map((color, index) => (
-              <div
-                key={index}
-                id={`box${index + 1}`}
-                style={{ backgroundColor: color }}
-                onClick={() => checkAnswer(color)}
-              >
-                <p id={["first", "second", "third"][index]}>{color}</p>
-                <p className="option p-2 fs-1">{["A", "B", "C"][index]}</p>
+          {/* Game */}
+          <div className="game-container container-lg my-5">
+            <h1 className="text-center display-4 fw-bold">RGB GAME</h1>
+
+            <div className="game">
+              {/* Menu */}
+              <div className="menu">
+                <p className="fs-2 fw-medium">
+                  Guess the color of <span id="rgb-name">{targetColor}</span>
+                </p>
+                <p>
+                  <span id="result" className="fs-4 fw-medium">{result}</span>
+                </p>
               </div>
-            ))}
-          </div>
 
-          {/* Play Again */}
-          <div className="play-button">
-            <button onClick={newGame} className="btn text-decoration-none text-body text-dark fw-medium">Play Again</button>
+              {/* Color Boxes */}
+              <div className="container">
+                {colors.map((color, index) => (
+                  <div
+                    key={index}
+                    id={`box${index + 1}`}
+                    style={{ backgroundColor: color }}
+                    onClick={() => checkAnswer(color)}
+                  >
+                    <p id={["first", "second", "third"][index]}>{color}</p>
+                    <p className="option p-2 fs-1">{["A", "B", "C"][index]}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Play Again */}
+              <div className="play-button">
+                <button onClick={newGame} className="btn text-decoration-none text-body text-dark fw-medium">Play Again</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
