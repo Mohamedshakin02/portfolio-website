@@ -60,18 +60,22 @@ $radius: 40px;
                 max-width: 100%;
                 aspect-ratio: 1/1;
             }
+
+            &:hover {
+                background-color: white;
+                transition: 0.5s;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+
         }
     }
 
     .image-holder {
         grid-area: images;
         position: relative;
-
-        // img{
-        //     width: 93%;
-        //     height: auto;
-        //     position: absolute;
-        // }
     }
 
     .welcome {
@@ -84,7 +88,6 @@ $radius: 40px;
 }
 
 @media (max-width: 992px) {
-    /* LG breakpoint */
 
     .mt-lg-6 {
         margin-top: 0rem !important;

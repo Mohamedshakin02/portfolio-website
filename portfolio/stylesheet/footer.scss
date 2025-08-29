@@ -4,7 +4,7 @@ $background-color: #FEE9C6;
     padding-top: 3rem !important;
 }
 
-.pb-0{
+.pb-0 {
     padding-bottom: 0% !important;
 }
 
@@ -27,6 +27,7 @@ $background-color: #FEE9C6;
 
             .links {
                 grid-area: link;
+
             }
 
             .contact {
@@ -91,57 +92,22 @@ $background-color: #FEE9C6;
                 }
             }
 
-            .contact{
+            .contact {
                 justify-self: start !important;
             }
 
             .name {
                 h3 {
-                    font-size: 1.75rem !important; // smaller than h1 in desktop
+                    font-size: 1.75rem !important;
                 }
+
                 h1 {
-                    font-size: 2.5rem !important; // adjust as needed
+                    font-size: 2.5rem !important;
                 }
             }
 
-        //     .links {
-        //         h3 {
-        //             font-size: 2rem !important;
-        //         }
-        //         .link a {
-        //             font-size: 1.5rem !important; // smaller links
-        //         }
-        //     }
-
-        //     .contact {
-        //         h3 {
-        //             font-size: 2rem !important;
-        //         }
-        //         a {
-        //             font-size: 1.5rem !important;
-        //         }
-
-        //         .number{
-        //             font-size: 1.4rem !important;
-        //         }
-            
-        // }
-
-        //     .contact {
-        //         width: initial !important;
-        //         justify-self: initial !important;
-        //     }
-
         }
 
-        // .bottom-container {
-        //     p {
-        //         font-size: 1.2rem !important;
-        //     }
 
-        //     .number{
-        //         font-size: 1.2rem !important;
-        //     }
-        // }
     }
 }
