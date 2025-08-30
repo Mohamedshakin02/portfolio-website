@@ -106,6 +106,7 @@ function WebProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Github Link'
                                             >
                                                 <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
                                                 Code Link
@@ -117,7 +118,7 @@ function WebProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                style={{ pointerEvents: "auto" }}
+                                                title='Live Link'
                                             >
                                                 <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                 Live Link

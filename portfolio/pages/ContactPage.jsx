@@ -15,6 +15,7 @@ function ContactPage() {
                         <a href="mailto:m.shakin2005@gmail.com"
                             target="_blank"
                             className="d-block text-decoration-none text-dark fs-2 fw-medium d-flex align-items-center"
+                            title='Email ID'
                             style={{ wordBreak: "break-word" }}>
 
                             <i className="bi bi-envelope-fill display-5 me-3 me-md-5 mt-2"></i>
@@ -25,7 +26,8 @@ function ContactPage() {
                     <div className='phone mt-4 mt-md-4'>
                         <a href="tel:+971504385645"
                                 target="_blank"
-                                className="number d-block text-decoration-none text-dark fs-3 fw-medium d-flex align-items-center">
+                                className="number d-block text-decoration-none text-dark fs-3 fw-medium d-flex align-items-center"
+                                title='Mobile Number'>
 
                                 <i className="bi bi-telephone-fill display-5 me-3 me-md-5 mt-1"></i>
                                 +971504385645
@@ -36,6 +38,7 @@ function ContactPage() {
                         <a href="https://www.linkedin.com/in/mohamed-shakin/"
                                 target="_blank"
                                 className=" d-block text-decoration-none text-dark fs-2 fw-medium d-flex"
+                                title='LinkedIn Profile'
                                 style={{ wordBreak: "break-word" }}>
 
                                 <i className="bi bi-linkedin display-5 me-3 me-md-5 mt-2"></i>

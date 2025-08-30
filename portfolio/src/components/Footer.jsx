@@ -16,19 +16,19 @@ function Footer() {
                         <div className='links'>
                             <h3 className='h1'>Links</h3>
                             <div className='link'>
-                                <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>LinkedIn</a>
+                                <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium' title='LinkedIn Link'>LinkedIn</a>
                             </div>
 
                             <div className='link'>
-                                <a href="https://github.com/Mohamedshakin02" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Github</a>
+                                <a href="https://github.com/Mohamedshakin02" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium' title='Github Link'>Github</a>
                             </div>
 
                             <div className='link'>
-                                <a href="https://mohamed-shakin.itch.io/" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Itch.io</a>
+                                <a href="https://mohamed-shakin.itch.io/" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium' title='itch.io Link'>itch.io</a>
                             </div>
 
                             <div className='link'>
-                                <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium'>Youtube</a>
+                                <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank" className='text-decoration-none text-body text-dark fs-4 fw-medium' title='Youtube Link'>Youtube</a>
                             </div>
                         </div>
 
@@ -37,13 +37,15 @@ function Footer() {
 
                             <a href="mailto:m.shakin2005@gmail.com"
                                 target="_blank"
-                                className="d-block text-decoration-none text-dark fs-4 fw-medium">
+                                className="d-block text-decoration-none text-dark fs-4 fw-medium"
+                                title='Email ID'>
                                 m.shakin<span className="number fs-5">2005</span>@gmail.com
                             </a>
 
                             <a href="tel:+971504385645"
                                 target="_blank"
-                                className="number d-block mt-2 text-decoration-none text-dark fs-5 fw-medium">
+                                className="number d-block mt-2 text-decoration-none text-dark fs-5 fw-medium"
+                                title='Mobile Number'>
                                 +971504385645
                             </a>
                         </div>

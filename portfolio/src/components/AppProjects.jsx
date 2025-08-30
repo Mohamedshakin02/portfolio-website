@@ -80,6 +80,7 @@ function AppProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Github Link'
                                             >
                                                 <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
                                                 Code Link
@@ -91,6 +92,7 @@ function AppProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Youtube Link'
                                             >
                                                 <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
                                                 YouTube Link

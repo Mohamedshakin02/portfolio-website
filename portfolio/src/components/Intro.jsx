@@ -89,16 +89,16 @@ function Intro() {
 
                         <div className='links d-flex flex-wrap align-items-center gap-3'>
                             <div className='link'>
-                                <a href="https://github.com/Mohamedshakin02" target="_blank"><img src={GithubLogo} alt="githib.com" className='img-fluid p-2' /></a>
+                                <a href="https://github.com/Mohamedshakin02" target="_blank"><img src={GithubLogo} alt="githib.com" title='Github Link' className='img-fluid p-2' /></a>
                             </div>
                             <div className='link'>
-                                <a href="https://mohamed-shakin.itch.io/" target="_blank"><img src={ItchLogo} alt="itch.io" className='img-fluid p-2' /></a>
+                                <a href="https://mohamed-shakin.itch.io/" target="_blank"><img src={ItchLogo} alt="itch.io" title='itch.io Link' className='img-fluid p-2' /></a>
                             </div>
                             <div className='link'>
-                                <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank"><img src={LinkedInLogo} alt="linkedin.com" className='img-fluid p-2' /></a>
+                                <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank"><img src={LinkedInLogo} alt="linkedin.com" title='LinkedIn Link' className='img-fluid p-2' /></a>
                             </div>
                             <div className='link'>
-                                <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank"><img src={YoutubeLogo} alt="youtube.com" className='img-fluid p-2' /></a>
+                                <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank"><img src={YoutubeLogo} alt="youtube.com" title='Youtube Link' className='img-fluid p-2' /></a>
                             </div>
                         </div>
 

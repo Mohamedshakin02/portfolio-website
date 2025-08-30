@@ -89,6 +89,7 @@ function Projects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Github Link'
                                             >
                                                 <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
                                                 Code Link
@@ -100,8 +101,9 @@ function Projects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Website Link'
                                             >
-                                                <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
+                                                <img src={WebLogo} alt="Live Link" className='me-1' style={{ width: '21px' }} />
                                                 Live Link
                                             </a>
                                         )}
@@ -111,6 +113,7 @@ function Projects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Youtube Link'
                                             >
                                                 <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
                                                 YouTube Link
@@ -122,6 +125,7 @@ function Projects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Game Link'
                                             >
                                                 <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
                                                 Game Link

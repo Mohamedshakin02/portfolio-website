@@ -73,7 +73,7 @@ function OtherProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                style={{ pointerEvents: "auto" }}
+                                                title='Live Link'
                                             >
                                                 <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                 Live Link

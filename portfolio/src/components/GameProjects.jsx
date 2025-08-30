@@ -80,6 +80,7 @@ function GameProjects() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Game Link'
                                             >
                                                 <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
                                                 Game Link
