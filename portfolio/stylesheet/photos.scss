@@ -1,17 +1,17 @@
-.photos-page-background {
+.photos-page-background, .arts-page-background {
   position: absolute;
   min-height: 100vh;
 }
 
-.photos-page {
+.photos-page, .arts-page {
 
-  .photos-container {
-    .photos {
+  .photos-container, .arts-container {
+    .photos, .arts {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 3rem;
 
-      .all-photo-card {
+      .all-photo-card, .all-art-card {
         box-shadow: 7px 7px 0px black;
       }
     }
@@ -32,7 +32,7 @@
 }
 
 @media (max-width: 768px) {
-  .photos-page {
+  .photos-page, .arts-page {
     button {
       box-shadow: 4px -4px 0px black, -4px 4px 0px black !important;
     }
