@@ -42,8 +42,8 @@ export default function Background() {
   // set background color based on route
   useEffect(() => {
     if (location.pathname === "/rgb-game") setBgColor(colors[0]);
-    else if (location.pathname === "/arts") setBgColor(colors[1]);
-    else if (location.pathname === "/photos") setBgColor(colors[2]);
+    else if (location.pathname === "/photos") setBgColor(colors[1]);
+    else if (location.pathname === "/arts") setBgColor(colors[2]);
     else setBgColor(""); // home/default → striped
   }, [location.pathname]);
 
@@ -58,8 +58,8 @@ export default function Background() {
 
     setTimeout(() => {
       if (index % 3 === 0) navigate("/rgb-game");
-      if (index % 3 === 1) navigate("/arts");
-      if (index % 3 === 2) navigate("/photos");
+      if (index % 3 === 1) navigate("/photos");
+      if (index % 3 === 2) navigate("/arts");
     }, 500);
   };
 

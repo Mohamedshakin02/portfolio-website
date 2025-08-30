@@ -33,7 +33,7 @@ function Layout({ children }) {
       {/* Foreground content */}
       <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
         {isHome && (
-          <div style={{ pointerEvents: "auto" }}>
+          <div style={{ pointerEvents: "none" }}>
             <Header />
           </div>
         )}

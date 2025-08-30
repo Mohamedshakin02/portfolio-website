@@ -1,0 +1,29 @@
+.photos-page-background {
+  position: absolute;
+  min-height: 100vh;
+}
+
+.photos-page .photos-container .photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+.photos-page .photos-container .photos .all-photo-card {
+  box-shadow: 7px 7px 0px black;
+}
+.photos-page button {
+  font-size: 21px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 5px -5px 0px black, -5px 5px 0px black;
+  background-color: white;
+}
+.photos-page button:hover {
+  background-color: #f6eca9;
+}
+
+@media (max-width: 768px) {
+  .photos-page button {
+    box-shadow: 4px -4px 0px black, -4px 4px 0px black !important;
+  }
+}/*# sourceMappingURL=photos.css.map */

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../stylesheet/rgb.css"; // or rgb.scss if using sass-loader
+import "../stylesheet/rgb.css";
 
 function RGB() {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ function RGB() {
   return (
     <>
       <div className="rgb-page-background container-fluid" style={{ zIndex: 1, pointerEvents: "auto" }}>
-        <div className="page rgb-page container-fluid" style={{ zIndex: 1, pointerEvents: "auto" }}>
+        <div className="page rgb-page container-fluid">
           {/* Back Button */}
           <div className="back container-md mt-5">
             <button
