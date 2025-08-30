@@ -13,27 +13,10 @@ import ProjectsPage from "../pages/ProjectsPage";
 import CertificatesPage from "../pages/CertificatesPage";
 import ContactPage from "../pages/ContactPage";
 
-// ✅ helper to preload all images
-function preloadImages(urls) {
-  return Promise.all(
-    urls.map(
-      (src) =>
-        new Promise((resolve) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = resolve;
-          img.onerror = resolve; // still resolve on error
-        })
-    )
-  );
-}
-
 // Layout with Background + Header
 function Layout({ children }) {
   const location = useLocation();
-  const isHome = ["/", "/about", "/projects", "/certificates", "/contact"].includes(
-    location.pathname
-  );
+  const isHome = ["/", "/about", "/projects","/certificates","/contact"].includes(location.pathname);
 
   return (
     <div style={{ position: "relative" }}>
@@ -41,25 +24,78 @@ function Layout({ children }) {
       <div
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 0,
+          top: 0, left: 0, right: 0, bottom: 0, zIndex: 0
         }}
       >
         <Background />
       </div>
 
-      {/* Foreground */}
-      <div style={{ position: "relative", zIndex: 1 }}>
-        {isHome && <Header />}
-        <main className="container-fluid p-0" style={{ paddingTop: "6rem" }}>
+      {/* Foreground content */}
+      <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
+        {isHome && (
+          <div style={{ pointerEvents: "none" }}>
+            <Header />
+          </div>
+        )}
+
+        <main
+          className="container-fluid p-0"
+          style={{
+            pointerEvents: "none",
+            paddingTop: "6rem"
+          }}
+        >
           {children}
         </main>
       </div>
     </div>
   );
+}
+
+// Hook to show Preloader on route changes
+function usePageLoader() {
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    const images = Array.from(document.images);
+    let loadedCount = 0;
+
+    if (images.length === 0) {
+      setLoading(false);
+      return;
+    }
+
+    const onLoadOrError = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        setLoading(false);
+      }
+    };
+
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+      } else {
+        img.addEventListener("load", onLoadOrError);
+        img.addEventListener("error", onLoadOrError);
+      }
+    });
+
+    const timer = setTimeout(() => setLoading(false), 2000);
+
+    return () => {
+      images.forEach((img) => {
+        img.removeEventListener("load", onLoadOrError);
+        img.removeEventListener("error", onLoadOrError);
+      });
+      clearTimeout(timer);
+    };
+  }, [location.pathname]);
+
+  return loading;
 }
 
 export default function App() {
@@ -71,36 +107,19 @@ export default function App() {
 }
 
 function AppContent() {
-  const location = useLocation();
-  const [loading, setLoading] = useState(true);
+  const loading = usePageLoader();
 
-  useEffect(() => {
-    // Collect all image URLs (backgrounds, page images, assets)
-    const urls = Array.from(document.querySelectorAll("img")).map((img) => img.src);
-
-    // Always show loader immediately
-    setLoading(true);
-
-    // Preload them
-    preloadImages(urls).then(() => {
-      // Add a small delay so loader feels smooth (e.g., 1s min)
-      setTimeout(() => setLoading(false), 1000);
-    });
-  }, [location.pathname]);
-
-  if (loading) {
-    return <Preloader />;
-  }
-
-  return (
+  return loading ? (
+    <Preloader />
+  ) : (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/certificates" element={<CertificatesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/rgb-game" element={<RGB />} />
+        <Route path="/certificates" element={<CertificatesPage/>} />
+        <Route path="/contact" element={<ContactPage/>} />
+        <Route path="/rgb-game" element={<RGB/>} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/arts" element={<Arts />} />
         <Route path="*" element={<NotFound />} />
