@@ -16,7 +16,9 @@ import ContactPage from "../pages/ContactPage";
 // Layout with Background + Header
 function Layout({ children }) {
   const location = useLocation();
-  const isHome = ["/", "/about", "/projects","/certificates","/contact"].includes(location.pathname);
+  const isHome = ["/", "/about", "/projects", "/certificates", "/contact"].includes(
+    location.pathname
+  );
 
   return (
     <div style={{ position: "relative" }}>
@@ -24,25 +26,23 @@ function Layout({ children }) {
       <div
         style={{
           position: "absolute",
-          top: 0, left: 0, right: 0, bottom: 0, zIndex: 0
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 0,
         }}
       >
         <Background />
       </div>
 
       {/* Foreground content */}
-      <div style={{ position: "relative", zIndex: 1, pointerEvents: "none" }}>
-        {isHome && (
-          <div style={{ pointerEvents: "none" }}>
-            <Header />
-          </div>
-        )}
-
+      <div style={{ position: "relative", zIndex: 1 }}>
+        {isHome && <Header />}
         <main
           className="container-fluid p-0"
           style={{
-            pointerEvents: "none",
-            paddingTop: "6rem"
+            paddingTop: "6rem",
           }}
         >
           {children}
@@ -58,7 +58,7 @@ function usePageLoader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true); // Always show loader on first load + route changes
 
     const images = Array.from(document.images);
     let loadedCount = 0;
@@ -84,7 +84,8 @@ function usePageLoader() {
       }
     });
 
-    const timer = setTimeout(() => setLoading(false), 2000);
+    // Fallback timeout (in case an image never loads)
+    const timer = setTimeout(() => setLoading(false), 3000);
 
     return () => {
       images.forEach((img) => {
@@ -109,17 +110,19 @@ export default function App() {
 function AppContent() {
   const loading = usePageLoader();
 
-  return loading ? (
-    <Preloader />
-  ) : (
+  if (loading) {
+    return <Preloader />; // Show only Preloader, hide everything else
+  }
+
+  return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/certificates" element={<CertificatesPage/>} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/rgb-game" element={<RGB/>} />
+        <Route path="/certificates" element={<CertificatesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/rgb-game" element={<RGB />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/arts" element={<Arts />} />
         <Route path="*" element={<NotFound />} />
