@@ -13,6 +13,21 @@ import ProjectsPage from "../pages/ProjectsPage";
 import CertificatesPage from "../pages/CertificatesPage";
 import ContactPage from "../pages/ContactPage";
 
+// ✅ helper to preload all images
+function preloadImages(urls) {
+  return Promise.all(
+    urls.map(
+      (src) =>
+        new Promise((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = resolve; // still resolve on error
+        })
+    )
+  );
+}
+
 // Layout with Background + Header
 function Layout({ children }) {
   const location = useLocation();
@@ -36,67 +51,15 @@ function Layout({ children }) {
         <Background />
       </div>
 
-      {/* Foreground content */}
+      {/* Foreground */}
       <div style={{ position: "relative", zIndex: 1 }}>
         {isHome && <Header />}
-        <main
-          className="container-fluid p-0"
-          style={{
-            paddingTop: "6rem",
-          }}
-        >
+        <main className="container-fluid p-0" style={{ paddingTop: "6rem" }}>
           {children}
         </main>
       </div>
     </div>
   );
-}
-
-// Hook to show Preloader on route changes
-function usePageLoader() {
-  const location = useLocation();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true); // Always show loader on first load + route changes
-
-    const images = Array.from(document.images);
-    let loadedCount = 0;
-
-    if (images.length === 0) {
-      setLoading(false);
-      return;
-    }
-
-    const onLoadOrError = () => {
-      loadedCount++;
-      if (loadedCount === images.length) {
-        setLoading(false);
-      }
-    };
-
-    images.forEach((img) => {
-      if (img.complete) {
-        loadedCount++;
-      } else {
-        img.addEventListener("load", onLoadOrError);
-        img.addEventListener("error", onLoadOrError);
-      }
-    });
-
-    // Fallback timeout (in case an image never loads)
-    const timer = setTimeout(() => setLoading(false), 3000);
-
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", onLoadOrError);
-        img.removeEventListener("error", onLoadOrError);
-      });
-      clearTimeout(timer);
-    };
-  }, [location.pathname]);
-
-  return loading;
 }
 
 export default function App() {
@@ -108,10 +71,25 @@ export default function App() {
 }
 
 function AppContent() {
-  const loading = usePageLoader();
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Collect all image URLs (backgrounds, page images, assets)
+    const urls = Array.from(document.querySelectorAll("img")).map((img) => img.src);
+
+    // Always show loader immediately
+    setLoading(true);
+
+    // Preload them
+    preloadImages(urls).then(() => {
+      // Add a small delay so loader feels smooth (e.g., 1s min)
+      setTimeout(() => setLoading(false), 1000);
+    });
+  }, [location.pathname]);
 
   if (loading) {
-    return <Preloader />; // Show only Preloader, hide everything else
+    return <Preloader />;
   }
 
   return (
