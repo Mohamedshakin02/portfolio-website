@@ -38,7 +38,7 @@ function WebProjects() {
             link: 'https://mohamedshakin1.github.io/The-Zoo-Wildlife-Park/',
         },
         {
-            title: 'Chocolate Company Website',
+            title: 'Chocolate Box Website',
             description: 'Developed a responsive chocolate company website featuring a custom chocolate box builder, company overview, product promotions, and user signup, optimized for desktop and mobile.',
             image: ProjectImg4,
             github: 'https://github.com/Mohamedshakin02/Chocolate-Company-Website',
