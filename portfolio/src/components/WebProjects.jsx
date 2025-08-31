@@ -39,7 +39,7 @@ function WebProjects() {
         },
         {
             title: 'Chocolate Box Website',
-            description: 'Developed a responsive chocolate company website featuring a custom chocolate box builder, company overview, product promotions, and user signup, optimized for desktop and mobile.',
+            description: 'Developed a responsive chocolate box website featuring a custom chocolate box builder, product overview,, and user signup, optimized for desktop and mobile.',
             image: ProjectImg4,
             github: 'https://github.com/Mohamedshakin02/Chocolate-Company-Website',
             link: 'https://chocolate-company-website.vercel.app/',
