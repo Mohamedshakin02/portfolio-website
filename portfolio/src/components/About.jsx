@@ -22,7 +22,7 @@ function About() {
 
                     <div className="age pt-3 pt-lg-5">
                         <p className="m-0 fs-5  fw-normal">Age:</p>
-                        <p className="number m-0 display-6 fw-medium pt-1">19</p>
+                        <p className="number m-0 display-6 fw-medium pt-1">20</p>
                     </div>
 
                     <div className="location pb-3 pt-4 pt-lg-0 d-flex flex-column align-self-end">
