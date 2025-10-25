@@ -18,7 +18,7 @@ import CertificateImg8 from '../assets/certificates/Python-2.jpg';
 import CertificateImg9 from '../assets/certificates/Tkinder.jpg';
 import CertificateImg10 from '../assets/certificates/Dialogflow.jpeg';
 import CertificateImg11 from '../assets/certificates/Data Visualization.jpeg';
-
+import CertificateImg12 from '../assets/certificates/Machine-Learning.png';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -33,6 +33,7 @@ function CourseCertificates() {
         { title: 'Python Tkinter Certificate', image: CertificateImg9 },
         { title: 'Dialogflow Certificate', image: CertificateImg10 },
         { title: 'Data Visualization Certificate', image: CertificateImg11 },
+        { title: 'Machine Learning Certificate', image: CertificateImg12 },
     ]);
 
     return (
