@@ -81,7 +81,7 @@ function ProjectCertificates() {
                         >
                             {certificates.map((certificate, index) => (
                                 <SwiperSlide key={index} className="certificate-slide">
-                                    <div className="all-certificate-card project-certificate-card">
+                                    <div className="all-certificate-card project-certificate-card mb-2 mb-md-3 mb-lg-0">
                                         <img
                                             src={certificate.image}
                                             alt={certificate.title}
