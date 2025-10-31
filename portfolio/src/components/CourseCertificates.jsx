@@ -35,7 +35,7 @@ function CourseCertificates() {
         { title: 'Dialogflow Certificate', image: CertificateImg10 },
         { title: 'Data Visualization Certificate', image: CertificateImg11 },
         { title: 'Machine Learning Certificate', image: CertificateImg12 },
-        { title: 'Machine Learning Certificate', image: CertificateImg13 },
+        { title: 'Into to Machine Learning Certificate', image: CertificateImg13 },
     ]);
 
     return (
