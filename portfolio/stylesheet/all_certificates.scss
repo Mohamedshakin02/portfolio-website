@@ -108,7 +108,7 @@ $radius: 40px;
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   /* target the third real slide */
   .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
     display: flex;
@@ -137,7 +137,7 @@ $radius: 40px;
         bottom: 4.3rem;
 
         .all-certificate-card {
-        border-width: 0px 4px 4px 0px;
+        border-width: 0px 4px 4px 0px !important; 
 
     }
     }
