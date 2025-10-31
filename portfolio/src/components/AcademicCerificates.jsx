@@ -55,7 +55,7 @@ function AcademicCertificates() {
                     }}
                 >
                     {certificates.map((certificate, index) => (
-                        <SwiperSlide key={index} className="certificate-slide">
+                        <SwiperSlide key={index} className={`certificate-slide slide-${index + 1}`}>
                             <div className="all-certificate-card">
                                 <img
                                     src={certificate.image}

@@ -34,12 +34,10 @@
 }
 .all-certificates-content .swiper-wrapper {
   display: flex;
-  align-items: center;
-  /* center vertically */
+  align-items: center; /* center vertically */
 }
 .all-certificates-content .swiper-slide {
-  width: auto !important;
-  /* allow width to fit image */
+  width: auto !important; /* allow width to fit image */
   display: flex;
   justify-content: center;
 }
@@ -51,8 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30rem;
-  /* set max height for certificates */
+  height: 30rem; /* set max height for certificates */
 }
 .all-certificates-content .certificate-img {
   height: 100%;
@@ -60,6 +57,8 @@
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
+  transition: transform 0.35s ease-in-out;
+  transform-origin: center center;
 }
 
 .certificates-footer {
@@ -91,6 +90,28 @@
   .all-certificates-content {
     padding-top: 3rem !important;
     bottom: 4.5rem;
+  }
+}
+@media (max-width: 700px) {
+  /* target the third real slide */
+  .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide.slide-3:not(.swiper-slide-duplicate) .all-certificate-card {
+    transform: rotate(-90deg);
+    border-width: 0px 0px 5px 5px;
+    border-radius: 25px 25px 25px 25px;
+    width: auto;
+    height: 20rem;
+  }
+  /* make sure image fits inside rotated card */
+  .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
+    width: 100%;
+    height: 15rem;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 576px) {
