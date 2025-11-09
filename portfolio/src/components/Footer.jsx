@@ -53,7 +53,7 @@ function Footer() {
                     </div>
 
                     <div className='bottom-container mt-5 pb-1'>
-                        <p className='fs-5'>Copyright © <span className='number fs-6'>2025</span> Mohamed Shakin </p>
+                        <p className='fs-5'>Copyright © <span className='number fs-6'>{new Date().getFullYear()}</span> Mohamed Shakin </p>
                     </div>
                 </div>
             </div>
