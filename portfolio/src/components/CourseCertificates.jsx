@@ -20,6 +20,8 @@ import CertificateImg10 from '../assets/certificates/Dialogflow.jpeg';
 import CertificateImg11 from '../assets/certificates/Data Visualization.jpeg';
 import CertificateImg12 from '../assets/certificates/Machine-Learning.png';
 import CertificateImg13 from '../assets/certificates/Intro to Machine Learning.png';
+import CertificateImg14 from '../assets/certificates/React.png';
+import CertificateImg15 from '../assets/certificates/RESTful.png';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -36,6 +38,8 @@ function CourseCertificates() {
         { title: 'Data Visualization Certificate', image: CertificateImg11 },
         { title: 'Machine Learning Certificate', image: CertificateImg12 },
         { title: 'Into to Machine Learning Certificate', image: CertificateImg13 },
+        { title: 'React Certificate', image: CertificateImg14 },
+        { title: 'RESTful APIs with Node.js and Express Certificate', image: CertificateImg15 },
     ]);
 
     return (
