@@ -24,6 +24,7 @@ import CertificateImg14 from '../assets/certificates/React.png';
 import CertificateImg15 from '../assets/certificates/RESTful.png';
 import CertificateImg16 from '../assets/certificates/GDG Certificate.png';
 import CertificateImg17 from '../assets/certificates/Gradio.png';
+import CertificateImg18 from '../assets/certificates/Tailwind.jpg';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -44,6 +45,7 @@ function CourseCertificates() {
         { title: 'RESTful APIs with Node.js and Express Certificate', image: CertificateImg15 },
         { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg16 },
         { title: "Gradio Interface Certificate", image: CertificateImg17 },
+        { title: "Tailwind CSS Certificate", image: CertificateImg18 },
     ]);
 
     return (
