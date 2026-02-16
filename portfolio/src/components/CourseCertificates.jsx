@@ -16,16 +16,17 @@ import CertificateImg6 from '../assets/certificates/Figma.png';
 import CertificateImg7 from '../assets/certificates/Python.png';
 import CertificateImg8 from '../assets/certificates/Python-2.jpg';
 import CertificateImg9 from '../assets/certificates/Tkinder.jpg';
-import CertificateImg10 from '../assets/certificates/Dialogflow.jpeg';
-import CertificateImg11 from '../assets/certificates/Data Visualization.jpeg';
-import CertificateImg12 from '../assets/certificates/Machine-Learning.png';
-import CertificateImg13 from '../assets/certificates/Intro to Machine Learning.png';
-import CertificateImg14 from '../assets/certificates/React.png';
-import CertificateImg15 from '../assets/certificates/RESTful.png';
-import CertificateImg16 from '../assets/certificates/GDG Certificate.png';
-import CertificateImg17 from '../assets/certificates/Gradio.png';
-import CertificateImg18 from '../assets/certificates/Tailwind.jpg';
-import CertificateImg19 from '../assets/certificates/NextJS.png';
+import CertificateImg10 from '../assets/certificates/Python Object Oriented Programming.png';
+import CertificateImg11 from '../assets/certificates/Dialogflow.jpeg';
+import CertificateImg12 from '../assets/certificates/Data Visualization.jpeg';
+import CertificateImg13 from '../assets/certificates/Machine-Learning.png';
+import CertificateImg14 from '../assets/certificates/Intro to Machine Learning.png';
+import CertificateImg15 from '../assets/certificates/React.png';
+import CertificateImg16 from '../assets/certificates/RESTful.png';
+import CertificateImg17 from '../assets/certificates/GDG Certificate.png';
+import CertificateImg18 from '../assets/certificates/Gradio.png';
+import CertificateImg19 from '../assets/certificates/Tailwind.jpg';
+import CertificateImg20 from '../assets/certificates/NextJS.png';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -38,16 +39,17 @@ function CourseCertificates() {
         { title: 'Introduction to Python Certificate', image: CertificateImg7 },
         { title: 'Python Intermediate Certificate', image: CertificateImg8 },
         { title: 'Python Tkinter Certificate', image: CertificateImg9 },
-        { title: 'Dialogflow Certificate', image: CertificateImg10 },
-        { title: 'Data Visualization Certificate', image: CertificateImg11 },
-        { title: 'Machine Learning Certificate', image: CertificateImg12 },
-        { title: 'Into to Machine Learning Certificate', image: CertificateImg13 },
-        { title: 'React Certificate', image: CertificateImg14 },
-        { title: 'RESTful APIs with Node.js and Express Certificate', image: CertificateImg15 },
-        { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg16 },
-        { title: "Gradio Interface Certificate", image: CertificateImg17 },
-        { title: "Tailwind CSS Certificate", image: CertificateImg18 },
-        { title: "Next.js Certificate", image: CertificateImg19 },
+        { title: 'Python Object Oriented Programming Certificate', image: CertificateImg10 },
+        { title: 'Dialogflow Certificate', image: CertificateImg11 },
+        { title: 'Data Visualization Certificate', image: CertificateImg12 },
+        { title: 'Machine Learning Certificate', image: CertificateImg13 },
+        { title: 'Into to Machine Learning Certificate', image: CertificateImg14 },
+        { title: 'React Certificate', image: CertificateImg15 },
+        { title: 'RESTful APIs with Node.js and Express Certificate', image: CertificateImg16 },
+        { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg17 },
+        { title: "Gradio Interface Certificate", image: CertificateImg18 },
+        { title: "Tailwind CSS Certificate", image: CertificateImg19 },
+        { title: "Next.js Certificate", image: CertificateImg20 },
     ]);
 
     return (
