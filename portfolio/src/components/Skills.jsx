@@ -26,8 +26,8 @@ function Skills() {
                             <div className="description">
                                 <p className='h5 fw-medium'>Building responsive and modern websites with clean layouts and smooth functionality. From simple projects to full-featured sites, delivering engaging and user-friendly web experiences.</p>
                             </div>
-                            <div className='tools mt-3 h-25'>
-                                <p className='m-0 fs-5 fw-medium'>Tools: HTML, CSS, JavaScript, Sass, Bootstrap, React</p>
+                            <div className='tools mt-3 mb-2 h-25'>
+                                <p className='m-0 fs-5 fw-medium'>Tools: HTML, CSS, JavaScript, Sass, Bootstrap, React, Node.js, Express.js, MongoDB</p>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ function Skills() {
                             <div className="description">
                                 <p className='h5 fw-medium'>Developing practical and efficient software solutions, from API-based programs to Android applications, with a focus on functionality and usability.</p>
                             </div>
-                            <div className='tools mt-3 h-25'>
+                            <div className='tools mt-3 mb-2 h-25'>
                                 <p className='m-0 fs-5 fw-medium'>Tools: Python, Tkinter, JavaScript, Android Studio</p>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ function Skills() {
                             <div className="description">
                                 <p className='h5 fw-medium'>Creating intuitive and user-friendly interfaces through wireframes and prototypes, ensuring designs balance aesthetics and functionality.</p>
                             </div>
-                            <div className='tools mt-3 h-25'>
+                            <div className='tools mt-3 mb-2 h-25'>
                                 <p className='m-0 fs-5 fw-medium'>Tools: Figma, Canva</p>
                             </div>
 
@@ -84,8 +84,8 @@ function Skills() {
                             <div className="description">
                                 <p className='h5 fw-medium'>Designing fun and interactive games that combine creativity with engaging mechanics, suitable for storytelling and entertainment.</p>
                             </div>
-                            <div className='tools mt-3 h-25'>
-                                <p className='m-0 fs-5 fw-medium'>Tools: Unity, Twine, Bitsy, p<span className='number fs-6'>5</span>.js</p>
+                            <div className='tools mt-3 mb-2 h-25'>
+                                <p className='m-0 fs-5 fw-medium align-self-start'>Tools: Unity, Twine, Bitsy, p<span className='number fs-6'>5</span>.js</p>
                             </div>
                         </div>
                     </div>

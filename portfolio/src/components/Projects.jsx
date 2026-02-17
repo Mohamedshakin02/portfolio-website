@@ -5,10 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg1 from '../assets/projects/G-Shock.png';
-import ProjectImg2 from '../assets/projects/Info-Globe.png';
-import ProjectImg3 from '../assets/projects/CML.png';
-import ProjectImg4 from '../assets/projects/Pixel-Football.png';
+import ProjectImg1 from '../assets/projects/Sports Note.png';
+import ProjectImg2 from '../assets/projects/CML.png';
+import ProjectImg3 from '../assets/projects/Pixel-Football.png';
+import ProjectImg4 from '../assets/projects/Info-Globe.png';
+import ProjectImg5 from '../assets/projects/Cloth-Care.png';
+import ProjectImg6 from '../assets/projects/G-Shock.png';
 import GithubLogo from '../assets/logos/github-logo.png';
 import GameLogo from '../assets/logos/game-logo.png';
 import YoutubeLogo from '../assets/logos/youtube-logo2.png';
@@ -18,25 +20,17 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 function Projects() {
     const [projects] = useState([
         {
-            title: 'G-Shock Responsive Website',
-            description: 'Developed a responsive G-Shock website using React.js, integrated with a Node.js/MongoDB backend for user login, featuring watch details and fully responsive design across desktop, tablet, and mobile devices.',
+            title: 'Sports Note Web Application',
+            description: 'Developed a full-stack sports note web application using React.js with a Node.js and MongoDB backend, allowing users to store, manage, and organize their sports-related data through a clean and responsive interface.',
             image: ProjectImg1,
-            github: 'https://github.com/Mohamedshakin02/G-SHOCK-Watch.git',
-            link: 'https://g-shock.vercel.app/',
+            github: 'https://github.com/Mohamedshakin02/sports-note.git',
+            link: 'https://sportsnote.vercel.app/',
             type: "Web Development",
-        },
-        {
-            title: ' Info Globe GUI',
-            description: "Developed Info Globe, a Python Tkinter GUI app that fetches country data from the RestCountries API, featuring search, random country display, and region/language filters.",
-            image: ProjectImg2,
-            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/Data%20Driven%20Application',
-            youtube: 'https://youtu.be/HDZiiggFHlM?si=NS_cXg5EcYnzWaLF',
-            type: "Software Development",
         },
         {
             title: 'CML Company Website',
             description: 'Developed a responsive website for CML Company as part of a university assessment, highlighting musical events, consulting, and products. My role included responsive development, UI design, and contributing ideas.',
-            image: ProjectImg3,
+            image: ProjectImg2,
             github: 'https://github.com/Zeko54/CML.git',
             link: 'https://cml-henna.vercel.app/',
             type: "Web Development",
@@ -44,9 +38,33 @@ function Projects() {
         {
             title: 'Pixel Football 2D Game',
             description: 'Developed a 2D pixel art football game in Unity with simple controls and fast-paced, engaging gameplay. Designed a side-view match with 2–5 minute durations, focusing on scoring goals and an engaging gameplay experience.',
-            image: ProjectImg4,
+            image: ProjectImg3,
             game: 'https://mohamed-shakin.itch.io/pixel-football',
             type: "Game Development",
+        },
+        {
+            title: 'Info Globe GUI',
+            description: "Developed Info Globe, a Python Tkinter GUI app that fetches country data from the RestCountries API, featuring search, random country display, and region/language filters.",
+            image: ProjectImg4,
+            github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/Data%20Driven%20Application',
+            youtube: 'https://youtu.be/HDZiiggFHlM?si=NS_cXg5EcYnzWaLF',
+            type: "Software Development",
+        },
+        {
+            title: 'Cloth Care Mobile Application ',
+            description: 'Developed Cloth Care, an Android Studio app that provides washing and ironing instructions based on the selected clothing item and fabric type, helping users take proper care of their clothes.',
+            image: ProjectImg5,
+            github: 'https://github.com/DC-BSU-RAK/projects-collection-2025-Mohamedshakin02/tree/main/Multi%20Page%20App',
+            youtube: 'https://youtu.be/xPLIlYXq1oI?si=a3ysVYTk4v7cOuHU',
+            type: "Mobile Application",
+        },
+        {
+            title: 'G-Shock Responsive Website',
+            description: 'Developed a responsive G-Shock website using React.js, integrated with a Node.js/MongoDB backend for user login, featuring watch details and fully responsive design across desktop, tablet, and mobile devices.',
+            image: ProjectImg6,
+            github: 'https://github.com/Mohamedshakin02/G-SHOCK-Watch.git',
+            link: 'https://g-shock.vercel.app/',
+            type: "Web Development",
         }
     ]);
 
