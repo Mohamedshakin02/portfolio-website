@@ -23,10 +23,9 @@ import CertificateImg13 from '../assets/certificates/Machine-Learning.png';
 import CertificateImg14 from '../assets/certificates/Intro to Machine Learning.png';
 import CertificateImg15 from '../assets/certificates/React.png';
 import CertificateImg16 from '../assets/certificates/RESTful.png';
-import CertificateImg17 from '../assets/certificates/GDG Certificate.png';
-import CertificateImg18 from '../assets/certificates/Gradio.png';
-import CertificateImg19 from '../assets/certificates/Tailwind.jpg';
-import CertificateImg20 from '../assets/certificates/NextJS.png';
+import CertificateImg17 from '../assets/certificates/Gradio.png';
+import CertificateImg18 from '../assets/certificates/Tailwind.jpg';
+import CertificateImg19 from '../assets/certificates/NextJS.png';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -46,10 +45,9 @@ function CourseCertificates() {
         { title: 'Into to Machine Learning Certificate', image: CertificateImg14 },
         { title: 'React Certificate', image: CertificateImg15 },
         { title: 'RESTful APIs with Node.js and Express Certificate', image: CertificateImg16 },
-        { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg17 },
-        { title: "Gradio Interface Certificate", image: CertificateImg18 },
-        { title: "Tailwind CSS Certificate", image: CertificateImg19 },
-        { title: "Next.js Certificate", image: CertificateImg20 },
+        { title: "Gradio Interface Certificate", image: CertificateImg17 },
+        { title: "Tailwind CSS Certificate", image: CertificateImg18 },
+        { title: "Next.js Certificate", image: CertificateImg19 },
     ]);
 
     return (
