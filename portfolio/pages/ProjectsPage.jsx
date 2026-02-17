@@ -7,6 +7,7 @@ import UIProjects from '../src/components/UIProjects'
 import GameProjects from '../src/components/GameProjects'
 import OtherProjects from '../src/components/OtherProjects'
 import Footer from '../src/components/Footer';
+import MLProjects from '../src/components/MLProjects';
 
 function ProjectsPage() {
   return (
@@ -16,6 +17,7 @@ function ProjectsPage() {
       <AppProjects />
       <UIProjects />
       <GameProjects />
+      <MLProjects />
       <OtherProjects />
       <div className="project-footer">
         <Footer />
