@@ -11,10 +11,12 @@ import ProjectImg3 from '../assets/projects/Pixel-Football.png';
 import ProjectImg4 from '../assets/projects/Info-Globe.png';
 import ProjectImg5 from '../assets/projects/Cloth-Care.png';
 import ProjectImg6 from '../assets/projects/G-Shock.png';
+import ProjectImg7 from '../assets/projects/Tick-Events.png';
 import GithubLogo from '../assets/logos/github-logo.png';
 import GameLogo from '../assets/logos/game-logo.png';
 import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 import WebLogo from '../assets/logos/web-logo.png';
+import FigmaLogo from '../assets/logos/figma-logo.png';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function Projects() {
@@ -65,6 +67,13 @@ function Projects() {
             github: 'https://github.com/Mohamedshakin02/G-SHOCK-Watch.git',
             link: 'https://g-shock.vercel.app/',
             type: "Web Development",
+        },
+        {
+            title: 'Tick Events Application Prototype',
+            description: "Developed Tick Events, a Figma prototype app that displays upcoming events, allowing users to filter by location, category, and date, providing an easy-to-use and informative experience.",
+            image: ProjectImg7,
+            figma: 'https://www.figma.com/proto/8ei59o3Siq5zbrHLCuS2r7/HiFi-Interactive-Prototype?node-id=103-2&t=FAqJabHuBirGSvqx-1&scaling=contain&page-id=0%3A1&starting-point-node-id=103%3A2',
+            type: "UI/UX Design",
         }
     ]);
 
@@ -147,6 +156,18 @@ function Projects() {
                                             >
                                                 <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
                                                 Game Link
+                                            </a>
+                                        )}
+                                        {project.figma && (
+                                            <a
+                                                href={project.figma}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Figma Link'
+                                            >
+                                                <img src={FigmaLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
+                                                Figma Link
                                             </a>
                                         )}
                                     </div>
