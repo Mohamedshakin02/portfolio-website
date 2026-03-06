@@ -27,7 +27,7 @@ function Skills() {
                                 <p className='h5 fw-medium'>Building responsive and modern websites with clean layouts and smooth functionality. From simple projects to full-featured sites, delivering engaging and user-friendly web experiences.</p>
                             </div>
                             <div className='tools mt-3 mb-2 h-25'>
-                                <p className='m-0 fs-5 fw-medium'>Tools: HTML, CSS, JavaScript, Sass, Bootstrap, React, Node.js, Express.js, MongoDB</p>
+                                <p className='m-0 fs-5 fw-medium'>Tools: HTML, CSS, JavaScript, Sass, Bootstrap, Tailwind, React, Node.js, Express.js, MongoDB</p>
                             </div>
                         </div>
                     </div>
