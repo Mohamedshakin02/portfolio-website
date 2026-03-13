@@ -32,9 +32,8 @@ function About() {
 
                     <div className="description py-3 pt-5">
                         <p className="m-0 h4 fw-medium">
-                            I’m Mohamed Shakin, passionate about building creative and practical digital solutions that solve real-world problems.
-                            With a background in Creative Computing, I’ve developed a solid foundation in front-end development and programming using HTML, CSS, JavaScript, and Python. <br /><br />
-                            I enjoy exploring how design and technology intersect to create meaningful user experiences. Whether it’s developing a website, prototyping an app, or automating a task, I approach every project with a problem-solving mindset and an eye for detail. <br /><br />
+                            I'm Mohamed Shakin, passionate about building creative and practical digital solutions that solve real-world problems. With a background in Creative Computing, I have developed a strong foundation in web development, software development, game development, and UI/UX design. I create responsive and modern websites using technologies such as HTML, CSS, JavaScript, Sass, Bootstrap, Tailwind, and React, along with backend tools like Node.js, Express.js, and MongoDB. <br /><br />
+                            I enjoy applying my skills to create meaningful user experiences. Whether it's developing a website, building a software application, designing an interactive game, or crafting intuitive interfaces, I approach every project with a problem-solving mindset and attention to detail. <br /><br />
                             I’m always looking for new challenges and opportunities to grow, especially those that allow me to collaborate, learn, and make a real impact through technology.
                         </p>
                     </div>
