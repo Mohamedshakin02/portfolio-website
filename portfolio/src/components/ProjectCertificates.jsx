@@ -26,6 +26,9 @@ function ProjectCertificates() {
                     display: flex;
                     justify-content: center;}
 
+                    .project-certificates-content .swiper-slide{
+                    margin-right: 0 !important;}
+
                     .all-certificates-content .project-certificate-card{
                     height: 25rem;}
     
@@ -35,12 +38,15 @@ function ProjectCertificates() {
 
                     @media (max-width: 768px) {
                         .project-certificates-content .swiper-wrapper{
-                        justify-content: flex-start;}
+                        justify-content: initial;}
                     }
     
                     @media (max-width: 576px) {
                         .all-certificates-content .project-certificate-card{
                         height: 15rem !important;}
+
+                        .project-certificates-content .swiper-wrapper{
+                        justify-content: flex-start;}
                 `}
     
                 </style>
