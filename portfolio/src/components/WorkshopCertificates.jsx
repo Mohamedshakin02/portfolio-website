@@ -7,11 +7,13 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 // Certificate images
-import CertificateImg1 from '../assets/certificates/GDG Certificate.png';;
+import CertificateImg1 from '../assets/certificates/GDG Certificate.png';
+import CertificateImg2 from '../assets/certificates/Mission Digital Escape.png';
 
 function WorkshopCertificates() {
     const [certificates] = useState([
         { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg1 },
+        { title: "Mission Digital Escape Workshop Certificate", image: CertificateImg2 },
     ]);
 
     return (
