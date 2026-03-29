@@ -23,24 +23,20 @@ function WorkshopCertificates() {
             <style>
                 {`
   
-                      .project-certificates-content .swiper-wrapper{
-                      display: flex;
-                      justify-content: center;}
-  
-                      .all-certificates-content .project-certificate-card{
+                      .all-certificates-content .workshop-certificate-card{
                       height: 25rem;}
       
                       @media (max-width: 992px) {
-                          .all-certificates-content .project-certificate-card{
+                          .all-certificates-content .workshop-certificate-card{
                           height: 20rem !important;}
   
                       @media (max-width: 768px) {
-                          .project-certificates-content .swiper-wrapper{
+                          .workshop-certificates-content .swiper-wrapper{
                           justify-content: flex-start;}
                       }
       
                       @media (max-width: 576px) {
-                          .all-certificates-content .project-certificate-card{
+                          .all-certificates-content .workshop-certificate-card{
                           height: 15rem !important;}
                   `}
 
@@ -48,9 +44,9 @@ function WorkshopCertificates() {
 
 
             <div className="all-certificates-container container-md">
-                <h1 className="display-3 fw-semibold text-center mb-5">Workshop Certificate</h1>
+                <h1 className="display-3 fw-semibold text-center mb-5">Workshop Certificates</h1>
 
-                <div className="all-certificates-content project-certificates-content p-0 pb-4 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
+                <div className="all-certificates-content workshop-certificates-content p-0 pb-4 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
                     <Swiper
                         slidesPerView={"auto"}
                         centeredSlides={true}
@@ -62,27 +58,32 @@ function WorkshopCertificates() {
                         className="mySwiper"
                         breakpoints={{
                             0: {
+                                loop: false,
                                 centeredSlides: true,
                             },
                             576: {
+                                loop: false,
                                 centeredSlides: true,
                             },
                             768: {
+                                loop: true,
                                 centeredSlides: false,
                                 spaceBetween: 40,
                             },
                             992: {
+                                loop: true,
                                 centeredSlides: false,
                                 spaceBetween: 40,
                             },
                             1200: {
+                                loop: true,
                                 centeredSlides: false,
                             },
                         }}
                     >
                         {certificates.map((certificate, index) => (
                             <SwiperSlide key={index} className="certificate-slide">
-                                <div className="all-certificate-card project-certificate-card mb-2 mb-md-3 mb-lg-0">
+                                <div className="all-certificate-card workshop-certificate-card mb-2 mb-md-3 mb-lg-0">
                                     <img
                                         src={certificate.image}
                                         alt={certificate.title}
