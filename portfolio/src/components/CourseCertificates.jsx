@@ -26,6 +26,7 @@ import CertificateImg16 from '../assets/certificates/RESTful.png';
 import CertificateImg17 from '../assets/certificates/Gradio.png';
 import CertificateImg18 from '../assets/certificates/Tailwind.jpg';
 import CertificateImg19 from '../assets/certificates/NextJS.png';
+import CertificateImg20 from '../assets/certificates/Introduction to Cybersecurity.png';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -48,6 +49,7 @@ function CourseCertificates() {
         { title: "Gradio Interface Certificate", image: CertificateImg17 },
         { title: "Tailwind CSS Certificate", image: CertificateImg18 },
         { title: "Next.js Certificate", image: CertificateImg19 },
+        { title: "Introduction to Cybersecurity Certificate", image: CertificateImg20 },
     ]);
 
     return (
