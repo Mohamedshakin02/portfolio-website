@@ -27,6 +27,8 @@ import CertificateImg17 from '../assets/certificates/Gradio.png';
 import CertificateImg18 from '../assets/certificates/Tailwind.jpg';
 import CertificateImg19 from '../assets/certificates/NextJS.png';
 import CertificateImg20 from '../assets/certificates/Introduction to Cybersecurity.png';
+import CertificateImg21 from '../assets/certificates/Learning Cyber Incident Response and Digital Forensics.png';
+import CertificateImg22 from '../assets/certificates/Autopsy for Digital Forensics.png';
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -50,6 +52,8 @@ function CourseCertificates() {
         { title: "Tailwind CSS Certificate", image: CertificateImg18 },
         { title: "Next.js Certificate", image: CertificateImg19 },
         { title: "Introduction to Cybersecurity Certificate", image: CertificateImg20 },
+        { title: "Learning Cyber Incident Response and Digital Forensics Certificate", image: CertificateImg21 },
+        { title: "Autopsy for Digital Forensics Certificate", image: CertificateImg22 },
     ]);
 
     return (
