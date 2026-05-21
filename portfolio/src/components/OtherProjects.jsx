@@ -8,7 +8,10 @@ import { Pagination } from 'swiper/modules';
 import ProjectImg1 from '../assets/projects/Garden-Chatbot.png';
 import ProjectImg2 from '../assets/projects/Agriculture-Data.png';
 import ProjectImg3 from '../assets/projects/p5js-works.png';
+import ProjectImg4 from '../assets/projects/Arduino.png';
 import WebLogo from '../assets/logos/web-logo.png';
+import GithubLogo from '../assets/logos/github-logo.png';
+import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 
 function OtherProjects() {
     const [projects] = useState([
@@ -23,6 +26,13 @@ function OtherProjects() {
             description: "Agriculture Data Visualization is an interactive project created using Flourish, showing how agriculture has changed over time and across regions, allowing users to explore the data and understand regional and global trends.",
             image: ProjectImg2,
             link: 'https://public.flourish.studio/story/3056211/',
+        },
+        {
+            title: 'Arduino Experiment Portfolio',
+            description: "Developed Arduino physical computing experiments using sensors, LEDs, and interactive components. Worked on circuit connections, coding, and hardware integration to create creative and engaging interactive systems.",
+            image: ProjectImg4,
+            github: 'https://github.com/Mohamedshakin02/arduino-experiment-portfolio.git',
+            youtube: 'https://www.youtube.com/playlist?list=PLRb-GveDzYRqrIj2GRFiNw2d2XcCFN_Ab',
         },
         {
             title: 'p5.js Works',
@@ -77,6 +87,30 @@ function OtherProjects() {
                                             >
                                                 <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                 Live Link
+                                            </a>
+                                        )}
+                                        {project.github && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Github Link'
+                                            >
+                                                <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
+                                                Code Link
+                                            </a>
+                                        )}
+                                        {project.youtube && (
+                                            <a
+                                                href={project.youtube}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                title='Youtube Link'
+                                            >
+                                                <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                YouTube Link
                                             </a>
                                         )}
                                     </div>
