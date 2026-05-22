@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css';
 import '/stylesheet/all_certificates.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -56,18 +56,39 @@ function CourseCertificates() {
         { title: "Autopsy for Digital Forensics Certificate", image: CertificateImg22 },
     ]);
 
+    const swiperRef = useRef(null);
+
+    const slidePrev = () => swiperRef.current?.slidePrev();
+    const slideNext = () => swiperRef.current?.slideNext();
+
     return (
 
         <>
 
             <style>
-                        {`
+                {`
                 .all-certificates-content .course-certificate-card{
                 height: 25rem;}
+
+                .course-certificates-content{
+                    padding-bottom: 2rem !important;
+                }
+
+                .course-certificates-content .slider-arrows{
+                    padding: 0 2rem !important;
+                }
 
                 @media (max-width: 992px) {
                     .all-certificates-content .course-certificate-card{
                     height: 20rem !important;}
+
+                @media (max-width: 992px) {
+                .course-certificates-content{
+                    padding-bottom: 2rem !important;
+            }
+
+                
+                }
 
                 @media (max-width: 576px) {
                     .all-certificates-content .course-certificate-card{
@@ -80,48 +101,65 @@ function CourseCertificates() {
             <div className="all-certificates-container container-md">
                 <h1 className="display-3 fw-semibold text-center mb-5">Course Certificates</h1>
 
-                <div className="all-certificates-content p-0 pb-3 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
-                    <Swiper
-                        slidesPerView={"auto"}
-                        centeredSlides={true}
-                        spaceBetween={50}
-                        initialSlide={0}
-                        loop={true}
-                        pagination={{ clickable: true, dynamicBullets: true, }}
-                        modules={[Pagination]}
-                        className="mySwiper"
-                        breakpoints={{
-                            0: {
-                                centeredSlides: true,
-                            },
-                            576: {
-                                centeredSlides: true,
-                            },
-                            768: {
-                                centeredSlides: false,
-                                spaceBetween: 40,
-                            },
-                            992: {
-                                centeredSlides: false,
-                                spaceBetween: 40,
-                            },
-                            1200: {
-                                centeredSlides: false,
-                            },
-                        }}
-                    >
-                        {certificates.map((certificate, index) => (
-                            <SwiperSlide key={index} className="certificate-slide">
-                                <div className="all-certificate-card course-certificate-card">
-                                    <img
-                                        src={certificate.image}
-                                        alt={certificate.title}
-                                        className="certificate-img"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                <div className="all-certificates-content course-certificates-content p-0 pb-3 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
+
+                    <div className="swiper-wrapper-container position-relative">
+                        <Swiper
+                            slidesPerView={"auto"}
+                            centeredSlides={true}
+                            spaceBetween={50}
+                            initialSlide={0}
+                            loop={true}
+                            pagination={{ clickable: true, dynamicBullets: true, }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                            onSwiper={(swiper) => (swiperRef.current = swiper)}
+                            breakpoints={{
+                                0: {
+                                    centeredSlides: true,
+                                },
+                                576: {
+                                    centeredSlides: true,
+                                },
+                                768: {
+                                    centeredSlides: false,
+                                    spaceBetween: 40,
+                                },
+                                992: {
+                                    centeredSlides: false,
+                                    spaceBetween: 40,
+                                },
+                                1200: {
+                                    centeredSlides: false,
+                                },
+                            }}
+                        >
+                            {certificates.map((certificate, index) => (
+                                <SwiperSlide key={index} className="certificate-slide">
+                                    <div className="all-certificate-card course-certificate-card">
+                                        <img
+                                            src={certificate.image}
+                                            alt={certificate.title}
+                                            className="certificate-img"
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                        {certificates.length > 3 && (
+                            <div className="slider-arrows">
+                                <button onClick={slidePrev}>
+                                    <i className="bi bi-caret-left-fill"></i>
+                                </button>
+
+                                <button onClick={slideNext}>
+                                    <i className="bi bi-caret-right-fill"></i>
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
                 </div>
             </div>
 

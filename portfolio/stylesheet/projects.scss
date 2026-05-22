@@ -6,8 +6,12 @@ $radius: 40px;
     height: 20% !important;
 }
 
+.swiper-wrapper-container {
+    position: relative;
+}
+
 .swiper-pagination {
-    margin-top: 40px;
+    margin-top: 40px !important;
     position: relative;
 }
 
@@ -79,11 +83,34 @@ $radius: 40px;
             ;
         }
 
-        a:hover{
+        a:hover {
             background-color: white;
         }
     }
 }
+
+.slider-arrows {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 0 1.5rem;
+    pointer-events: none;
+}
+
+.slider-arrows button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 1.6rem;
+    color: black;
+}
+
 
 @media (max-width: 992px) {
     .projects-container {
@@ -108,9 +135,13 @@ $radius: 40px;
     }
 
     .swiper-pagination {
-    margin-top: 30px;
-    position: relative;
-}
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .slider-arrows {
+        padding: 0 0.5rem;
+    }
 
 
     .swiper-pagination-bullet {

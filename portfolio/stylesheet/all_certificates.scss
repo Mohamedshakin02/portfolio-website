@@ -2,8 +2,16 @@ $background-color: rgba(255, 255, 255, 0.51);
 $blur: blur(5px);
 $radius: 40px;
 
+.swiper-wrapper-container {
+    position: relative;
+}
+
+.swiper-wrapper-container {
+    position: relative;
+}
+
 .swiper-pagination {
-    margin-top: 40px;
+    margin-top: 50px !important;
     position: relative;
 }
 
@@ -37,11 +45,13 @@ $radius: 40px;
 
     .swiper-wrapper {
         display: flex;
-        align-items: center;  /* center vertically */
+        align-items: center;
+        /* center vertically */
     }
 
     .swiper-slide {
-        width: auto !important; /* allow width to fit image */
+        width: auto !important;
+        /* allow width to fit image */
         display: flex;
         justify-content: center;
     }
@@ -54,7 +64,8 @@ $radius: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 30rem;   /* set max height for certificates */
+        height: 30rem;
+        /* set max height for certificates */
     }
 
     .certificate-img {
@@ -64,8 +75,30 @@ $radius: 40px;
         display: block;
         transition: transform 0.35s ease-in-out;
         transform-origin: center center;
-        
+
     }
+}
+
+.slider-arrows {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 0 1.5rem;
+    pointer-events: none;
+}
+
+.slider-arrows button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 1.6rem;
+    color: black;
 }
 
 .certificates-footer {
@@ -105,31 +138,40 @@ $radius: 40px;
         padding-top: 3rem !important;
         bottom: 4.5rem;
 
-}
+    }
+
+    .swiper-pagination{
+        margin-top: 42px !important;
+    }
+
+    .slider-arrows{
+        padding: 0 0.5rem;
+    }
 }
 
 @media (max-width: 650px) {
-  /* target the third real slide */
-  .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .swiper-slide.slide-3:not(.swiper-slide-duplicate) .all-certificate-card {
-    transform: rotate(-90deg);
-    border-width: 0px 0px 5px 5px;
-    border-radius: 25px 25px 25px 25px;
-    width: auto;
-    height: 20rem; 
-  }
+    /* target the third real slide */
+    .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  /* make sure image fits inside rotated card */
-  .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
-    width: 100%;
-    height: 15rem;
-    object-fit: contain;
-  }
+    .swiper-slide.slide-3:not(.swiper-slide-duplicate) .all-certificate-card {
+        transform: rotate(-90deg);
+        border-width: 0px 0px 5px 5px;
+        border-radius: 25px 25px 25px 25px;
+        width: auto;
+        height: 20rem;
+    }
+
+    /* make sure image fits inside rotated card */
+    .swiper-slide.slide-3:not(.swiper-slide-duplicate) {
+        width: 100%;
+        height: 15rem;
+        object-fit: contain;
+    }
 }
 
 @media (max-width: 576px) {
@@ -137,8 +179,8 @@ $radius: 40px;
         bottom: 4.3rem;
 
         .all-certificate-card {
-        border-width: 0px 4px 4px 0px; 
-}
+            border-width: 0px 4px 4px 0px;
+        }
     }
 
     .swiper-slide.slide-3:not(.swiper-slide-duplicate) .all-certificate-card {
@@ -146,7 +188,7 @@ $radius: 40px;
         border-width: 0px 0px 4px 4px;
         border-radius: 25px 25px 25px 25px;
         width: auto;
-        height: 20rem; 
+        height: 20rem;
     }
 
     .certificates-footer {

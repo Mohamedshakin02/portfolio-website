@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css';
 import '/stylesheet/projects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -77,108 +77,139 @@ function Projects() {
         }
     ]);
 
+    const swiperRef = useRef(null);
+
+    const slidePrev = () => swiperRef.current?.slidePrev();
+    const slideNext = () => swiperRef.current?.slideNext();
+
     return (
         <>
+            <style>
+                {`
+  .projects-content {
+    padding-bottom: 2rem !important;
+    }
+`}
+            </style>
+
             <div className="projects-container container-md">
                 <h1 className="display-1 fw-semibold text-center mb-5">Projects</h1>
 
                 <div className="projects-content p-4 pt-1 p-lg-5" style={{ pointerEvents: "auto" }}>
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={50}
-                        loop={true}
-                        pagination={{ clickable: true, dynamicBullets: true, }}
-                        breakpoints={{
-                            768: { slidesPerView: 2 },
-                            1200: { slidesPerView: 3 },
-                        }}
-                        modules={[Pagination]}
-                        className="mySwiper"
-                    >
-                        {projects.map((project, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="project-card p-4 h-100 d-flex flex-column">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="img-fluid mb-3"
-                                        style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-                                    />
-                                    <div className="top-container">
-                                        <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
-                                        <p className="fs-6 fw-medium">{project.type}</p>
-                                    </div>
-                                    <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
-                                    <div className="d-flex justify-content-between mt-4">
-                                        {project.github && (
-                                            <a
-                                                href={project.github}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Github Link'
-                                            >
-                                                <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
-                                                Code Link
-                                            </a>
-                                        )}
-                                        {project.link && (
-                                            <a
-                                                href={project.link}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Website Link'
-                                            >
-                                                <img src={WebLogo} alt="Live Link" className='me-1' style={{ width: '21px' }} />
-                                                Live Link
-                                            </a>
-                                        )}
-                                        {project.youtube && (
-                                            <a
-                                                href={project.youtube}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Youtube Link'
-                                            >
-                                                <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
-                                                YouTube Link
-                                            </a>
-                                        )}
-                                        {project.game && (
-                                            <a
-                                                href={project.game}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Game Link'
-                                            >
-                                                <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
-                                                Game Link
-                                            </a>
-                                        )}
-                                        {project.figma && (
-                                            <a
-                                                href={project.figma}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Figma Link'
-                                            >
-                                                <img src={FigmaLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
-                                                Figma Link
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
 
-                    <div className="explore d-flex justify-content-center">
+                    <div className="swiper-wrapper-container position-relative">
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={50}
+                            loop={true}
+                            pagination={{ clickable: true, dynamicBullets: true, }}
+                            breakpoints={{
+                                768: { slidesPerView: 2 },
+                                1200: { slidesPerView: 3 },
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                            onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        >
+                            {projects.map((project, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="project-card p-4 h-100 d-flex flex-column">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="img-fluid mb-3"
+                                            style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                                        />
+                                        <div className="top-container">
+                                            <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
+                                            <p className="fs-6 fw-medium">{project.type}</p>
+                                        </div>
+                                        <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
+                                        <div className="d-flex justify-content-between mt-4">
+                                            {project.github && (
+                                                <a
+                                                    href={project.github}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Github Link'
+                                                >
+                                                    <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
+                                                    Code Link
+                                                </a>
+                                            )}
+                                            {project.link && (
+                                                <a
+                                                    href={project.link}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Website Link'
+                                                >
+                                                    <img src={WebLogo} alt="Live Link" className='me-1' style={{ width: '21px' }} />
+                                                    Live Link
+                                                </a>
+                                            )}
+                                            {project.youtube && (
+                                                <a
+                                                    href={project.youtube}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Youtube Link'
+                                                >
+                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                    YouTube Link
+                                                </a>
+                                            )}
+                                            {project.game && (
+                                                <a
+                                                    href={project.game}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Game Link'
+                                                >
+                                                    <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
+                                                    Game Link
+                                                </a>
+                                            )}
+                                            {project.figma && (
+                                                <a
+                                                    href={project.figma}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Figma Link'
+                                                >
+                                                    <img src={FigmaLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
+                                                    Figma Link
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                        {projects.length > 3 && (
+                            <div className="slider-arrows">
+                                <button onClick={slidePrev}>
+                                    <i className="bi bi-caret-left-fill"></i>
+                                </button>
+
+                                <button onClick={slideNext}>
+                                    <i className="bi bi-caret-right-fill"></i>
+                                </button>
+                            </div>
+                        )}
+
+                    </div>
+
+                    <div className="explore d-flex justify-content-center mt-2">
                         <Link to="/projects" className="btn text-decoration-none text-body text-dark fw-medium d-flex justify-content-center mt-4 mb-4 mb-lg-3 py-2 px-3 py-lg-3 px-lg-4 fs-5">EXPLORE MORE</Link>
                     </div>
+
                 </div>
             </div>
         </>

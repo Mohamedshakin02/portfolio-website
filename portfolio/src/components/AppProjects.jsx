@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../App.css';
 import '/stylesheet/all_projects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -29,17 +29,41 @@ function AppProjects() {
 
     ]);
 
+    const swiperRef = useRef(null);
+
+    const slidePrev = () => swiperRef.current?.slidePrev();
+    const slideNext = () => swiperRef.current?.slideNext();
+
+    const [showArrows, setShowArrows] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setShowArrows(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <>
 
-             <style>
-                        {`
+            <style>
+                {`
                 .app-project-content .swiper-wrapper{
                 justify-content: center;}
 
                 @media (max-width: 1200px) {
                     .app-project-content .swiper-wrapper{
                     justify-content: flex-start;}
+
+                @media (max-width: 992px){
+                    .app-project-content {
+                        padding-bottom: 2rem !important;
+                    }
+                }
             `}
             </style>
 
@@ -47,62 +71,79 @@ function AppProjects() {
                 <h1 className="display-3 fw-semibold text-center mb-5">Mobile Application</h1>
 
                 <div className="all-projects-content app-project-content p-4 p-lg-5" style={{ pointerEvents: "auto" }}>
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={50}
-                        initialSlide={0}
-                        loop={true}
-                        pagination={{ clickable: true, dynamicBullets: true, }}
-                        breakpoints={{
-                            768: { slidesPerView: 2 },
-                            1200: { slidesPerView: 3 },
-                        }}
-                        modules={[Pagination]}
-                        className="mySwiper"
-                    >
-                        {projects.map((project, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="all-project-card p-4 h-100 d-flex flex-column">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="img-fluid mb-3"
-                                        style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-                                    />
-                                    <div className="top-container">
-                                        <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
+
+                    <div className="swiper-wrapper-container position-relative">
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={50}
+                            initialSlide={0}
+                            loop={true}
+                            pagination={{ clickable: true, dynamicBullets: true, }}
+                            breakpoints={{
+                                768: { slidesPerView: 2 },
+                                1200: { slidesPerView: 3 },
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                            onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        >
+                            {projects.map((project, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="all-project-card p-4 h-100 d-flex flex-column">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="img-fluid mb-3"
+                                            style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                                        />
+                                        <div className="top-container">
+                                            <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
+                                        </div>
+                                        <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
+                                        <div className="d-flex justify-content-between mt-4">
+                                            {project.github && (
+                                                <a
+                                                    href={project.github}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Github Link'
+                                                >
+                                                    <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
+                                                    Code Link
+                                                </a>
+                                            )}
+                                            {project.youtube && (
+                                                <a
+                                                    href={project.youtube}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Youtube Link'
+                                                >
+                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                    YouTube Link
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
-                                    <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
-                                    <div className="d-flex justify-content-between mt-4">
-                                        {project.github && (
-                                            <a
-                                                href={project.github}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Github Link'
-                                            >
-                                                <img src={GithubLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
-                                                Code Link
-                                            </a>
-                                        )}
-                                        {project.youtube && (
-                                            <a
-                                                href={project.youtube}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Youtube Link'
-                                            >
-                                                <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
-                                                YouTube Link
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                        {showArrows && (
+                            <div className="slider-arrows">
+                                <button onClick={slidePrev}>
+                                    <i className="bi bi-caret-left-fill"></i>
+                                </button>
+
+                                <button onClick={slideNext}>
+                                    <i className="bi bi-caret-right-fill"></i>
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
                 </div>
             </div>
         </>

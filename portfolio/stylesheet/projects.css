@@ -2,8 +2,12 @@
   height: 20% !important;
 }
 
+.swiper-wrapper-container {
+  position: relative;
+}
+
 .swiper-pagination {
-  margin-top: 40px;
+  margin-top: 40px !important;
   position: relative;
 }
 
@@ -32,8 +36,7 @@
   padding-top: 6rem !important;
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.51);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 40px;
   box-sizing: border-box;
 }
@@ -71,6 +74,28 @@
   background-color: white;
 }
 
+.slider-arrows {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 0 1.5rem;
+  pointer-events: none;
+}
+
+.slider-arrows button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  font-size: 1.6rem;
+  color: black;
+}
+
 @media (max-width: 992px) {
   .projects-container {
     top: 8rem;
@@ -90,6 +115,9 @@
   .swiper-pagination {
     margin-top: 30px;
     position: relative;
+  }
+  .slider-arrows {
+    padding: 0 0.5rem;
   }
   .swiper-pagination-bullet {
     width: 12px;

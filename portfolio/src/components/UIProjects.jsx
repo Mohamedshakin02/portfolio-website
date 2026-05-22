@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css';
 import '/stylesheet/all_projects.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -41,76 +41,102 @@ function UIProjects() {
 
     ]);
 
+    const swiperRef = useRef(null);
+
+    const slidePrev = () => swiperRef.current?.slidePrev();
+    const slideNext = () => swiperRef.current?.slideNext();
+
     return (
         <>
 
             <style>
                 {`
                         .ui-title{
-                         min-height: 65px !important;}
+                        min-height: 65px !important;}
+
+                         .ui-project-content {
+                        padding-bottom: 2rem !important;
+                    }
                     `}
             </style>
 
             <div className="all-projects-container container-md">
                 <h1 className="display-3 fw-semibold text-center mb-5">UI/UX Design</h1>
 
-                <div className="all-projects-content p-4 p-lg-5" style={{ pointerEvents: "auto" }}>
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={50}
-                        initialSlide={0}
-                        loop={true}
-                        pagination={{ clickable: true, dynamicBullets: true, }}
-                        breakpoints={{
-                            768: { slidesPerView: 2 },
-                            1200: { slidesPerView: 3 },
-                        }}
-                        modules={[Pagination]}
-                        className="mySwiper"
-                    >
-                        {projects.map((project, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="all-project-card p-4 h-100 d-flex flex-column">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="img-fluid mb-3"
-                                        style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-                                    />
-                                    <div className="top-container ui-title">
-                                        <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
+                <div className="all-projects-content ui-project-content p-4 p-lg-5" style={{ pointerEvents: "auto" }}>
+
+                    <div className="swiper-wrapper-container position-relative">
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={50}
+                            initialSlide={0}
+                            loop={true}
+                            pagination={{ clickable: true, dynamicBullets: true, }}
+                            breakpoints={{
+                                768: { slidesPerView: 2 },
+                                1200: { slidesPerView: 3 },
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                            onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        >
+                            {projects.map((project, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="all-project-card p-4 h-100 d-flex flex-column">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="img-fluid mb-3"
+                                            style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                                        />
+                                        <div className="top-container ui-title">
+                                            <h3 className="fs-4 fw-semibold m-0">{project.title}</h3>
+                                        </div>
+                                        <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
+                                        <div className="d-flex justify-content-between mt-4">
+                                            {project.figma && (
+                                                <a
+                                                    href={project.figma}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Figma Link'
+                                                >
+                                                    <img src={FigmaLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
+                                                    Figma Link
+                                                </a>
+                                            )}
+                                            {project.canva && (
+                                                <a
+                                                    href={project.canva}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Canva Link'
+                                                >
+                                                    <img src={CanvaLogo} alt="Youtube Link" className='me-2' style={{ width: '25px' }} />
+                                                    Canva Link
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
-                                    <p className="flex-grow-1 h5 fw-medium h-50">{project.description}</p>
-                                    <div className="d-flex justify-content-between mt-4">
-                                        {project.figma && (
-                                            <a
-                                                href={project.figma}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Figma Link'
-                                            >
-                                                <img src={FigmaLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
-                                                Figma Link
-                                            </a>
-                                        )}
-                                        {project.canva && (
-                                            <a
-                                                href={project.canva}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                title='Canva Link'
-                                            >
-                                                <img src={CanvaLogo} alt="Youtube Link" className='me-2' style={{ width: '25px' }} />
-                                                Canva Link
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                        {projects.length > 3 && (
+                            <div className="slider-arrows">
+                                <button onClick={slidePrev}>
+                                    <i className="bi bi-caret-left-fill"></i>
+                                </button>
+
+                                <button onClick={slideNext}>
+                                    <i className="bi bi-caret-right-fill"></i>
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
                 </div>
             </div>
         </>
