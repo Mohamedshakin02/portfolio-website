@@ -114,7 +114,7 @@ function WorkshopCertificates() {
                         >
                             {certificates.map((certificate, index) => (
                                 <SwiperSlide key={index} className="certificate-slide">
-                                    <div className="all-certificate-card workshop-certificate-card mb-1 mb-md-3 mb-lg-0">
+                                    <div className="all-certificate-card workshop-certificate-card mb-md-3 mb-lg-0">
                                         <img
                                             src={certificate.image}
                                             alt={certificate.title}
