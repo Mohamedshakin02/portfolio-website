@@ -50,8 +50,8 @@ function AcademicCertificates() {
                             centeredSlides={true}
                             spaceBetween={50}
                             initialSlide={0}
-                            loop={true}
-                            loopedSlides={certificates.length}
+                            observer={true}        
+                            observeParents={true}
                             pagination={{ clickable: true, dynamicBullets: true, }}
                             modules={[Pagination]}
                             className="mySwiper"
