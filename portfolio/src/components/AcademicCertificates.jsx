@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../App.css';
 import '/stylesheet/all_certificates.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -25,6 +25,18 @@ function AcademicCertificates() {
     const slidePrev = () => swiperRef.current?.slidePrev();
     const slideNext = () => swiperRef.current?.slideNext();
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <>
             <style>
@@ -50,7 +62,8 @@ function AcademicCertificates() {
                             centeredSlides={true}
                             spaceBetween={50}
                             initialSlide={0}
-                            observer={true}        
+                            loop={!isMobile}
+                            observer={true}
                             observeParents={true}
                             pagination={{ clickable: true, dynamicBullets: true, }}
                             modules={[Pagination]}
@@ -58,20 +71,25 @@ function AcademicCertificates() {
                             onSwiper={(swiper) => (swiperRef.current = swiper)}
                             breakpoints={{
                                 0: {
+                                    loop: false,
                                     centeredSlides: true,
                                 },
                                 576: {
+                                    loop: false,
                                     centeredSlides: true,
                                 },
                                 768: {
+                                    loop: true,
                                     centeredSlides: false,
                                     spaceBetween: 40,
                                 },
                                 992: {
+                                    loop: true,
                                     centeredSlides: false,
                                     spaceBetween: 40,
                                 },
                                 1200: {
+                                    loop: true,
                                     centeredSlides: false,
                                 },
                             }}
