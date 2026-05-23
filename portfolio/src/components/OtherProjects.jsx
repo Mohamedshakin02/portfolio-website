@@ -20,12 +20,14 @@ function OtherProjects() {
             description: 'Developed Garden Chatbot using Google Dialogflow to provide personalized plant recommendations based on the user’s environment, offering simple and engaging gardening guidance.',
             image: ProjectImg1,
             link: 'https://garden-chatbot-project.vercel.app/',
+            youtube: 'https://youtu.be/62CzarqaD9E?si=Bx-sh-nURvk8kdU0',
         },
         {
             title: 'Agriculture Data Visualization',
             description: "Agriculture Data Visualization is an interactive project created using Flourish, showing how agriculture has changed over time and across regions, allowing users to explore the data and understand regional and global trends.",
             image: ProjectImg2,
             link: 'https://public.flourish.studio/story/3056211/',
+            youtube: 'https://youtu.be/acvx_h8eqw4?si=MC73lopS_sfqmaQ_',
         },
         {
             title: 'Arduino Experiment Portfolio',
