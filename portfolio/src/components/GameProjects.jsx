@@ -10,6 +10,7 @@ import ProjectImg2 from '../assets/projects/Driving-Test.png';
 import ProjectImg3 from '../assets/projects/Third-Level.png';
 import ProjectImg4 from '../assets/projects/Highway.png';
 import GameLogo from '../assets/logos/game-logo.png';
+import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 
 function GameProjects() {
     const [projects] = useState([
@@ -18,24 +19,28 @@ function GameProjects() {
             description: "Developed a 2D pixel art football game in Unity with simple controls and fast-paced, engaging gameplay. Designed a side-view match with 2–5 minute durations, focusing on scoring goals and an engaging gameplay experience.",
             image: ProjectImg1,
             game: 'https://mohamed-shakin.itch.io/pixel-football',
+            youtube: 'https://youtu.be/oTZ9FPcg7qc?si=hrdhWLaOjhm5PDFd',
         },
         {
             title: 'Driving Test Bitsy Game',
             description: 'Developed a driving test game in Bitsy with multiple levels, featuring interactive environments with cars, roads, and obstacles, focusing on realistic driving procedures and engaging gameplay.',
             image: ProjectImg2,
             game: 'https://mohamed-shakin.itch.io/driving-test',
+            youtube: 'https://youtu.be/mRUvgyTLIN8?si=0mJi8zVfeE0k1a-E',
         },
         {
             title: 'The Third Level Story Game',
             description: "Developed an interactive story game in Twine adapted from The Third Level by Jack Finney, following Charley’s perspective as he tries to escape a world full of fear and worry. Explore if he succeeds or not.",
             image: ProjectImg3,
             game: 'https://mohamed-shakin.itch.io/the-third-level',
+            youtube: 'https://youtu.be/W4YHnwWZosw?si=LTxChWTgJj9p_QGw',
         },
         {
             title: 'Highway 2D Game',
             description: 'Developed HIGHWAY, a driving game where players avoid hitting oncoming cars on a highway. Designed the game with cars gradually increasing the speed to make it more challenging and fun.',
             image: ProjectImg4,
             game: 'https://editor.p5js.org/m.shakin2005/full/m8bfD2RkI',
+            youtube: 'https://youtu.be/DP3GMKy46pg?si=XugTFQXmeXupW1va',
         }
 
     ]);
@@ -99,6 +104,19 @@ function GameProjects() {
                                                 >
                                                     <img src={GameLogo} alt="Game Link" className='me-2' style={{ width: '21px' }} />
                                                     Game Link
+                                                </a>
+                                            )}
+
+                                            {project.youtube && (
+                                                <a
+                                                    href={project.youtube}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Youtube Link'
+                                                >
+                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                    YouTube Link
                                                 </a>
                                             )}
                                         </div>

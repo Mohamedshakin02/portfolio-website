@@ -42,6 +42,7 @@ function Projects() {
             description: 'Developed a 2D pixel art football game in Unity with simple controls and fast-paced, engaging gameplay. Designed a side-view match with 2–5 minute durations, focusing on scoring goals and an engaging gameplay experience.',
             image: ProjectImg3,
             game: 'https://mohamed-shakin.itch.io/pixel-football',
+            youtube: 'https://youtu.be/oTZ9FPcg7qc?si=hrdhWLaOjhm5PDFd',
             type: "Game Development",
         },
         {
@@ -150,18 +151,6 @@ function Projects() {
                                                     Live Link
                                                 </a>
                                             )}
-                                            {project.youtube && (
-                                                <a
-                                                    href={project.youtube}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
-                                                    title='Youtube Link'
-                                                >
-                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
-                                                    YouTube Link
-                                                </a>
-                                            )}
                                             {project.game && (
                                                 <a
                                                     href={project.game}
@@ -184,6 +173,18 @@ function Projects() {
                                                 >
                                                     <img src={FigmaLogo} alt="GitHub Link" className='me-1' style={{ width: '21px' }} />
                                                     Figma Link
+                                                </a>
+                                            )}
+                                            {project.youtube && (
+                                                <a
+                                                    href={project.youtube}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Youtube Link'
+                                                >
+                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                    YouTube Link
                                                 </a>
                                             )}
                                         </div>
