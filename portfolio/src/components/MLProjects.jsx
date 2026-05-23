@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import ProjectImg from '../assets/projects/Kaggle.png';
 import WebLogo from '../assets/logos/web-logo.png';
+import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 
 function MLProjects() {
     const [projects] = useState([
@@ -27,6 +28,7 @@ function MLProjects() {
             description: "Developed a machine learning model using Linear Regression to predict AI and Data Science salaries based on experience, skills, tools, country, education, work mode, and company size. The model included data cleaning, currency conversion, feature encoding, scaling, and evaluation, achieving about 90% accuracy. A Gradio interface integrated to allow users to enter details and receive predicted salaries.",
             image: ProjectImg,
             link: 'https://www.kaggle.com/code/mohamedshakin/ai-data-science-job-salaries-prediction',
+            youtube: 'https://youtu.be/b61qtailbtY?si=rawq7GGVJwvg42tZ',
         }
 
     ]);
@@ -39,15 +41,15 @@ function MLProjects() {
     const [showArrows, setShowArrows] = useState(window.innerWidth <= 1200);
 
     useEffect(() => {
-            const handleResize = () => {
-                setShowArrows(window.innerWidth <= 1200);
-            };
-    
-            window.addEventListener('resize', handleResize);
-            handleResize();
-    
-            return () => window.removeEventListener('resize', handleResize);
-        }, []);
+        const handleResize = () => {
+            setShowArrows(window.innerWidth <= 1200);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <>
@@ -106,6 +108,19 @@ function MLProjects() {
                                                 >
                                                     <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                     Live Link
+                                                </a>
+                                            )}
+
+                                            {project.youtube && (
+                                                <a
+                                                    href={project.youtube}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Youtube Link'
+                                                >
+                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                    YouTube Link
                                                 </a>
                                             )}
                                         </div>
