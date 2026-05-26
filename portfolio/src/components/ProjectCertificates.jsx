@@ -16,11 +16,11 @@ function ProjectCertificates() {
     ]);
 
     return (
-    
-            <>
-    
-                <style>
-                            {`
+
+        <>
+
+            <style>
+                {`
 
                     .project-certificates-content .swiper-wrapper{
                     display: flex;
@@ -35,6 +35,12 @@ function ProjectCertificates() {
                     @media (max-width: 992px) {
                         .all-certificates-content .project-certificate-card{
                         height: 20rem !important;}
+                    }
+
+                    @media (min-width: 768px) and (max-width: 768px) {
+                        .project-certificates-content .swiper-wrapper {
+                         justify-content: center !important;}
+                    }
 
                     @media (max-width: 768px) {
                         .project-certificates-content .swiper-wrapper{
@@ -48,60 +54,60 @@ function ProjectCertificates() {
                         .project-certificates-content .swiper-wrapper{
                         justify-content: flex-start;}
                 `}
-    
-                </style>
-    
-    
-                <div className="all-certificates-container container-md">
-                    <h1 className="display-3 fw-semibold text-center mb-5">Project Certificate</h1>
-    
-                    <div className="all-certificates-content project-certificates-content p-0 pb-4 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
-                        <Swiper
-                            slidesPerView={"auto"}
-                            centeredSlides={true}
-                            spaceBetween={50}
-                            initialSlide={0}
-                            loop={true}
-                            pagination={{ clickable: true, dynamicBullets: true, }}
-                            modules={[Pagination]}
-                            className="mySwiper"
-                            breakpoints={{
-                                0: {
-                                    centeredSlides: true,
-                                },
-                                576: {
-                                    centeredSlides: true,
-                                },
-                                768: {
-                                    centeredSlides: false,
-                                    spaceBetween: 40,
-                                },
-                                992: {
-                                    centeredSlides: false,
-                                    spaceBetween: 40,
-                                },
-                                1200: {
-                                    centeredSlides: false,
-                                },
-                            }}
-                        >
-                            {certificates.map((certificate, index) => (
-                                <SwiperSlide key={index} className="certificate-slide">
-                                    <div className="all-certificate-card project-certificate-card mb-2 mb-md-3 mb-lg-0">
-                                        <img
-                                            src={certificate.image}
-                                            alt={certificate.title}
-                                            className="certificate-img"
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
+
+            </style>
+
+
+            <div className="all-certificates-container container-md">
+                <h1 className="display-3 fw-semibold text-center mb-5">Project Certificate</h1>
+
+                <div className="all-certificates-content project-certificates-content p-0 pb-4 p-md-4 p-lg-5" style={{ pointerEvents: "auto" }}>
+                    <Swiper
+                        slidesPerView={"auto"}
+                        centeredSlides={true}
+                        spaceBetween={50}
+                        initialSlide={0}
+                        loop={true}
+                        pagination={{ clickable: true, dynamicBullets: true, }}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                        breakpoints={{
+                            0: {
+                                centeredSlides: true,
+                            },
+                            576: {
+                                centeredSlides: true,
+                            },
+                            768: {
+                                centeredSlides: false,
+                                spaceBetween: 40,
+                            },
+                            992: {
+                                centeredSlides: false,
+                                spaceBetween: 40,
+                            },
+                            1200: {
+                                centeredSlides: false,
+                            },
+                        }}
+                    >
+                        {certificates.map((certificate, index) => (
+                            <SwiperSlide key={index} className="certificate-slide">
+                                <div className="all-certificate-card project-certificate-card mb-2 mb-md-3 mb-lg-0">
+                                    <img
+                                        src={certificate.image}
+                                        alt={certificate.title}
+                                        className="certificate-img"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
-    
-            </>
-        );
+            </div>
+
+        </>
+    );
 }
 
 export default ProjectCertificates
