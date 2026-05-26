@@ -8,31 +8,20 @@ import { Pagination } from 'swiper/modules';
 
 // Certificate images
 import CertificateImg1 from '../assets/certificates/GDG Certificate.png';
-import CertificateImg2 from '../assets/certificates/Mission Digital Escape.png';
+import CertificateImg2 from '../assets/certificates/Vibe Coding Challenge.png';
+import CertificateImg3 from '../assets/certificates/Mission Digital Escape.png';
 
 function WorkshopCertificates() {
     const [certificates] = useState([
         { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg1 },
-        { title: "Mission Digital Escape Workshop Certificate", image: CertificateImg2 },
+        { title: "Vibe Coding Challenge Workshop Certificate", image: CertificateImg2 },
+        { title: "Mission Digital Escape Workshop Certificate", image: CertificateImg3 },
     ]);
 
     const swiperRef = useRef(null);
 
     const slidePrev = () => swiperRef.current?.slidePrev();
     const slideNext = () => swiperRef.current?.slideNext();
-
-    const [showArrows, setShowArrows] = useState(window.innerWidth <= 1400);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setShowArrows(window.innerWidth <= 1400);
-        };
-
-        window.addEventListener('resize', handleResize);
-        handleResize();
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     return (
 
@@ -125,7 +114,7 @@ function WorkshopCertificates() {
                             ))}
                         </Swiper>
 
-                        {showArrows && (
+                        {certificates.length > 2 && (
                             <div className="slider-arrows">
                                 <button onClick={slidePrev}>
                                     <i className="bi bi-caret-left-fill"></i>
