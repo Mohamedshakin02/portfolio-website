@@ -5,13 +5,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg1 from '../assets/projects/Sports Note.png';
-import ProjectImg2 from '../assets/projects/CML.png';
-import ProjectImg3 from '../assets/projects/Pixel-Football.png';
-import ProjectImg4 from '../assets/projects/Info-Globe.png';
-import ProjectImg5 from '../assets/projects/Cloth-Care.png';
-import ProjectImg6 from '../assets/projects/G-Shock.png';
-import ProjectImg7 from '../assets/projects/Tick-Events.png';
+import ProjectImg1 from '../assets/projects/Focusentrix.png';
+import ProjectImg2 from '../assets/projects/Sports Note.png';
+import ProjectImg3 from '../assets/projects/CML.png';
+import ProjectImg4 from '../assets/projects/Pixel-Football.png';
+import ProjectImg5 from '../assets/projects/Info-Globe.png';
+import ProjectImg6 from '../assets/projects/Cloth-Care.png';
+import ProjectImg7 from '../assets/projects/G-Shock.png';
+import ProjectImg8 from '../assets/projects/Tick-Events.png';
 import GithubLogo from '../assets/logos/github-logo.png';
 import GameLogo from '../assets/logos/game-logo.png';
 import YoutubeLogo from '../assets/logos/youtube-logo2.png';
@@ -22,9 +23,17 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 function Projects() {
     const [projects] = useState([
         {
+            title: 'Focusentrix Web Application',
+            description: 'Developed a smart web-based productivity platform using MediaPipe library for real-time focus monitoring during study/work sessions, along with productivity tools to improve concentration, reduce distractions, and build better productivity habits.',
+            image: ProjectImg1,
+            github: 'https://github.com/Mohamedshakin02/focusentrix.git',
+            youtube: 'https://youtu.be/Y_R1MCAMDhI?si=yMnvVKYHb5oiIuiW',
+            type: "Web Development",
+        },
+        {
             title: 'Sports Note Web Application',
             description: 'Developed a full-stack sports note web application using React.js with a Node.js and MongoDB backend, allowing users to store, manage, and organize their sports-related data through a clean and responsive interface.',
-            image: ProjectImg1,
+            image: ProjectImg2,
             github: 'https://github.com/Mohamedshakin02/sports-note.git',
             link: 'https://sportsnote.vercel.app/',
             type: "Web Development",
@@ -32,7 +41,7 @@ function Projects() {
         {
             title: 'CML Company Website',
             description: 'Developed a responsive website for CML Company as part of a university assessment, highlighting musical events, consulting, and products. My role included responsive development, UI design, and contributing ideas.',
-            image: ProjectImg2,
+            image: ProjectImg3,
             github: 'https://github.com/Zeko54/CML.git',
             link: 'https://cml-henna.vercel.app/',
             type: "Web Development",
@@ -40,7 +49,7 @@ function Projects() {
         {
             title: 'Pixel Football 2D Game',
             description: 'Developed a 2D pixel art football game in Unity with simple controls and fast-paced, engaging gameplay. Designed a side-view match with 2–5 minute durations, focusing on scoring goals and an engaging gameplay experience.',
-            image: ProjectImg3,
+            image: ProjectImg4,
             game: 'https://mohamed-shakin.itch.io/pixel-football',
             youtube: 'https://youtu.be/oTZ9FPcg7qc?si=hrdhWLaOjhm5PDFd',
             type: "Game Development",
@@ -48,7 +57,7 @@ function Projects() {
         {
             title: 'Info Globe GUI',
             description: "Developed Info Globe, a Python Tkinter GUI app that fetches country data from the RestCountries API, featuring search, random country display, and region/language filters.",
-            image: ProjectImg4,
+            image: ProjectImg5,
             github: 'https://github.com/Mohamedshakin02/Python-Projects/tree/main/Data%20Driven%20Application',
             youtube: 'https://youtu.be/HDZiiggFHlM?si=NS_cXg5EcYnzWaLF',
             type: "Software Development",
@@ -56,7 +65,7 @@ function Projects() {
         {
             title: 'Cloth Care Mobile Application ',
             description: 'Developed Cloth Care, an Android Studio app that provides washing and ironing instructions based on the selected clothing item and fabric type, helping users take proper care of their clothes.',
-            image: ProjectImg5,
+            image: ProjectImg6,
             github: 'https://github.com/DC-BSU-RAK/projects-collection-2025-Mohamedshakin02/tree/main/Multi%20Page%20App',
             youtube: 'https://youtu.be/xPLIlYXq1oI?si=a3ysVYTk4v7cOuHU',
             type: "Mobile Application",
@@ -64,7 +73,7 @@ function Projects() {
         {
             title: 'G-Shock Responsive Website',
             description: 'Developed a responsive G-Shock website using React.js, integrated with a Node.js/MongoDB backend for user login, featuring watch details and fully responsive design across desktop, tablet, and mobile devices.',
-            image: ProjectImg6,
+            image: ProjectImg7,
             github: 'https://github.com/Mohamedshakin02/G-SHOCK-Watch.git',
             link: 'https://g-shock.vercel.app/',
             type: "Web Development",
@@ -72,7 +81,7 @@ function Projects() {
         {
             title: 'Tick Events Application Prototype',
             description: "Developed Tick Events, a Figma prototype app that displays upcoming events, allowing users to filter by location, category, and date, providing an easy-to-use and informative experience.",
-            image: ProjectImg7,
+            image: ProjectImg8,
             figma: 'https://www.figma.com/proto/8ei59o3Siq5zbrHLCuS2r7/HiFi-Interactive-Prototype?node-id=103-2&t=FAqJabHuBirGSvqx-1&scaling=contain&page-id=0%3A1&starting-point-node-id=103%3A2',
             type: "UI/UX Design",
         }

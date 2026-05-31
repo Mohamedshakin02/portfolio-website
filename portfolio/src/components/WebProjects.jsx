@@ -5,64 +5,73 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg1 from '../assets/projects/Sports Note.png';
-import ProjectImg2 from '../assets/projects/CML.png';
-import ProjectImg3 from '../assets/projects/G-Shock.png';
-import ProjectImg4 from '../assets/projects/Zoo-Website.png';
-import ProjectImg5 from '../assets/projects/Choco.png';
-import ProjectImg6 from '../assets/projects/Soundboard.png';
-import ProjectImg7 from '../assets/projects/Petrol.png';
+import ProjectImg1 from '../assets/projects/Focusentrix.png';
+import ProjectImg2 from '../assets/projects/Sports Note.png';
+import ProjectImg3 from '../assets/projects/CML.png';
+import ProjectImg4 from '../assets/projects/G-Shock.png';
+import ProjectImg5 from '../assets/projects/Zoo-Website.png';
+import ProjectImg6 from '../assets/projects/Choco.png';
+import ProjectImg7 from '../assets/projects/Soundboard.png';
+import ProjectImg8 from '../assets/projects/Petrol.png';
 import GithubLogo from '../assets/logos/github-logo.png';
 import WebLogo from '../assets/logos/web-logo.png';
+import YoutubeLogo from '../assets/logos/youtube-logo2.png';
 
 function WebProjects() {
     const [projects] = useState([
         {
+            title: 'Focusentrix Web Application',
+            description: 'Developed a smart web-based productivity platform using MediaPipe library for real-time focus monitoring during study/work sessions, along with productivity tools to improve concentration, reduce distractions, and build better productivity habits.',
+            image: ProjectImg1,
+            github: 'https://github.com/Mohamedshakin02/focusentrix.git',
+            youtube: 'https://youtu.be/Y_R1MCAMDhI?si=yMnvVKYHb5oiIuiW',
+        },
+        {
             title: 'Sports Note Web Application',
             description: 'Developed a full-stack sports note web application using React.js with a Node.js and MongoDB backend, allowing users to store, manage, and organize their sports-related data through a clean and responsive interface.',
-            image: ProjectImg1,
+            image: ProjectImg2,
             github: 'https://github.com/Mohamedshakin02/sports-note.git',
             link: 'https://sportsnote.vercel.app/',
         },
         {
             title: 'CML Company Website',
             description: 'Developed a responsive website for CML Company as part of a university assessment, highlighting musical events, consulting, and products. My role included responsive development, UI design, and contributing ideas.',
-            image: ProjectImg2,
+            image: ProjectImg3,
             github: 'https://github.com/Zeko54/CML.git',
             link: 'https://cml-henna.vercel.app/',
         },
         {
             title: 'G-Shock Responsive Website',
             description: 'Developed a responsive G-Shock website using React.js, integrated with a Node.js/MongoDB backend for user login, featuring watch details and fully responsive design across desktop, tablet, and mobile devices.',
-            image: ProjectImg3,
+            image: ProjectImg4,
             github: 'https://github.com/Mohamedshakin02/G-SHOCK-Watch.git',
             link: 'https://g-shock.vercel.app/',
         },
         {
             title: 'The Zoo Wildlife Park Website',
             description: 'Recreated the non-responsive Zoo Wildlife Park website using HTML, CSS, and JavaScript, designed some sections to improve visual layout and user engagement, while preserving the original content and core functionality.',
-            image: ProjectImg4,
+            image: ProjectImg5,
             github: 'https://github.com/Mohamedshakin1/The-Zoo-Wildlife-Park',
             link: 'https://mohamedshakin1.github.io/The-Zoo-Wildlife-Park/',
         },
         {
             title: 'Chocolate Box Website',
             description: 'Developed a responsive chocolate box website featuring a custom chocolate box builder, product overview, and user signup page, optimized for desktop and mobile.',
-            image: ProjectImg5,
+            image: ProjectImg6,
             github: 'https://github.com/Mohamedshakin02/Chocolate-Company-Website',
             link: 'https://chocolate-company-website.vercel.app/',
         },
         {
             title: 'Interactive Soundboard',
             description: 'Developed an interactive audio soundboard web application using HTML, CSS, and JavaScript, featuring a grid of audio samples with clickable playback and a text-to-speech feature.',
-            image: ProjectImg6,
+            image: ProjectImg7,
             github: 'https://github.com/Mohamedshakin02/Javascript-Projects/tree/main/Soundboard',
             link: 'https://soundboard-activity.vercel.app/',
         },
         {
             title: 'Petrol Calculator',
             description: 'Developed a simple petrol calculator web application using HTML, CSS, and JavaScript, featuring inputs for petrol cost per liter and liters purchased, with a calculation button to display the total cost.',
-            image: ProjectImg7,
+            image: ProjectImg8,
             github: 'https://github.com/Mohamedshakin02/Javascript-Projects/tree/main/Petrol%20Calculator',
             link: 'https://petrol-calculator-activity.vercel.app/',
         }
@@ -87,7 +96,7 @@ function WebProjects() {
     }
 `}
             </style>
-            
+
             <div className="all-projects-container container-md">
                 <h1 className="display-3 fw-semibold text-center mb-5">Web Development</h1>
 
@@ -143,6 +152,18 @@ function WebProjects() {
                                                 >
                                                     <img src={WebLogo} alt="Website Link" className='me-1' style={{ width: '21px' }} />
                                                     Live Link
+                                                </a>
+                                            )}
+                                            {project.youtube && (
+                                                <a
+                                                    href={project.youtube}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-decoration-none text-body text-dark fs-5 fw-medium d-flex align-items-center"
+                                                    title='Youtube Link'
+                                                >
+                                                    <img src={YoutubeLogo} alt="Youtube Link" className='me-1' style={{ width: '25px' }} />
+                                                    YouTube Link
                                                 </a>
                                             )}
                                         </div>
