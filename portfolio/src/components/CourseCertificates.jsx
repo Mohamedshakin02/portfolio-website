@@ -30,6 +30,10 @@ import CertificateImg20 from '../assets/certificates/Introduction to Cybersecuri
 import CertificateImg21 from '../assets/certificates/Learning Cyber Incident Response and Digital Forensics.png';
 import CertificateImg22 from '../assets/certificates/Autopsy for Digital Forensics.png';
 import CertificateImg23 from '../assets/certificates/Power BI Desktop.png';
+import CertificateImg24 from '../assets/certificates/Building Scalable React UI Component Libraries with Storybook.png';
+import CertificateImg25 from '../assets/certificates/Microsoft Copilot Studio.png';
+import CertificateImg26 from '../assets/certificates/1 Million Prompters.png';
+
 
 function CourseCertificates() {
     const [certificates] = useState([
@@ -56,6 +60,9 @@ function CourseCertificates() {
         { title: "Learning Cyber Incident Response and Digital Forensics Certificate", image: CertificateImg21 },
         { title: "Autopsy for Digital Forensics Certificate", image: CertificateImg22 },
         { title: "Power BI Desktop Certificate", image: CertificateImg23 },
+        { title: "Storybook Certificate", image: CertificateImg24 },
+        { title: "Microsoft Copilot Studio Certificate", image: CertificateImg25 },
+        { title: "1 Million Prompters Certificate", image: CertificateImg26 },
     ]);
 
     const swiperRef = useRef(null);
