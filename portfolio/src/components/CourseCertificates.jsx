@@ -33,6 +33,8 @@ import CertificateImg23 from '../assets/certificates/Power BI Desktop.png';
 import CertificateImg24 from '../assets/certificates/Building Scalable React UI Component Libraries with Storybook.png';
 import CertificateImg25 from '../assets/certificates/Microsoft Copilot Studio.png';
 import CertificateImg26 from '../assets/certificates/1 Million Prompters.png';
+import CertificateImg27 from '../assets/certificates/Microsoft Power Automate Essential Training.png';
+import CertificateImg28 from '../assets/certificates/Microsoft Power Apps Essential Training The Basics.png';
 
 
 function CourseCertificates() {
@@ -63,6 +65,8 @@ function CourseCertificates() {
         { title: "Storybook Certificate", image: CertificateImg24 },
         { title: "Microsoft Copilot Studio Certificate", image: CertificateImg25 },
         { title: "1 Million Prompters Certificate", image: CertificateImg26 },
+        { title: "Microsoft Power Automate Essential Training", image: CertificateImg27 },
+        { title: "Microsoft Power Apps Essential Training The Basics", image: CertificateImg28 },
     ]);
 
     const swiperRef = useRef(null);
